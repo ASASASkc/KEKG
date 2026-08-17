@@ -1,0 +1,28 @@
+# ===== 环境与密钥（严禁提交） =====
+backend/.env
+backend/.env.*
+backend/kekg.db
+backend/uploads/
+
+# ===== Python =====
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+
+# ===== 前端 =====
+frontend/node_modules/
+frontend/dist/
+
+# ===== 本地数据库 / 环境数据 =====
+mysql_data/
+
+# ===== 日志 =====
+*.log
+debug.log
+
+# ===== 临时文件 =====
+*.tmp
+.DS_Store
+Thumbs.db

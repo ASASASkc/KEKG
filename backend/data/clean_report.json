@@ -1,0 +1,3592 @@
+{
+  "summary": {
+    "generated_at": "2026-07-06T22:13:16.455176",
+    "total_files": 8,
+    "total_deleted_empty_nodes": 0,
+    "total_fixed_dangling_rels": 0,
+    "total_merged_groups": 243,
+    "total_nodes_before": 7586,
+    "total_nodes_after": 7335,
+    "total_rels_before": 9175,
+    "total_rels_after": 9175,
+    "files": [
+      {
+        "file": "graph_common_clean.json",
+        "status": "ok",
+        "before_nodes": 504,
+        "after_nodes": 504
+      },
+      {
+        "file": "graph_crawler.json",
+        "status": "ok",
+        "before_nodes": 963,
+        "after_nodes": 963
+      },
+      {
+        "file": "graph_data_analysis.json",
+        "status": "ok",
+        "before_nodes": 949,
+        "after_nodes": 949
+      },
+      {
+        "file": "graph_devops.json",
+        "status": "ok",
+        "before_nodes": 951,
+        "after_nodes": 873
+      },
+      {
+        "file": "graph_dl.json",
+        "status": "ok",
+        "before_nodes": 1142,
+        "after_nodes": 1060
+      },
+      {
+        "file": "graph_llm.json",
+        "status": "ok",
+        "before_nodes": 1012,
+        "after_nodes": 1006
+      },
+      {
+        "file": "graph_ml.json",
+        "status": "ok",
+        "before_nodes": 1059,
+        "after_nodes": 993
+      },
+      {
+        "file": "graph_nlp.json",
+        "status": "ok",
+        "before_nodes": 1006,
+        "after_nodes": 987
+      }
+    ]
+  },
+  "details": [
+    {
+      "file": "graph_common_clean.json",
+      "deleted_empty_nodes": [],
+      "fixed_dangling_rels": [],
+      "merged_duplicates": [],
+      "before_nodes": 504,
+      "after_nodes": 504,
+      "before_rels": 364,
+      "after_rels": 364
+    },
+    {
+      "file": "graph_crawler.json",
+      "deleted_empty_nodes": [],
+      "fixed_dangling_rels": [],
+      "merged_duplicates": [],
+      "before_nodes": 963,
+      "after_nodes": 963,
+      "before_rels": 1312,
+      "after_rels": 1312
+    },
+    {
+      "file": "graph_data_analysis.json",
+      "deleted_empty_nodes": [],
+      "fixed_dangling_rels": [],
+      "merged_duplicates": [],
+      "before_nodes": 949,
+      "after_nodes": 949,
+      "before_rels": 1439,
+      "after_rels": 1439
+    },
+    {
+      "file": "graph_devops.json",
+      "deleted_empty_nodes": [],
+      "fixed_dangling_rels": [],
+      "merged_duplicates": [
+        {
+          "kept": {
+            "id": "n_0023",
+            "name": "strip()方法",
+            "category": "python_basics"
+          },
+          "removed": [
+            {
+              "id": "n_0657",
+              "name": "strip()方法",
+              "category": "python_basics"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0024",
+            "name": "split()方法",
+            "category": "python_basics"
+          },
+          "removed": [
+            {
+              "id": "n_0666",
+              "name": "split()方法",
+              "category": "python_basics"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0025",
+            "name": "join()方法",
+            "category": "python_basics"
+          },
+          "removed": [
+            {
+              "id": "n_0668",
+              "name": "join()方法",
+              "category": "python_basics"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0026",
+            "name": "replace()方法",
+            "category": "python_basics"
+          },
+          "removed": [
+            {
+              "id": "n_0665",
+              "name": "replace()方法",
+              "category": "python_basics"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0033",
+            "name": "append()方法",
+            "category": "python_basics"
+          },
+          "removed": [
+            {
+              "id": "n_0669",
+              "name": "append()方法",
+              "category": "python_basics"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0034",
+            "name": "extend()方法",
+            "category": "python_basics"
+          },
+          "removed": [
+            {
+              "id": "n_0670",
+              "name": "extend()方法",
+              "category": "python_basics"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0035",
+            "name": "pop()方法",
+            "category": "python_basics"
+          },
+          "removed": [
+            {
+              "id": "n_0673",
+              "name": "pop()方法",
+              "category": "python_basics"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0039",
+            "name": "get()方法",
+            "category": "python_basics"
+          },
+          "removed": [
+            {
+              "id": "n_0683",
+              "name": "get()方法",
+              "category": "python_basics"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0040",
+            "name": "keys()方法",
+            "category": "python_basics"
+          },
+          "removed": [
+            {
+              "id": "n_0680",
+              "name": "keys()方法",
+              "category": "python_basics"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0041",
+            "name": "values()方法",
+            "category": "python_basics"
+          },
+          "removed": [
+            {
+              "id": "n_0681",
+              "name": "values()方法",
+              "category": "python_basics"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0042",
+            "name": "items()方法",
+            "category": "python_basics"
+          },
+          "removed": [
+            {
+              "id": "n_0682",
+              "name": "items()方法",
+              "category": "python_basics"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0047",
+            "name": "str()函数",
+            "category": "python_basics"
+          },
+          "removed": [
+            {
+              "id": "n_0645",
+              "name": "str()函数",
+              "category": "python_basics"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0048",
+            "name": "int()函数",
+            "category": "python_basics"
+          },
+          "removed": [
+            {
+              "id": "n_0643",
+              "name": "int()函数",
+              "category": "python_basics"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0049",
+            "name": "float()函数",
+            "category": "python_basics"
+          },
+          "removed": [
+            {
+              "id": "n_0644",
+              "name": "float()函数",
+              "category": "python_basics"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0050",
+            "name": "type()函数",
+            "category": "python_basics"
+          },
+          "removed": [
+            {
+              "id": "n_0651",
+              "name": "type()函数",
+              "category": "python_basics"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0064",
+            "name": "if语句",
+            "category": "python_advanced"
+          },
+          "removed": [
+            {
+              "id": "n_0690",
+              "name": "if语句",
+              "category": "python_advanced"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0065",
+            "name": "elif语句",
+            "category": "python_advanced"
+          },
+          "removed": [
+            {
+              "id": "n_0691",
+              "name": "elif语句",
+              "category": "python_advanced"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0692",
+            "name": "else语句",
+            "category": "python_advanced"
+          },
+          "removed": [
+            {
+              "id": "n_0066",
+              "name": "else语句",
+              "category": "python_advanced"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0069",
+            "name": "while循环",
+            "category": "python_advanced"
+          },
+          "removed": [
+            {
+              "id": "n_0694",
+              "name": "while循环",
+              "category": "python_advanced"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0070",
+            "name": "for循环",
+            "category": "python_advanced"
+          },
+          "removed": [
+            {
+              "id": "n_0695",
+              "name": "for循环",
+              "category": "python_advanced"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0073",
+            "name": "break语句",
+            "category": "python_advanced"
+          },
+          "removed": [
+            {
+              "id": "n_0696",
+              "name": "break语句",
+              "category": "python_advanced"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0074",
+            "name": "continue语句",
+            "category": "python_advanced"
+          },
+          "removed": [
+            {
+              "id": "n_0697",
+              "name": "continue语句",
+              "category": "python_advanced"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0081",
+            "name": "read()方法",
+            "category": "python_advanced"
+          },
+          "removed": [
+            {
+              "id": "n_0709",
+              "name": "read()方法",
+              "category": "python_advanced"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0082",
+            "name": "readline()方法",
+            "category": "python_advanced"
+          },
+          "removed": [
+            {
+              "id": "n_0710",
+              "name": "readline()方法",
+              "category": "python_advanced"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0083",
+            "name": "readlines()方法",
+            "category": "python_advanced"
+          },
+          "removed": [
+            {
+              "id": "n_0711",
+              "name": "readlines()方法",
+              "category": "python_advanced"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0084",
+            "name": "write()方法",
+            "category": "python_advanced"
+          },
+          "removed": [
+            {
+              "id": "n_0712",
+              "name": "write()方法",
+              "category": "python_advanced"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0086",
+            "name": "with语句",
+            "category": "python_advanced"
+          },
+          "removed": [
+            {
+              "id": "n_0714",
+              "name": "with语句",
+              "category": "python_advanced"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0090",
+            "name": "return语句",
+            "category": "python_advanced"
+          },
+          "removed": [
+            {
+              "id": "n_0699",
+              "name": "return语句",
+              "category": "python_advanced"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0706",
+            "name": "import语句",
+            "category": "python_advanced"
+          },
+          "removed": [
+            {
+              "id": "n_0093",
+              "name": "import语句",
+              "category": "python_advanced"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0094",
+            "name": "from...import语句",
+            "category": "python_advanced"
+          },
+          "removed": [
+            {
+              "id": "n_0707",
+              "name": "from...import语句",
+              "category": "python_advanced"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0097",
+            "name": "os模块",
+            "category": "python_advanced"
+          },
+          "removed": [
+            {
+              "id": "n_0925",
+              "name": "os模块",
+              "category": "python_advanced"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0098",
+            "name": "sys模块",
+            "category": "python_advanced"
+          },
+          "removed": [
+            {
+              "id": "n_0926",
+              "name": "sys模块",
+              "category": "python_advanced"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0125",
+            "name": "TCP协议",
+            "category": "network_fundamentals"
+          },
+          "removed": [
+            {
+              "id": "n_0743",
+              "name": "TCP协议",
+              "category": "network_fundamentals"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0126",
+            "name": "UDP协议",
+            "category": "network_fundamentals"
+          },
+          "removed": [
+            {
+              "id": "n_0744",
+              "name": "UDP协议",
+              "category": "network_fundamentals"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0140",
+            "name": "Telnet端口23",
+            "category": "network_fundamentals"
+          },
+          "removed": [
+            {
+              "id": "n_0769",
+              "name": "Telnet端口23",
+              "category": "network_fundamentals"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0141",
+            "name": "SSH端口22",
+            "category": "network_fundamentals"
+          },
+          "removed": [
+            {
+              "id": "n_0768",
+              "name": "SSH端口22",
+              "category": "network_fundamentals"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0215",
+            "name": "git init",
+            "category": "version_control"
+          },
+          "removed": [
+            {
+              "id": "n_0883",
+              "name": "git init",
+              "category": "version_control"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0216",
+            "name": "git add",
+            "category": "version_control"
+          },
+          "removed": [
+            {
+              "id": "n_0885",
+              "name": "git add",
+              "category": "version_control"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0217",
+            "name": "git commit",
+            "category": "version_control"
+          },
+          "removed": [
+            {
+              "id": "n_0886",
+              "name": "git commit",
+              "category": "version_control"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0218",
+            "name": "git status",
+            "category": "version_control"
+          },
+          "removed": [
+            {
+              "id": "n_0887",
+              "name": "git status",
+              "category": "version_control"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0219",
+            "name": "git log",
+            "category": "version_control"
+          },
+          "removed": [
+            {
+              "id": "n_0888",
+              "name": "git log",
+              "category": "version_control"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0222",
+            "name": "git branch",
+            "category": "version_control"
+          },
+          "removed": [
+            {
+              "id": "n_0890",
+              "name": "git branch",
+              "category": "version_control"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0223",
+            "name": "git checkout",
+            "category": "version_control"
+          },
+          "removed": [
+            {
+              "id": "n_0891",
+              "name": "git checkout",
+              "category": "version_control"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0224",
+            "name": "git merge",
+            "category": "version_control"
+          },
+          "removed": [
+            {
+              "id": "n_0892",
+              "name": "git merge",
+              "category": "version_control"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0226",
+            "name": "git clone",
+            "category": "version_control"
+          },
+          "removed": [
+            {
+              "id": "n_0884",
+              "name": "git clone",
+              "category": "version_control"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0227",
+            "name": "git push",
+            "category": "version_control"
+          },
+          "removed": [
+            {
+              "id": "n_0893",
+              "name": "git push",
+              "category": "version_control"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0228",
+            "name": "git pull",
+            "category": "version_control"
+          },
+          "removed": [
+            {
+              "id": "n_0894",
+              "name": "git pull",
+              "category": "version_control"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0229",
+            "name": "git remote",
+            "category": "version_control"
+          },
+          "removed": [
+            {
+              "id": "n_0896",
+              "name": "git remote",
+              "category": "version_control"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0265",
+            "name": "startswith()方法",
+            "category": "python_basics"
+          },
+          "removed": [
+            {
+              "id": "n_0663",
+              "name": "startswith()方法",
+              "category": "python_basics"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0266",
+            "name": "endswith()方法",
+            "category": "python_basics"
+          },
+          "removed": [
+            {
+              "id": "n_0664",
+              "name": "endswith()方法",
+              "category": "python_basics"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0267",
+            "name": "count()方法",
+            "category": "python_basics"
+          },
+          "removed": [
+            {
+              "id": "n_0660",
+              "name": "count()方法",
+              "category": "python_basics"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0269",
+            "name": "index()方法",
+            "category": "python_basics"
+          },
+          "removed": [
+            {
+              "id": "n_0661",
+              "name": "index()方法",
+              "category": "python_basics"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0273",
+            "name": "lstrip()方法",
+            "category": "python_basics"
+          },
+          "removed": [
+            {
+              "id": "n_0658",
+              "name": "lstrip()方法",
+              "category": "python_basics"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0274",
+            "name": "rstrip()方法",
+            "category": "python_basics"
+          },
+          "removed": [
+            {
+              "id": "n_0659",
+              "name": "rstrip()方法",
+              "category": "python_basics"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0276",
+            "name": "insert()方法",
+            "category": "python_basics"
+          },
+          "removed": [
+            {
+              "id": "n_0671",
+              "name": "insert()方法",
+              "category": "python_basics"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0277",
+            "name": "remove()方法",
+            "category": "python_basics"
+          },
+          "removed": [
+            {
+              "id": "n_0672",
+              "name": "remove()方法",
+              "category": "python_basics"
+            },
+            {
+              "id": "n_0448",
+              "name": "remove()方法",
+              "category": "python_basics"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0278",
+            "name": "reverse()方法",
+            "category": "python_basics"
+          },
+          "removed": [
+            {
+              "id": "n_0678",
+              "name": "reverse()方法",
+              "category": "python_basics"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0279",
+            "name": "sort()方法",
+            "category": "python_basics"
+          },
+          "removed": [
+            {
+              "id": "n_0677",
+              "name": "sort()方法",
+              "category": "python_basics"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0280",
+            "name": "copy()方法",
+            "category": "python_basics"
+          },
+          "removed": [
+            {
+              "id": "n_0679",
+              "name": "copy()方法",
+              "category": "python_basics"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0281",
+            "name": "clear()方法",
+            "category": "python_basics"
+          },
+          "removed": [
+            {
+              "id": "n_0674",
+              "name": "clear()方法",
+              "category": "python_basics"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0285",
+            "name": "update()方法",
+            "category": "python_basics"
+          },
+          "removed": [
+            {
+              "id": "n_0686",
+              "name": "update()方法",
+              "category": "python_basics"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0287",
+            "name": "popitem()方法",
+            "category": "python_basics"
+          },
+          "removed": [
+            {
+              "id": "n_0685",
+              "name": "popitem()方法",
+              "category": "python_basics"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0288",
+            "name": "setdefault()方法",
+            "category": "python_basics"
+          },
+          "removed": [
+            {
+              "id": "n_0687",
+              "name": "setdefault()方法",
+              "category": "python_basics"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0304",
+            "name": "传输层(TCP/IP)",
+            "category": "network_fundamentals"
+          },
+          "removed": [
+            {
+              "id": "n_0738",
+              "name": "传输层(TCP/IP)",
+              "category": "network_fundamentals"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0315",
+            "name": "VLAN类型",
+            "category": "network_fundamentals"
+          },
+          "removed": [
+            {
+              "id": "n_0754",
+              "name": "VLAN类型",
+              "category": "network_fundamentals"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0317",
+            "name": "路由表",
+            "category": "network_fundamentals"
+          },
+          "removed": [
+            {
+              "id": "n_0759",
+              "name": "路由表",
+              "category": "network_fundamentals"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0320",
+            "name": "默认路由",
+            "category": "network_fundamentals"
+          },
+          "removed": [
+            {
+              "id": "n_0761",
+              "name": "默认路由",
+              "category": "network_fundamentals"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0322",
+            "name": "密钥认证",
+            "category": "network_automation_libs"
+          },
+          "removed": [
+            {
+              "id": "n_0777",
+              "name": "密钥认证",
+              "category": "network_automation_libs"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0328",
+            "name": "get_facts()",
+            "category": "network_automation_libs"
+          },
+          "removed": [
+            {
+              "id": "n_0787",
+              "name": "get_facts()",
+              "category": "network_automation_libs"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0329",
+            "name": "get_interfaces()",
+            "category": "network_automation_libs"
+          },
+          "removed": [
+            {
+              "id": "n_0788",
+              "name": "get_interfaces()",
+              "category": "network_automation_libs"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0330",
+            "name": "get_config()",
+            "category": "network_automation_libs"
+          },
+          "removed": [
+            {
+              "id": "n_0790",
+              "name": "get_config()",
+              "category": "network_automation_libs"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0331",
+            "name": "get_bgp_neighbors()",
+            "category": "network_automation_libs"
+          },
+          "removed": [
+            {
+              "id": "n_0791",
+              "name": "get_bgp_neighbors()",
+              "category": "network_automation_libs"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0353",
+            "name": "Git工作流",
+            "category": "version_control"
+          },
+          "removed": [
+            {
+              "id": "n_0901",
+              "name": "Git工作流",
+              "category": "version_control"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0355",
+            "name": "GitHub Flow",
+            "category": "version_control"
+          },
+          "removed": [
+            {
+              "id": "n_0903",
+              "name": "GitHub Flow",
+              "category": "version_control"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0357",
+            "name": "git tag",
+            "category": "version_control"
+          },
+          "removed": [
+            {
+              "id": "n_0900",
+              "name": "git tag",
+              "category": "version_control"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0567",
+            "name": "支持的设备类型",
+            "category": "network_automation_libs"
+          },
+          "removed": [
+            {
+              "id": "n_0593",
+              "name": "支持的设备类型",
+              "category": "network_automation_libs"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "n_0579",
+            "name": "支持的厂商",
+            "category": "network_automation_libs"
+          },
+          "removed": [
+            {
+              "id": "n_0596",
+              "name": "支持的厂商",
+              "category": "network_automation_libs"
+            }
+          ]
+        }
+      ],
+      "before_nodes": 951,
+      "after_nodes": 873,
+      "before_rels": 1036,
+      "after_rels": 1036
+    },
+    {
+      "file": "graph_dl.json",
+      "deleted_empty_nodes": [],
+      "fixed_dangling_rels": [],
+      "merged_duplicates": [
+        {
+          "kept": {
+            "id": "2",
+            "name": "深度学习定义",
+            "category": "深度学习基础"
+          },
+          "removed": [
+            {
+              "id": "772",
+              "name": "深度学习定义",
+              "category": "深度学习基础"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "778",
+            "name": "深度学习三要素",
+            "category": "深度学习基础"
+          },
+          "removed": [
+            {
+              "id": "10",
+              "name": "深度学习三要素",
+              "category": "深度学习基础"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "773",
+            "name": "表示学习",
+            "category": "深度学习基础"
+          },
+          "removed": [
+            {
+              "id": "11",
+              "name": "表示学习",
+              "category": "深度学习基础"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "774",
+            "name": "特征学习",
+            "category": "深度学习基础"
+          },
+          "removed": [
+            {
+              "id": "12",
+              "name": "特征学习",
+              "category": "深度学习基础"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "775",
+            "name": "端到端学习",
+            "category": "深度学习基础"
+          },
+          "removed": [
+            {
+              "id": "14",
+              "name": "端到端学习",
+              "category": "深度学习基础"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "30",
+            "name": "GPU加速",
+            "category": "深度学习基础"
+          },
+          "removed": [
+            {
+              "id": "779",
+              "name": "GPU加速",
+              "category": "深度学习基础"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "825",
+            "name": "输入层",
+            "category": "神经网络基础"
+          },
+          "removed": [
+            {
+              "id": "44",
+              "name": "输入层",
+              "category": "神经网络基础"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "826",
+            "name": "隐藏层",
+            "category": "神经网络基础"
+          },
+          "removed": [
+            {
+              "id": "45",
+              "name": "隐藏层",
+              "category": "神经网络基础"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "827",
+            "name": "输出层",
+            "category": "神经网络基础"
+          },
+          "removed": [
+            {
+              "id": "46",
+              "name": "输出层",
+              "category": "神经网络基础"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "835",
+            "name": "激活函数",
+            "category": "神经网络基础"
+          },
+          "removed": [
+            {
+              "id": "51",
+              "name": "激活函数",
+              "category": "神经网络基础"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "839",
+            "name": "Leaky ReLU",
+            "category": "神经网络基础"
+          },
+          "removed": [
+            {
+              "id": "56",
+              "name": "Leaky ReLU",
+              "category": "神经网络基础"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "840",
+            "name": "PReLU",
+            "category": "神经网络基础"
+          },
+          "removed": [
+            {
+              "id": "57",
+              "name": "PReLU",
+              "category": "神经网络基础"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "841",
+            "name": "ELU",
+            "category": "神经网络基础"
+          },
+          "removed": [
+            {
+              "id": "58",
+              "name": "ELU",
+              "category": "神经网络基础"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "859",
+            "name": "权重初始化",
+            "category": "神经网络基础"
+          },
+          "removed": [
+            {
+              "id": "122",
+              "name": "权重初始化",
+              "category": "神经网络基础"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "861",
+            "name": "随机初始化",
+            "category": "神经网络基础"
+          },
+          "removed": [
+            {
+              "id": "123",
+              "name": "随机初始化",
+              "category": "神经网络基础"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "864",
+            "name": "Xavier初始化",
+            "category": "神经网络基础"
+          },
+          "removed": [
+            {
+              "id": "124",
+              "name": "Xavier初始化",
+              "category": "神经网络基础"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "865",
+            "name": "He初始化",
+            "category": "神经网络基础"
+          },
+          "removed": [
+            {
+              "id": "125",
+              "name": "He初始化",
+              "category": "神经网络基础"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "866",
+            "name": "正交初始化",
+            "category": "神经网络基础"
+          },
+          "removed": [
+            {
+              "id": "126",
+              "name": "正交初始化",
+              "category": "神经网络基础"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "860",
+            "name": "零初始化",
+            "category": "神经网络基础"
+          },
+          "removed": [
+            {
+              "id": "127",
+              "name": "零初始化",
+              "category": "神经网络基础"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "868",
+            "name": "偏置初始化",
+            "category": "神经网络基础"
+          },
+          "removed": [
+            {
+              "id": "129",
+              "name": "偏置初始化",
+              "category": "神经网络基础"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "876",
+            "name": "卷积核",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "146",
+              "name": "卷积核",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "147",
+            "name": "滤波器",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "877",
+              "name": "滤波器",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "148",
+            "name": "特征图",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "878",
+              "name": "特征图",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "879",
+            "name": "感受野",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "149",
+              "name": "感受野",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "897",
+            "name": "1x1卷积",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "155",
+              "name": "1x1卷积",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "886",
+            "name": "膨胀卷积",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "156",
+              "name": "膨胀卷积",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "888",
+            "name": "转置卷积",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "157",
+              "name": "转置卷积",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "889",
+            "name": "反卷积",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "158",
+              "name": "反卷积",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "895",
+            "name": "分组卷积",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "159",
+              "name": "分组卷积",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "892",
+            "name": "深度可分离卷积",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "160",
+              "name": "深度可分离卷积",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "893",
+            "name": "深度卷积",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "161",
+              "name": "深度卷积",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "894",
+            "name": "逐点卷积",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "162",
+              "name": "逐点卷积",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "887",
+            "name": "空洞卷积",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "163",
+              "name": "空洞卷积",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "164",
+            "name": "池化层",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "903",
+              "name": "池化层",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "904",
+            "name": "最大池化",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "165",
+              "name": "最大池化",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "905",
+            "name": "平均池化",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "166",
+              "name": "平均池化",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "906",
+            "name": "全局平均池化",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "167",
+              "name": "全局平均池化",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "907",
+            "name": "全局最大池化",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "168",
+              "name": "全局最大池化",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "170",
+            "name": "填充",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "881",
+              "name": "填充",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "882",
+            "name": "零填充",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "171",
+              "name": "零填充",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "883",
+            "name": "有效填充",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "172",
+              "name": "有效填充",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "884",
+            "name": "相同填充",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "173",
+              "name": "相同填充",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "174",
+            "name": "步长",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "880",
+              "name": "步长",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "915",
+            "name": "LeNet",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "182",
+              "name": "LeNet",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "916",
+            "name": "AlexNet",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "184",
+              "name": "AlexNet",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "917",
+            "name": "VGGNet",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "189",
+              "name": "VGGNet",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "918",
+            "name": "GoogLeNet",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "194",
+              "name": "GoogLeNet",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "196",
+            "name": "Inception v1",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "920",
+              "name": "Inception v1",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "197",
+            "name": "Inception v2",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "921",
+              "name": "Inception v2",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "198",
+            "name": "Inception v3",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "922",
+              "name": "Inception v3",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "199",
+            "name": "Inception v4",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "923",
+              "name": "Inception v4",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "202",
+            "name": "ResNet",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "925",
+              "name": "ResNet",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "926",
+            "name": "残差连接",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "203",
+              "name": "残差连接",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "927",
+            "name": "跳跃连接",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "204",
+              "name": "跳跃连接",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "928",
+            "name": "瓶颈结构",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "207",
+              "name": "瓶颈结构",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "208",
+            "name": "ResNet-18",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "930",
+              "name": "ResNet-18",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "209",
+            "name": "ResNet-34",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "931",
+              "name": "ResNet-34",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "210",
+            "name": "ResNet-50",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "932",
+              "name": "ResNet-50",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "211",
+            "name": "ResNet-101",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "933",
+              "name": "ResNet-101",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "212",
+            "name": "ResNet-152",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "934",
+              "name": "ResNet-152",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "935",
+            "name": "ResNeXt",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "215",
+              "name": "ResNeXt",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "945",
+            "name": "DenseNet",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "217",
+              "name": "DenseNet",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "946",
+            "name": "密集连接",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "218",
+              "name": "密集连接",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "947",
+            "name": "特征复用",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "219",
+              "name": "特征复用",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "940",
+            "name": "MobileNet",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "222",
+              "name": "MobileNet",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "943",
+            "name": "EfficientNet",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "229",
+              "name": "EfficientNet",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "944",
+            "name": "复合缩放",
+            "category": "卷积神经网络"
+          },
+          "removed": [
+            {
+              "id": "230",
+              "name": "复合缩放",
+              "category": "卷积神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "244",
+            "name": "循环神经网络",
+            "category": "循环神经网络"
+          },
+          "removed": [
+            {
+              "id": "955",
+              "name": "循环神经网络",
+              "category": "循环神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "985",
+            "name": "序列到序列",
+            "category": "循环神经网络"
+          },
+          "removed": [
+            {
+              "id": "252",
+              "name": "序列到序列",
+              "category": "循环神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "269",
+            "name": "LSTM变体",
+            "category": "循环神经网络"
+          },
+          "removed": [
+            {
+              "id": "963",
+              "name": "LSTM变体",
+              "category": "循环神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "275",
+            "name": "双向RNN",
+            "category": "循环神经网络"
+          },
+          "removed": [
+            {
+              "id": "958",
+              "name": "双向RNN",
+              "category": "循环神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "961",
+            "name": "堆叠RNN",
+            "category": "循环神经网络"
+          },
+          "removed": [
+            {
+              "id": "281",
+              "name": "堆叠RNN",
+              "category": "循环神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "960",
+            "name": "多层RNN",
+            "category": "循环神经网络"
+          },
+          "removed": [
+            {
+              "id": "282",
+              "name": "多层RNN",
+              "category": "循环神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "987",
+            "name": "机器翻译",
+            "category": "循环神经网络"
+          },
+          "removed": [
+            {
+              "id": "285",
+              "name": "机器翻译",
+              "category": "循环神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "993",
+            "name": "时间序列预测",
+            "category": "循环神经网络"
+          },
+          "removed": [
+            {
+              "id": "287",
+              "name": "时间序列预测",
+              "category": "循环神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "977",
+            "name": "注意力机制",
+            "category": "循环神经网络"
+          },
+          "removed": [
+            {
+              "id": "290",
+              "name": "注意力机制",
+              "category": "循环神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "986",
+            "name": "编码器-解码器",
+            "category": "循环神经网络"
+          },
+          "removed": [
+            {
+              "id": "292",
+              "name": "编码器-解码器",
+              "category": "循环神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "978",
+            "name": "加性注意力",
+            "category": "循环神经网络"
+          },
+          "removed": [
+            {
+              "id": "299",
+              "name": "加性注意力",
+              "category": "循环神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "979",
+            "name": "乘性注意力",
+            "category": "循环神经网络"
+          },
+          "removed": [
+            {
+              "id": "300",
+              "name": "乘性注意力",
+              "category": "循环神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "980",
+            "name": "自注意力",
+            "category": "循环神经网络"
+          },
+          "removed": [
+            {
+              "id": "304",
+              "name": "自注意力",
+              "category": "循环神经网络"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "1004",
+            "name": "生成模型",
+            "category": "生成模型"
+          },
+          "removed": [
+            {
+              "id": "770",
+              "name": "生成模型",
+              "category": "生成模型"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "1079",
+            "name": "自监督学习",
+            "category": "自监督学习"
+          },
+          "removed": [
+            {
+              "id": "771",
+              "name": "自监督学习",
+              "category": "自监督学习"
+            }
+          ]
+        }
+      ],
+      "before_nodes": 1142,
+      "after_nodes": 1060,
+      "before_rels": 1516,
+      "after_rels": 1516
+    },
+    {
+      "file": "graph_llm.json",
+      "deleted_empty_nodes": [],
+      "fixed_dangling_rels": [],
+      "merged_duplicates": [
+        {
+          "kept": {
+            "id": "920",
+            "name": "Agents",
+            "category": "开发框架与工具"
+          },
+          "removed": [
+            {
+              "id": "949",
+              "name": "Agents",
+              "category": "开发框架与工具"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "921",
+            "name": "Tools",
+            "category": "开发框架与工具"
+          },
+          "removed": [
+            {
+              "id": "950",
+              "name": "Tools",
+              "category": "开发框架与工具"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "929",
+            "name": "Retrievers",
+            "category": "开发框架与工具"
+          },
+          "removed": [
+            {
+              "id": "947",
+              "name": "Retrievers",
+              "category": "开发框架与工具"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "930",
+            "name": "Memory",
+            "category": "开发框架与工具"
+          },
+          "removed": [
+            {
+              "id": "951",
+              "name": "Memory",
+              "category": "开发框架与工具"
+            },
+            {
+              "id": "999",
+              "name": "Memory",
+              "category": "开发框架与工具"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "931",
+            "name": "Callbacks",
+            "category": "开发框架与工具"
+          },
+          "removed": [
+            {
+              "id": "952",
+              "name": "Callbacks",
+              "category": "开发框架与工具"
+            }
+          ]
+        }
+      ],
+      "before_nodes": 1012,
+      "after_nodes": 1006,
+      "before_rels": 1028,
+      "after_rels": 1028
+    },
+    {
+      "file": "graph_ml.json",
+      "deleted_empty_nodes": [],
+      "fixed_dangling_rels": [],
+      "merged_duplicates": [
+        {
+          "kept": {
+            "id": "173",
+            "name": "一对一",
+            "category": "监督学习"
+          },
+          "removed": [
+            {
+              "id": "885",
+              "name": "一对一",
+              "category": "监督学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "210",
+            "name": "肘部法则",
+            "category": "无监督学习"
+          },
+          "removed": [
+            {
+              "id": "929",
+              "name": "肘部法则",
+              "category": "无监督学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "211",
+            "name": "轮廓系数",
+            "category": "无监督学习"
+          },
+          "removed": [
+            {
+              "id": "920",
+              "name": "轮廓系数",
+              "category": "无监督学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "214",
+            "name": "层次聚类",
+            "category": "无监督学习"
+          },
+          "removed": [
+            {
+              "id": "900",
+              "name": "层次聚类",
+              "category": "无监督学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "233",
+            "name": "谱聚类",
+            "category": "无监督学习"
+          },
+          "removed": [
+            {
+              "id": "907",
+              "name": "谱聚类",
+              "category": "无监督学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "240",
+            "name": "聚类评估",
+            "category": "无监督学习"
+          },
+          "removed": [
+            {
+              "id": "919",
+              "name": "聚类评估",
+              "category": "无监督学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "241",
+            "name": "兰德指数",
+            "category": "无监督学习"
+          },
+          "removed": [
+            {
+              "id": "924",
+              "name": "兰德指数",
+              "category": "无监督学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "242",
+            "name": "调整兰德指数",
+            "category": "无监督学习"
+          },
+          "removed": [
+            {
+              "id": "925",
+              "name": "调整兰德指数",
+              "category": "无监督学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "264",
+            "name": "t-SNE",
+            "category": "无监督学习"
+          },
+          "removed": [
+            {
+              "id": "936",
+              "name": "t-SNE",
+              "category": "无监督学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "937",
+            "name": "UMAP",
+            "category": "无监督学习"
+          },
+          "removed": [
+            {
+              "id": "270",
+              "name": "UMAP",
+              "category": "无监督学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "271",
+            "name": "Isomap",
+            "category": "无监督学习"
+          },
+          "removed": [
+            {
+              "id": "938",
+              "name": "Isomap",
+              "category": "无监督学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "272",
+            "name": "局部线性嵌入",
+            "category": "无监督学习"
+          },
+          "removed": [
+            {
+              "id": "939",
+              "name": "局部线性嵌入",
+              "category": "无监督学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "274",
+            "name": "因子分析",
+            "category": "无监督学习"
+          },
+          "removed": [
+            {
+              "id": "934",
+              "name": "因子分析",
+              "category": "无监督学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "275",
+            "name": "独立成分分析",
+            "category": "无监督学习"
+          },
+          "removed": [
+            {
+              "id": "935",
+              "name": "独立成分分析",
+              "category": "无监督学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "276",
+            "name": "异常检测",
+            "category": "无监督学习"
+          },
+          "removed": [
+            {
+              "id": "951",
+              "name": "异常检测",
+              "category": "无监督学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "277",
+            "name": "局部离群因子",
+            "category": "无监督学习"
+          },
+          "removed": [
+            {
+              "id": "953",
+              "name": "局部离群因子",
+              "category": "无监督学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "286",
+            "name": "混淆矩阵",
+            "category": "模型评估与调优"
+          },
+          "removed": [
+            {
+              "id": "992",
+              "name": "混淆矩阵",
+              "category": "模型评估与调优"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "291",
+            "name": "ROC曲线",
+            "category": "模型评估与调优"
+          },
+          "removed": [
+            {
+              "id": "994",
+              "name": "ROC曲线",
+              "category": "模型评估与调优"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "995",
+            "name": "PR曲线",
+            "category": "模型评估与调优"
+          },
+          "removed": [
+            {
+              "id": "293",
+              "name": "PR曲线",
+              "category": "模型评估与调优"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "300",
+            "name": "分层K折",
+            "category": "模型评估与调优"
+          },
+          "removed": [
+            {
+              "id": "970",
+              "name": "分层K折",
+              "category": "模型评估与调优"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "301",
+            "name": "留一法",
+            "category": "模型评估与调优"
+          },
+          "removed": [
+            {
+              "id": "972",
+              "name": "留一法",
+              "category": "模型评估与调优"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "971",
+            "name": "时间序列分割",
+            "category": "模型评估与调优"
+          },
+          "removed": [
+            {
+              "id": "302",
+              "name": "时间序列分割",
+              "category": "模型评估与调优"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "306",
+            "name": "网格搜索",
+            "category": "模型评估与调优"
+          },
+          "removed": [
+            {
+              "id": "959",
+              "name": "网格搜索",
+              "category": "模型评估与调优"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "308",
+            "name": "随机搜索",
+            "category": "模型评估与调优"
+          },
+          "removed": [
+            {
+              "id": "960",
+              "name": "随机搜索",
+              "category": "模型评估与调优"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "310",
+            "name": "贝叶斯优化",
+            "category": "模型评估与调优"
+          },
+          "removed": [
+            {
+              "id": "961",
+              "name": "贝叶斯优化",
+              "category": "模型评估与调优"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "313",
+            "name": "学习曲线",
+            "category": "模型评估与调优"
+          },
+          "removed": [
+            {
+              "id": "956",
+              "name": "学习曲线",
+              "category": "模型评估与调优"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "314",
+            "name": "验证曲线",
+            "category": "模型评估与调优"
+          },
+          "removed": [
+            {
+              "id": "957",
+              "name": "验证曲线",
+              "category": "模型评估与调优"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "977",
+            "name": "模型比较",
+            "category": "模型评估与调优"
+          },
+          "removed": [
+            {
+              "id": "330",
+              "name": "模型比较",
+              "category": "模型评估与调优"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "978",
+            "name": "统计检验",
+            "category": "模型评估与调优"
+          },
+          "removed": [
+            {
+              "id": "331",
+              "name": "统计检验",
+              "category": "模型评估与调优"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "333",
+            "name": "分类报告",
+            "category": "模型评估与调优"
+          },
+          "removed": [
+            {
+              "id": "993",
+              "name": "分类报告",
+              "category": "模型评估与调优"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "342",
+            "name": "校准曲线",
+            "category": "模型评估与调优"
+          },
+          "removed": [
+            {
+              "id": "996",
+              "name": "校准曲线",
+              "category": "模型评估与调优"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "343",
+            "name": "可靠性图",
+            "category": "模型评估与调优"
+          },
+          "removed": [
+            {
+              "id": "997",
+              "name": "可靠性图",
+              "category": "模型评估与调优"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "359",
+            "name": "硬投票",
+            "category": "集成学习"
+          },
+          "removed": [
+            {
+              "id": "1021",
+              "name": "硬投票",
+              "category": "集成学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "360",
+            "name": "软投票",
+            "category": "集成学习"
+          },
+          "removed": [
+            {
+              "id": "1020",
+              "name": "软投票",
+              "category": "集成学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "363",
+            "name": "基学习器",
+            "category": "集成学习"
+          },
+          "removed": [
+            {
+              "id": "1004",
+              "name": "基学习器",
+              "category": "集成学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "1005",
+            "name": "多样性",
+            "category": "集成学习"
+          },
+          "removed": [
+            {
+              "id": "366",
+              "name": "多样性",
+              "category": "集成学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "1006",
+            "name": "误差-分歧分解",
+            "category": "集成学习"
+          },
+          "removed": [
+            {
+              "id": "367",
+              "name": "误差-分歧分解",
+              "category": "集成学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "370",
+            "name": "Extra Trees",
+            "category": "集成学习"
+          },
+          "removed": [
+            {
+              "id": "1031",
+              "name": "Extra Trees",
+              "category": "集成学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "381",
+            "name": "XGBoost",
+            "category": "集成学习"
+          },
+          "removed": [
+            {
+              "id": "1029",
+              "name": "XGBoost",
+              "category": "集成学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "1028",
+            "name": "LightGBM",
+            "category": "集成学习"
+          },
+          "removed": [
+            {
+              "id": "386",
+              "name": "LightGBM",
+              "category": "集成学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "392",
+            "name": "CatBoost",
+            "category": "集成学习"
+          },
+          "removed": [
+            {
+              "id": "1026",
+              "name": "CatBoost",
+              "category": "集成学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "397",
+            "name": "元学习器",
+            "category": "集成学习"
+          },
+          "removed": [
+            {
+              "id": "1003",
+              "name": "元学习器",
+              "category": "集成学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "409",
+            "name": "集成剪枝",
+            "category": "集成学习"
+          },
+          "removed": [
+            {
+              "id": "1049",
+              "name": "集成剪枝",
+              "category": "集成学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "413",
+            "name": "集成学习理论",
+            "category": "集成学习"
+          },
+          "removed": [
+            {
+              "id": "1054",
+              "name": "集成学习理论",
+              "category": "集成学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "1055",
+            "name": "PAC学习",
+            "category": "集成学习"
+          },
+          "removed": [
+            {
+              "id": "414",
+              "name": "PAC学习",
+              "category": "集成学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "425",
+            "name": "加权平均",
+            "category": "集成学习"
+          },
+          "removed": [
+            {
+              "id": "1016",
+              "name": "加权平均",
+              "category": "集成学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "426",
+            "name": "简单平均",
+            "category": "集成学习"
+          },
+          "removed": [
+            {
+              "id": "1017",
+              "name": "简单平均",
+              "category": "集成学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "862",
+            "name": "最大后验估计",
+            "category": "机器学习基础"
+          },
+          "removed": [
+            {
+              "id": "624",
+              "name": "最大后验估计",
+              "category": "机器学习基础"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "742",
+            "name": "亲和传播",
+            "category": "无监督学习"
+          },
+          "removed": [
+            {
+              "id": "915",
+              "name": "亲和传播",
+              "category": "无监督学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "743",
+            "name": "均值漂移",
+            "category": "无监督学习"
+          },
+          "removed": [
+            {
+              "id": "914",
+              "name": "均值漂移",
+              "category": "无监督学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "756",
+            "name": "增量PCA",
+            "category": "无监督学习"
+          },
+          "removed": [
+            {
+              "id": "947",
+              "name": "增量PCA",
+              "category": "无监督学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "757",
+            "name": "稀疏PCA",
+            "category": "无监督学习"
+          },
+          "removed": [
+            {
+              "id": "948",
+              "name": "稀疏PCA",
+              "category": "无监督学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "759",
+            "name": "截断SVD",
+            "category": "无监督学习"
+          },
+          "removed": [
+            {
+              "id": "949",
+              "name": "截断SVD",
+              "category": "无监督学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "763",
+            "name": "非负矩阵分解",
+            "category": "无监督学习"
+          },
+          "removed": [
+            {
+              "id": "950",
+              "name": "非负矩阵分解",
+              "category": "无监督学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "774",
+            "name": "椭圆包络",
+            "category": "无监督学习"
+          },
+          "removed": [
+            {
+              "id": "955",
+              "name": "椭圆包络",
+              "category": "无监督学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "912",
+            "name": "密度峰值聚类",
+            "category": "无监督学习"
+          },
+          "removed": [
+            {
+              "id": "779",
+              "name": "密度峰值聚类",
+              "category": "无监督学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "813",
+            "name": "留P法",
+            "category": "模型评估与调优"
+          },
+          "removed": [
+            {
+              "id": "973",
+              "name": "留P法",
+              "category": "模型评估与调优"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "819",
+            "name": "超参数优化",
+            "category": "模型评估与调优"
+          },
+          "removed": [
+            {
+              "id": "958",
+              "name": "超参数优化",
+              "category": "模型评估与调优"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "820",
+            "name": "遗传算法",
+            "category": "模型评估与调优"
+          },
+          "removed": [
+            {
+              "id": "962",
+              "name": "遗传算法",
+              "category": "模型评估与调优"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "821",
+            "name": "粒子群优化",
+            "category": "模型评估与调优"
+          },
+          "removed": [
+            {
+              "id": "963",
+              "name": "粒子群优化",
+              "category": "模型评估与调优"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "827",
+            "name": "Pasting",
+            "category": "集成学习"
+          },
+          "removed": [
+            {
+              "id": "1045",
+              "name": "Pasting",
+              "category": "集成学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "843",
+            "name": "多数投票",
+            "category": "集成学习"
+          },
+          "removed": [
+            {
+              "id": "1018",
+              "name": "多数投票",
+              "category": "集成学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "844",
+            "name": "加权投票",
+            "category": "集成学习"
+          },
+          "removed": [
+            {
+              "id": "1019",
+              "name": "加权投票",
+              "category": "集成学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "845",
+            "name": "集成选择",
+            "category": "集成学习"
+          },
+          "removed": [
+            {
+              "id": "1050",
+              "name": "集成选择",
+              "category": "集成学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "1047",
+            "name": "Random Patches",
+            "category": "集成学习"
+          },
+          "removed": [
+            {
+              "id": "1033",
+              "name": "Random Patches",
+              "category": "集成学习"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "1046",
+            "name": "Random Subspaces",
+            "category": "集成学习"
+          },
+          "removed": [
+            {
+              "id": "1034",
+              "name": "Random Subspaces",
+              "category": "集成学习"
+            }
+          ]
+        }
+      ],
+      "before_nodes": 1059,
+      "after_nodes": 993,
+      "before_rels": 1463,
+      "after_rels": 1463
+    },
+    {
+      "file": "graph_nlp.json",
+      "deleted_empty_nodes": [],
+      "fixed_dangling_rels": [],
+      "merged_duplicates": [
+        {
+          "kept": {
+            "id": "371",
+            "name": "最大熵模型",
+            "category": "传统NLP方法"
+          },
+          "removed": [
+            {
+              "id": "401",
+              "name": "最大熵模型",
+              "category": "传统NLP方法"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "513",
+            "name": "机器翻译",
+            "category": "Seq2Seq与注意力"
+          },
+          "removed": [
+            {
+              "id": "573",
+              "name": "机器翻译",
+              "category": "Seq2Seq与注意力"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "637",
+            "name": "ERNIE",
+            "category": "Transformer与预训练"
+          },
+          "removed": [
+            {
+              "id": "674",
+              "name": "ERNIE",
+              "category": "Transformer与预训练"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "638",
+            "name": "MacBERT",
+            "category": "Transformer与预训练"
+          },
+          "removed": [
+            {
+              "id": "677",
+              "name": "MacBERT",
+              "category": "Transformer与预训练"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "807",
+            "name": "Pipeline",
+            "category": "NLP工具与库"
+          },
+          "removed": [
+            {
+              "id": "834",
+              "name": "Pipeline",
+              "category": "NLP工具与库"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "818",
+            "name": "分词",
+            "category": "NLP工具与库"
+          },
+          "removed": [
+            {
+              "id": "862",
+              "name": "分词",
+              "category": "NLP工具与库"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "819",
+            "name": "词性标注",
+            "category": "NLP工具与库"
+          },
+          "removed": [
+            {
+              "id": "843",
+              "name": "词性标注",
+              "category": "NLP工具与库"
+            },
+            {
+              "id": "855",
+              "name": "词性标注",
+              "category": "NLP工具与库"
+            },
+            {
+              "id": "863",
+              "name": "词性标注",
+              "category": "NLP工具与库"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "820",
+            "name": "命名实体识别",
+            "category": "NLP工具与库"
+          },
+          "removed": [
+            {
+              "id": "844",
+              "name": "命名实体识别",
+              "category": "NLP工具与库"
+            },
+            {
+              "id": "864",
+              "name": "命名实体识别",
+              "category": "NLP工具与库"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "822",
+            "name": "文本分类",
+            "category": "NLP工具与库"
+          },
+          "removed": [
+            {
+              "id": "848",
+              "name": "文本分类",
+              "category": "NLP工具与库"
+            },
+            {
+              "id": "877",
+              "name": "文本分类",
+              "category": "NLP工具与库"
+            },
+            {
+              "id": "884",
+              "name": "文本分类",
+              "category": "NLP工具与库"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "845",
+            "name": "依存句法分析",
+            "category": "NLP工具与库"
+          },
+          "removed": [
+            {
+              "id": "865",
+              "name": "依存句法分析",
+              "category": "NLP工具与库"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "846",
+            "name": "关键词提取",
+            "category": "NLP工具与库"
+          },
+          "removed": [
+            {
+              "id": "856",
+              "name": "关键词提取",
+              "category": "NLP工具与库"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "871",
+            "name": "FastText",
+            "category": "NLP工具与库"
+          },
+          "removed": [
+            {
+              "id": "876",
+              "name": "FastText",
+              "category": "NLP工具与库"
+            }
+          ]
+        },
+        {
+          "kept": {
+            "id": "960",
+            "name": "人工评估",
+            "category": "NLP评估指标"
+          },
+          "removed": [
+            {
+              "id": "982",
+              "name": "人工评估",
+              "category": "NLP评估指标"
+            },
+            {
+              "id": "985",
+              "name": "人工评估",
+              "category": "NLP评估指标"
+            }
+          ]
+        }
+      ],
+      "before_nodes": 1006,
+      "after_nodes": 987,
+      "before_rels": 1017,
+      "after_rels": 1017
+    }
+  ]
+}

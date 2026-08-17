@@ -1,0 +1,901 @@
+{
+  "total_calls": 412,
+  "endpoints": [
+    {
+      "method": "GET",
+      "path": "/api/v1/knowledge-points?page_size=1",
+      "count": 1,
+      "avg_ms": 2336.97,
+      "max_ms": 2336.97,
+      "min_ms": 2336.97
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/graph-groups",
+      "count": 1,
+      "avg_ms": 817.21,
+      "max_ms": 817.21,
+      "min_ms": 817.21
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/graph/statistics",
+      "count": 2,
+      "avg_ms": 776.9,
+      "max_ms": 798.17,
+      "min_ms": 755.64
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/knowledge-points?page_size=5",
+      "count": 1,
+      "avg_ms": 341.19,
+      "max_ms": 341.19,
+      "min_ms": 341.19
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/knowledge-points",
+      "count": 1,
+      "avg_ms": 269.97,
+      "max_ms": 269.97,
+      "min_ms": 269.97
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/auth/login",
+      "count": 79,
+      "avg_ms": 85.91,
+      "max_ms": 87.23,
+      "min_ms": 84.07
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/auth/register",
+      "count": 80,
+      "avg_ms": 84.13,
+      "max_ms": 89.22,
+      "min_ms": 0.32
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/resources/24",
+      "count": 1,
+      "avg_ms": 51.19,
+      "max_ms": 51.19,
+      "min_ms": 51.19
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/users/10398/profile",
+      "count": 1,
+      "avg_ms": 29.26,
+      "max_ms": 29.26,
+      "min_ms": 29.26
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/knowledge-points/search?keyword=数",
+      "count": 1,
+      "avg_ms": 22.74,
+      "max_ms": 22.74,
+      "min_ms": 22.74
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/knowledge-points/search?keyword=基础",
+      "count": 1,
+      "avg_ms": 21.45,
+      "max_ms": 21.45,
+      "min_ms": 21.45
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/graph/tracks",
+      "count": 1,
+      "avg_ms": 15.13,
+      "max_ms": 15.13,
+      "min_ms": 15.13
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/exams/76/submit",
+      "count": 1,
+      "avg_ms": 11.27,
+      "max_ms": 11.27,
+      "min_ms": 11.27
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/resources",
+      "count": 3,
+      "avg_ms": 10.75,
+      "max_ms": 26.57,
+      "min_ms": 1.06
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/exams/78/submit",
+      "count": 2,
+      "avg_ms": 10.7,
+      "max_ms": 10.75,
+      "min_ms": 10.64
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/learning/path",
+      "count": 2,
+      "avg_ms": 9.87,
+      "max_ms": 10.46,
+      "min_ms": 9.28
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/exams/80/submit",
+      "count": 1,
+      "avg_ms": 8.66,
+      "max_ms": 8.66,
+      "min_ms": 8.66
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/exams/generate",
+      "count": 8,
+      "avg_ms": 8.51,
+      "max_ms": 12.54,
+      "min_ms": 5.83
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/exams/83/submit",
+      "count": 1,
+      "avg_ms": 8.0,
+      "max_ms": 8.0,
+      "min_ms": 8.0
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/exams/82/submit",
+      "count": 1,
+      "avg_ms": 7.92,
+      "max_ms": 7.92,
+      "min_ms": 7.92
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/exams/76/start",
+      "count": 2,
+      "avg_ms": 7.76,
+      "max_ms": 14.01,
+      "min_ms": 1.51
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/exams/76/submissions/183/finalize",
+      "count": 1,
+      "avg_ms": 6.97,
+      "max_ms": 6.97,
+      "min_ms": 6.97
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/exams/76/publish",
+      "count": 1,
+      "avg_ms": 6.52,
+      "max_ms": 6.52,
+      "min_ms": 6.52
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/logs/operations?page_size=5",
+      "count": 1,
+      "avg_ms": 6.39,
+      "max_ms": 6.39,
+      "min_ms": 6.39
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/exams/78/start",
+      "count": 2,
+      "avg_ms": 6.06,
+      "max_ms": 6.81,
+      "min_ms": 5.31
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/exams/78/publish",
+      "count": 1,
+      "avg_ms": 5.7,
+      "max_ms": 5.7,
+      "min_ms": 5.7
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/users/10398/achievements",
+      "count": 1,
+      "avg_ms": 5.68,
+      "max_ms": 5.68,
+      "min_ms": 5.68
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/exams/83/publish",
+      "count": 1,
+      "avg_ms": 5.45,
+      "max_ms": 5.45,
+      "min_ms": 5.45
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/exams/80/publish",
+      "count": 1,
+      "avg_ms": 5.32,
+      "max_ms": 5.32,
+      "min_ms": 5.32
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/classes/join",
+      "count": 10,
+      "avg_ms": 5.0,
+      "max_ms": 6.6,
+      "min_ms": 3.72
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/learning/plans/13/checkin",
+      "count": 2,
+      "avg_ms": 4.84,
+      "max_ms": 5.59,
+      "min_ms": 4.09
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/exams/78/answers",
+      "count": 1,
+      "avg_ms": 4.57,
+      "max_ms": 4.57,
+      "min_ms": 4.57
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/learning/plans/11/checkin",
+      "count": 1,
+      "avg_ms": 4.5,
+      "max_ms": 4.5,
+      "min_ms": 4.5
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/classes",
+      "count": 13,
+      "avg_ms": 4.46,
+      "max_ms": 5.8,
+      "min_ms": 3.25
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/exams/76/answers",
+      "count": 4,
+      "avg_ms": 4.42,
+      "max_ms": 5.06,
+      "min_ms": 3.99
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/questions/1498/approve",
+      "count": 1,
+      "avg_ms": 4.41,
+      "max_ms": 4.41,
+      "min_ms": 4.41
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/exams/80/start-homework",
+      "count": 2,
+      "avg_ms": 4.37,
+      "max_ms": 4.53,
+      "min_ms": 4.2
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/exams/82/start",
+      "count": 1,
+      "avg_ms": 4.19,
+      "max_ms": 4.19,
+      "min_ms": 4.19
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/exams/81/publish",
+      "count": 1,
+      "avg_ms": 4.09,
+      "max_ms": 4.09,
+      "min_ms": 4.09
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/exams/77/publish",
+      "count": 1,
+      "avg_ms": 4.03,
+      "max_ms": 4.03,
+      "min_ms": 4.03
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/classes/60",
+      "count": 1,
+      "avg_ms": 3.91,
+      "max_ms": 3.91,
+      "min_ms": 3.91
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/classes/62/leave",
+      "count": 1,
+      "avg_ms": 3.89,
+      "max_ms": 3.89,
+      "min_ms": 3.89
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/learning/plans",
+      "count": 3,
+      "avg_ms": 3.86,
+      "max_ms": 4.47,
+      "min_ms": 2.9
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/classes/61/announcements",
+      "count": 1,
+      "avg_ms": 3.8,
+      "max_ms": 3.8,
+      "min_ms": 3.8
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/questions",
+      "count": 34,
+      "avg_ms": 3.65,
+      "max_ms": 5.03,
+      "min_ms": 1.06
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/exams/83/start",
+      "count": 1,
+      "avg_ms": 3.62,
+      "max_ms": 3.62,
+      "min_ms": 3.62
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/exams/82/publish",
+      "count": 1,
+      "avg_ms": 3.6,
+      "max_ms": 3.6,
+      "min_ms": 3.6
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/questions/1499/favorite",
+      "count": 1,
+      "avg_ms": 3.43,
+      "max_ms": 3.43,
+      "min_ms": 3.43
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/exams/76/analysis",
+      "count": 1,
+      "avg_ms": 3.39,
+      "max_ms": 3.39,
+      "min_ms": 3.39
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v1/questions/1499/favorite",
+      "count": 1,
+      "avg_ms": 3.38,
+      "max_ms": 3.38,
+      "min_ms": 3.38
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/exams/83/answers",
+      "count": 1,
+      "avg_ms": 3.26,
+      "max_ms": 3.26,
+      "min_ms": 3.26
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/classes/60/announcements",
+      "count": 1,
+      "avg_ms": 3.13,
+      "max_ms": 3.13,
+      "min_ms": 3.13
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/exams/82/my-result",
+      "count": 1,
+      "avg_ms": 2.92,
+      "max_ms": 2.92,
+      "min_ms": 2.92
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/questions?page_size=5",
+      "count": 1,
+      "avg_ms": 2.91,
+      "max_ms": 2.91,
+      "min_ms": 2.91
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/exams/76/my-result",
+      "count": 1,
+      "avg_ms": 2.85,
+      "max_ms": 2.85,
+      "min_ms": 2.85
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/exams/77",
+      "count": 1,
+      "avg_ms": 2.73,
+      "max_ms": 2.73,
+      "min_ms": 2.73
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/exams/82/answers",
+      "count": 2,
+      "avg_ms": 2.68,
+      "max_ms": 2.69,
+      "min_ms": 2.67
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/classes/68/announcements",
+      "count": 1,
+      "avg_ms": 2.67,
+      "max_ms": 2.67,
+      "min_ms": 2.67
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/questions",
+      "count": 3,
+      "avg_ms": 2.54,
+      "max_ms": 4.15,
+      "min_ms": 0.22
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/auth/users/10401/role",
+      "count": 2,
+      "avg_ms": 2.53,
+      "max_ms": 4.49,
+      "min_ms": 0.56
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/practice/attempts",
+      "count": 12,
+      "avg_ms": 2.47,
+      "max_ms": 3.16,
+      "min_ms": 2.01
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/learning/plans/11/checkins",
+      "count": 1,
+      "avg_ms": 2.46,
+      "max_ms": 2.46,
+      "min_ms": 2.46
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/classes/62",
+      "count": 1,
+      "avg_ms": 2.45,
+      "max_ms": 2.45,
+      "min_ms": 2.45
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/exams/76/submissions/183",
+      "count": 1,
+      "avg_ms": 2.36,
+      "max_ms": 2.36,
+      "min_ms": 2.36
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/exams/76",
+      "count": 2,
+      "avg_ms": 2.32,
+      "max_ms": 2.42,
+      "min_ms": 2.22
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/learning/plans/13/checkins",
+      "count": 1,
+      "avg_ms": 2.28,
+      "max_ms": 2.28,
+      "min_ms": 2.28
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/exams/82",
+      "count": 1,
+      "avg_ms": 2.14,
+      "max_ms": 2.14,
+      "min_ms": 2.14
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/questions/favorites",
+      "count": 1,
+      "avg_ms": 2.09,
+      "max_ms": 2.09,
+      "min_ms": 2.09
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/logs/actions",
+      "count": 1,
+      "avg_ms": 2.02,
+      "max_ms": 2.02,
+      "min_ms": 2.02
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/logs/modules",
+      "count": 1,
+      "avg_ms": 1.99,
+      "max_ms": 1.99,
+      "min_ms": 1.99
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/classes/58",
+      "count": 4,
+      "avg_ms": 1.97,
+      "max_ms": 2.35,
+      "min_ms": 1.71
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/resources",
+      "count": 1,
+      "avg_ms": 1.88,
+      "max_ms": 1.88,
+      "min_ms": 1.88
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/exams/79",
+      "count": 1,
+      "avg_ms": 1.83,
+      "max_ms": 1.83,
+      "min_ms": 1.83
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/practice/questions/1523",
+      "count": 1,
+      "avg_ms": 1.81,
+      "max_ms": 1.81,
+      "min_ms": 1.81
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/users/10398/wrong-answers",
+      "count": 1,
+      "avg_ms": 1.8,
+      "max_ms": 1.8,
+      "min_ms": 1.8
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me",
+      "count": 36,
+      "avg_ms": 1.79,
+      "max_ms": 21.51,
+      "min_ms": 0.28
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/resources?page_size=5",
+      "count": 1,
+      "avg_ms": 1.74,
+      "max_ms": 1.74,
+      "min_ms": 1.74
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/learning/plans",
+      "count": 3,
+      "avg_ms": 1.67,
+      "max_ms": 1.8,
+      "min_ms": 1.45
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/exams/76/ranking",
+      "count": 1,
+      "avg_ms": 1.66,
+      "max_ms": 1.66,
+      "min_ms": 1.66
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/exams/81",
+      "count": 1,
+      "avg_ms": 1.65,
+      "max_ms": 1.65,
+      "min_ms": 1.65
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/classes/69/announcements",
+      "count": 1,
+      "avg_ms": 1.57,
+      "max_ms": 1.57,
+      "min_ms": 1.57
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/questions/1498",
+      "count": 2,
+      "avg_ms": 1.54,
+      "max_ms": 1.72,
+      "min_ms": 1.36
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/exams/76/submissions",
+      "count": 1,
+      "avg_ms": 1.53,
+      "max_ms": 1.53,
+      "min_ms": 1.53
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/notifications",
+      "count": 1,
+      "avg_ms": 1.51,
+      "max_ms": 1.51,
+      "min_ms": 1.51
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/notifications/read-all",
+      "count": 1,
+      "avg_ms": 1.49,
+      "max_ms": 1.49,
+      "min_ms": 1.49
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/practice/history",
+      "count": 2,
+      "avg_ms": 1.43,
+      "max_ms": 1.63,
+      "min_ms": 1.23
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/llm/config",
+      "count": 2,
+      "avg_ms": 1.42,
+      "max_ms": 2.22,
+      "min_ms": 0.62
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/classes/61/announcements",
+      "count": 2,
+      "avg_ms": 1.4,
+      "max_ms": 1.57,
+      "min_ms": 1.22
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/resources/25",
+      "count": 1,
+      "avg_ms": 1.4,
+      "max_ms": 1.4,
+      "min_ms": 1.4
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/questions/1496",
+      "count": 1,
+      "avg_ms": 1.39,
+      "max_ms": 1.39,
+      "min_ms": 1.39
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/users",
+      "count": 2,
+      "avg_ms": 1.38,
+      "max_ms": 1.96,
+      "min_ms": 0.8
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/statistics/student/overview",
+      "count": 2,
+      "avg_ms": 1.36,
+      "max_ms": 1.71,
+      "min_ms": 1.01
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/statistics/student/summary",
+      "count": 2,
+      "avg_ms": 1.33,
+      "max_ms": 1.51,
+      "min_ms": 1.16
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/learning/assessment",
+      "count": 3,
+      "avg_ms": 1.32,
+      "max_ms": 1.86,
+      "min_ms": 0.94
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/resources/24",
+      "count": 1,
+      "avg_ms": 1.21,
+      "max_ms": 1.21,
+      "min_ms": 1.21
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/classes/59/announcements",
+      "count": 1,
+      "avg_ms": 1.19,
+      "max_ms": 1.19,
+      "min_ms": 1.19
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/classes/59/groups",
+      "count": 1,
+      "avg_ms": 1.18,
+      "max_ms": 1.18,
+      "min_ms": 1.18
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/questions/1497",
+      "count": 2,
+      "avg_ms": 1.12,
+      "max_ms": 1.21,
+      "min_ms": 1.04
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/classes/59",
+      "count": 1,
+      "avg_ms": 1.07,
+      "max_ms": 1.07,
+      "min_ms": 1.07
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/notifications/unread-count",
+      "count": 1,
+      "avg_ms": 1.07,
+      "max_ms": 1.07,
+      "min_ms": 1.07
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/exams/77/start",
+      "count": 1,
+      "avg_ms": 1.05,
+      "max_ms": 1.05,
+      "min_ms": 1.05
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/exams/81/submissions",
+      "count": 1,
+      "avg_ms": 1.04,
+      "max_ms": 1.04,
+      "min_ms": 1.04
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/statistics/student/radar",
+      "count": 2,
+      "avg_ms": 1.0,
+      "max_ms": 1.03,
+      "min_ms": 0.97
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/health",
+      "count": 1,
+      "avg_ms": 0.99,
+      "max_ms": 0.99,
+      "min_ms": 0.99
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/learning/plans/12/checkin",
+      "count": 1,
+      "avg_ms": 0.97,
+      "max_ms": 0.97,
+      "min_ms": 0.97
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/resources/types",
+      "count": 1,
+      "avg_ms": 0.84,
+      "max_ms": 0.84,
+      "min_ms": 0.84
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/classes/59/groups",
+      "count": 1,
+      "avg_ms": 0.8,
+      "max_ms": 0.8,
+      "min_ms": 0.8
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/learning/plans/12/questions",
+      "count": 1,
+      "avg_ms": 0.79,
+      "max_ms": 0.79,
+      "min_ms": 0.79
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v1/classes/59",
+      "count": 1,
+      "avg_ms": 0.73,
+      "max_ms": 0.73,
+      "min_ms": 0.73
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/classes",
+      "count": 2,
+      "avg_ms": 0.7,
+      "max_ms": 1.11,
+      "min_ms": 0.29
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/practice/questions",
+      "count": 1,
+      "avg_ms": 0.35,
+      "max_ms": 0.35,
+      "min_ms": 0.35
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/exams",
+      "count": 1,
+      "avg_ms": 0.25,
+      "max_ms": 0.25,
+      "min_ms": 0.25
+    }
+  ]
+}

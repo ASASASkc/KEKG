@@ -1,0 +1,239 @@
+/* ── Connected Papers 风格全局样式 ── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Connected Papers 配色 */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-header: #0f172a;
+  --bg-footer: #0f172a;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --text-light: #94a3b8;
+  --text-white: #f1f5f9;
+  --accent-blue: #3b82f6;
+  --accent-blue-dark: #2563eb;
+  --accent-cyan: #06b6d4;
+  --accent-green: #10b981;
+  --accent-purple: #8b5cf6;
+  --accent-orange: #f59e0b;
+  --border-color: #e2e8f0;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* ── 语义色板（1.5b 设计系统）──────────────────────
+     约定：正确=绿 / 错误=红 / 警告=橙 / 进行中=蓝 / 中性=灰 */
+  --color-success: #10b981;
+  --color-success-bg: #d1fae5;
+  --color-success-text: #065f46;
+  --color-danger: #ef4444;
+  --color-danger-bg: #fee2e2;
+  --color-danger-text: #991b1b;
+  --color-warning: #f59e0b;
+  --color-warning-bg: #fef3c7;
+  --color-warning-text: #92400e;
+  --color-info: #3b82f6;
+  --color-info-bg: #dbeafe;
+  --color-info-text: #1e40af;
+  --color-neutral: #94a3b8;
+  --color-neutral-bg: #f1f5f9;
+  --color-neutral-text: #475569;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--accent-blue);
+  text-decoration: none;
+}
+a:hover { color: var(--accent-blue-dark); }
+
+button {
+  font-family: var(--font-family);
+  cursor: pointer;
+}
+
+/* 通用卡片 */
+.card {
+  background: var(--bg-primary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  padding: 24px;
+}
+
+/* 通用按钮 */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.btn-primary {
+  background: var(--accent-blue);
+  color: white;
+}
+.btn-primary:hover {
+  background: var(--accent-blue-dark);
+  transform: translateY(-1px);
+}
+.btn-secondary {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+.btn-secondary:hover {
+  background: var(--border-color);
+}
+.btn-sm { padding: 6px 14px; font-size: 13px; }
+.btn-lg { padding: 14px 28px; font-size: 16px; }
+
+/* 输入框 */
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-family: var(--font-family);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background: var(--bg-primary);
+}
+.input:focus {
+  outline: none;
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+.input-lg {
+  padding: 14px 20px;
+  font-size: 16px;
+}
+
+/* 页面容器 */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  width: 100%;
+}
+.page-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+.page-subtitle {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+}
+
+/* 两栏布局（图谱页） */
+.two-col {
+  display: flex;
+  gap: 0;
+  height: calc(100vh - 64px);
+}
+.two-col .col-sidebar {
+  width: 360px;
+  flex-shrink: 0;
+  background: var(--bg-primary);
+  border-right: 1px solid var(--border-color);
+  overflow-y: auto;
+  padding: 20px;
+}
+.two-col .col-main {
+  flex: 1;
+  position: relative;
+}
+
+/* 节点颜色方案 */
+.node-category-basic { background: #3b82f6; }
+.node-category-core { background: #8b5cf6; }
+.node-category-advanced { background: #10b981; }
+.node-category-data { background: #f59e0b; }
+.node-category-structure { background: #06b6d4; }
+
+/* ── 语义状态标签（1.5b 设计系统）──────────────────── */
+.chip-success { background: var(--color-success-bg); color: var(--color-success-text); }
+.chip-danger { background: var(--color-danger-bg); color: var(--color-danger-text); }
+.chip-warning { background: var(--color-warning-bg); color: var(--color-warning-text); }
+.chip-info { background: var(--color-info-bg); color: var(--color-info-text); }
+.chip-neutral { background: var(--color-neutral-bg); color: var(--color-neutral-text); }
+
+/* ── 语义按钮（1.5b 设计系统）──────────────────────── */
+.btn-danger {
+  background: var(--color-danger);
+  color: #fff;
+}
+.btn-danger:hover { background: #dc2626; }
+.btn-danger-text {
+  background: transparent;
+  color: var(--color-danger);
+  border: none;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+.btn-danger-text:hover { background: var(--color-danger-bg); color: var(--color-danger-text); }
+
+/* ── 响应式适配（RA / M5-E）──────────────────────── */
+/* 断点取标准平板宽度 768px：桌面宽度（含 IDE 内置浏览器预览）保持
+   桌面布局，窄于 768px（手机/窄平板）才进入纵向堆叠适配 */
+@media (max-width: 768px) {
+  /* 页面容器收缩 */
+  .page-container { padding: 20px 12px; }
+
+  /* 表格横向滚动，避免窄屏挤压破版 */
+  .data-table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+  }
+  .data-table th, .data-table td { white-space: nowrap; }
+
+  /* 多列栅格收缩为单列 */
+  .form-row { grid-template-columns: 1fr; }
+
+  /* 两栏布局（图谱页）纵向堆叠 */
+  .two-col {
+    flex-direction: column;
+    height: auto;
+  }
+  .two-col .col-sidebar {
+    width: 100%;
+    max-height: 280px;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  /* 卡片内边距收缩 */
+  .card { padding: 16px; }
+
+  /* 筛选栏换行更紧凑 */
+  .filter-bar { gap: 6px; }
+}

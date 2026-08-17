@@ -1,0 +1,6592 @@
+{
+  "meta": {
+    "total_nodes": 504,
+    "total_relationships": 364,
+    "version": "2.0.0-clean",
+    "cleaned_at": "2026-07-06T22:13:16.457199"
+  },
+  "nodes": [
+    {
+      "id": "1",
+      "name": "Python定义",
+      "category": "第1章 Python概述",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "2",
+      "name": "面向对象、解释型高级编程语言",
+      "category": "第1章 Python概述",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "3",
+      "name": "Python特点",
+      "category": "第1章 Python概述",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "4",
+      "name": "优点",
+      "category": "第1章 Python概述",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "5",
+      "name": "简洁",
+      "category": "第1章 Python概述",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "6",
+      "name": "风格统一",
+      "category": "第1章 Python概述",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "7",
+      "name": "简单易学",
+      "category": "第1章 Python概述",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "8",
+      "name": "开源",
+      "category": "第1章 Python概述",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "9",
+      "name": "可移植性好",
+      "category": "第1章 Python概述",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "10",
+      "name": "可扩展性好",
+      "category": "第1章 Python概述",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "11",
+      "name": "库丰富",
+      "category": "第1章 Python概述",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "12",
+      "name": "通用灵活",
+      "category": "第1章 Python概述",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "13",
+      "name": "中文支持好",
+      "category": "第1章 Python概述",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "14",
+      "name": "缺点",
+      "category": "第1章 Python概述",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "15",
+      "name": "运行速度较慢",
+      "category": "第1章 Python概述",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "16",
+      "name": "Python解释器",
+      "category": "第1章 Python概述",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "17",
+      "name": "执行Python程序的工具",
+      "category": "第1章 Python概述",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "18",
+      "name": "运行方式",
+      "category": "第1章 Python概述",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "19",
+      "name": "交互式：逐行执行",
+      "category": "第1章 Python概述",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "20",
+      "name": "文件式：执行.py文件",
+      "category": "第1章 Python概述",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "21",
+      "name": "环境变量Path",
+      "category": "第1章 Python概述",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "22",
+      "name": "系统查找程序的路径列表",
+      "category": "第1章 Python概述",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "23",
+      "name": "常用开发工具",
+      "category": "第1章 Python概述",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "24",
+      "name": "PyCharm",
+      "category": "第1章 Python概述",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "25",
+      "name": "Sublime Text",
+      "category": "第1章 Python概述",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "26",
+      "name": "VS Code",
+      "category": "第1章 Python概述",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "27",
+      "name": "Jupyter Notebook",
+      "category": "第1章 Python概述",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "28",
+      "name": "Anaconda",
+      "category": "第1章 Python概述",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "29",
+      "name": "PyCharm版本",
+      "category": "第1章 Python概述",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "30",
+      "name": "Professional：付费版本",
+      "category": "第1章 Python概述",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "31",
+      "name": "Community：免费版本",
+      "category": "第1章 Python概述",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "32",
+      "name": "模块定义",
+      "category": "第1章 Python概述",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "33",
+      "name": "扩展名为.py的文件",
+      "category": "第1章 Python概述",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "34",
+      "name": "模块安装",
+      "category": "第1章 Python概述",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "35",
+      "name": "pip install 模块名",
+      "category": "第1章 Python概述",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "36",
+      "name": "模块导入",
+      "category": "第1章 Python概述",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "37",
+      "name": "import 模块名",
+      "category": "第1章 Python概述",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "38",
+      "name": "from 模块名 import 内容",
+      "category": "第1章 Python概述",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "39",
+      "name": "代码组织层次",
+      "category": "第1章 Python概述",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "40",
+      "name": "模块（代码组织层次）",
+      "category": "第1章 Python概述",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "41",
+      "name": "包（代码组织层次）",
+      "category": "第1章 Python概述",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "42",
+      "name": "库",
+      "category": "第1章 Python概述",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "43",
+      "name": "注释",
+      "category": "第2章 Python基础知识",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "44",
+      "name": "单行注释：#",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "45",
+      "name": "多行注释：''' 或 \"\"\"",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "46",
+      "name": "缩进",
+      "category": "第2章 Python基础知识",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "47",
+      "name": "4个空格表示一级缩进",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "48",
+      "name": "不可混用空格与Tab",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "49",
+      "name": "语句换行",
+      "category": "第2章 Python基础知识",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "50",
+      "name": "使用 \\ 换行",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "51",
+      "name": "使用 () 换行",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "52",
+      "name": "标识符命名规则",
+      "category": "第2章 Python基础知识",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "53",
+      "name": "字母、数字、下划线组成",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "54",
+      "name": "不能以数字开头",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "55",
+      "name": "区分大小写",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "56",
+      "name": "不能使用关键字",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "57",
+      "name": "关键字",
+      "category": "第2章 Python基础知识",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "58",
+      "name": "Python预定义的35个保留字",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "59",
+      "name": "变量",
+      "category": "第2章 Python基础知识",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "60",
+      "name": "存储数据的标识符",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "61",
+      "name": "数据类型",
+      "category": "第2章 Python基础知识",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "62",
+      "name": "数字类型",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "63",
+      "name": "int：整型",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "64",
+      "name": "float：浮点型",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "65",
+      "name": "complex：复数型",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "66",
+      "name": "bool：布尔型",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "67",
+      "name": "组合类型",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "68",
+      "name": "str：字符串",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "69",
+      "name": "list：列表",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "70",
+      "name": "tuple：元组",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "71",
+      "name": "set：集合",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "72",
+      "name": "dict：字典",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "73",
+      "name": "输入输出",
+      "category": "第2章 Python基础知识",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "74",
+      "name": "input()：接收输入",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "75",
+      "name": "print()：输出内容",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "76",
+      "name": "整型",
+      "category": "第2章 Python基础知识",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "77",
+      "name": "支持二进制、八进制、十进制、十六进制",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "78",
+      "name": "浮点型",
+      "category": "第2章 Python基础知识",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "79",
+      "name": "支持科学计数法",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "80",
+      "name": "复数型",
+      "category": "第2章 Python基础知识",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "81",
+      "name": "real + imagj",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "82",
+      "name": "布尔型",
+      "category": "第2章 Python基础知识",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "83",
+      "name": "True",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "84",
+      "name": "False",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "85",
+      "name": "类型转换函数",
+      "category": "第2章 Python基础知识",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "86",
+      "name": "int()",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "87",
+      "name": "float()",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "88",
+      "name": "complex()",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "89",
+      "name": "bool()",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "90",
+      "name": "算术运算符",
+      "category": "第2章 Python基础知识",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "91",
+      "name": "+",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "92",
+      "name": "-",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "93",
+      "name": "*",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "94",
+      "name": "/",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "95",
+      "name": "//",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "96",
+      "name": "%",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "97",
+      "name": "**",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "98",
+      "name": "赋值运算符",
+      "category": "第2章 Python基础知识",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "99",
+      "name": "=",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "100",
+      "name": "+=",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "101",
+      "name": "-=",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "102",
+      "name": ":=（海象运算符）",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "103",
+      "name": "比较运算符",
+      "category": "第2章 Python基础知识",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "104",
+      "name": "==",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "105",
+      "name": "!=",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "106",
+      "name": "<",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "107",
+      "name": "<=",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "108",
+      "name": "逻辑运算符",
+      "category": "第2章 Python基础知识",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "109",
+      "name": "and",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "110",
+      "name": "or",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "111",
+      "name": "not",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "112",
+      "name": "成员运算符",
+      "category": "第2章 Python基础知识",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "113",
+      "name": "in",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "114",
+      "name": "not in",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "115",
+      "name": "位运算符",
+      "category": "第2章 Python基础知识",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "116",
+      "name": "<<",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "117",
+      "name": "&",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "118",
+      "name": "|",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "119",
+      "name": "^",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "120",
+      "name": "~",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "121",
+      "name": "运算符优先级",
+      "category": "第2章 Python基础知识",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "122",
+      "name": "从高到低：** → * / % // → + - → << >> → & → ^ | → 比较 → 逻辑 → 赋值",
+      "category": "第2章 Python基础知识",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "123",
+      "name": "if语句",
+      "category": "第3章 流程控制",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "124",
+      "name": "单分支判断",
+      "category": "第3章 流程控制",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "125",
+      "name": "if-else语句",
+      "category": "第3章 流程控制",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "126",
+      "name": "双分支判断",
+      "category": "第3章 流程控制",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "127",
+      "name": "if-elif-else语句",
+      "category": "第3章 流程控制",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "128",
+      "name": "多分支判断",
+      "category": "第3章 流程控制",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "129",
+      "name": "if嵌套",
+      "category": "第3章 流程控制",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "130",
+      "name": "条件中包含条件",
+      "category": "第3章 流程控制",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "131",
+      "name": "while循环",
+      "category": "第3章 流程控制",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "132",
+      "name": "条件循环",
+      "category": "第3章 流程控制",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "133",
+      "name": "for循环",
+      "category": "第3章 流程控制",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "134",
+      "name": "遍历循环",
+      "category": "第3章 流程控制",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "135",
+      "name": "常与range()搭配",
+      "category": "第3章 流程控制",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "136",
+      "name": "循环嵌套",
+      "category": "第3章 流程控制",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "137",
+      "name": "循环中包含循环",
+      "category": "第3章 流程控制",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "138",
+      "name": "break",
+      "category": "第3章 流程控制",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "139",
+      "name": "结束整个循环",
+      "category": "第3章 流程控制",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "140",
+      "name": "continue",
+      "category": "第3章 流程控制",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "141",
+      "name": "跳过本次循环",
+      "category": "第3章 流程控制",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "142",
+      "name": "定义方式",
+      "category": "第4章 字符串",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "143",
+      "name": "单引号",
+      "category": "第4章 字符串",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "144",
+      "name": "双引号",
+      "category": "第4章 字符串",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "145",
+      "name": "三引号",
+      "category": "第4章 字符串",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "146",
+      "name": "转义字符",
+      "category": "第4章 字符串",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "147",
+      "name": "\\n：换行",
+      "category": "第4章 字符串",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "148",
+      "name": "\\t：制表",
+      "category": "第4章 字符串",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "149",
+      "name": "\\r：回车",
+      "category": "第4章 字符串",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "150",
+      "name": "\\b：退格",
+      "category": "第4章 字符串",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "151",
+      "name": "原始字符串",
+      "category": "第4章 字符串",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "152",
+      "name": "r'' 或 R''",
+      "category": "第4章 字符串",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "153",
+      "name": "%格式化",
+      "category": "第4章 字符串",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "154",
+      "name": "\"格式符\" % 值",
+      "category": "第4章 字符串",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "155",
+      "name": "format()方法",
+      "category": "第4章 字符串",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "156",
+      "name": "\"{}\".format(值)",
+      "category": "第4章 字符串",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "157",
+      "name": "f-string",
+      "category": "第4章 字符串",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "158",
+      "name": "f\"{变量}\"",
+      "category": "第4章 字符串",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "159",
+      "name": "查找",
+      "category": "第4章 字符串",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "160",
+      "name": "find()",
+      "category": "第4章 字符串",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "161",
+      "name": "替换",
+      "category": "第4章 字符串",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "162",
+      "name": "replace()",
+      "category": "第4章 字符串",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "163",
+      "name": "组合数据类型",
+      "category": "第5章 组合数据类型",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "164",
+      "name": "定义：将多个相同或不同类型的数据组织为一个整体",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "165",
+      "name": "序列类型",
+      "category": "第5章 组合数据类型",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "166",
+      "name": "特点：有序排列，支持双向索引",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "167",
+      "name": "包含：字符串(str)、列表(list)、元组(tuple)",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "168",
+      "name": "不可变序列：字符串、元组",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "169",
+      "name": "可变序列：列表",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "170",
+      "name": "集合类型",
+      "category": "第5章 组合数据类型",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "171",
+      "name": "特点：元素唯一、无序、不可重复",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "172",
+      "name": "元素要求：必须为不可变类型",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "173",
+      "name": "映射类型",
+      "category": "第5章 组合数据类型",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "174",
+      "name": "特点：键值对存储",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "175",
+      "name": "唯一实现：字典(dict)",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "176",
+      "name": "键的要求：唯一且不可变",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "177",
+      "name": "创建列表",
+      "category": "第5章 组合数据类型",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "178",
+      "name": "使用中括号：`[]`",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "179",
+      "name": "使用list()函数：`list()`",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "180",
+      "name": "访问列表元素",
+      "category": "第5章 组合数据类型",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "181",
+      "name": "索引访问：`list[i]`",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "182",
+      "name": "切片访问：`list[m:n:step]`",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "183",
+      "name": "循环访问：`for item in list`",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "184",
+      "name": "添加列表元素",
+      "category": "第5章 组合数据类型",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "185",
+      "name": "append()：末尾添加单个元素",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "186",
+      "name": "extend()：扩展另一个序列",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "187",
+      "name": "insert()：指定位置插入",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "188",
+      "name": "列表元素排序",
+      "category": "第5章 组合数据类型",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "189",
+      "name": "sort()：原地排序",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "190",
+      "name": "sorted()：返回新列表",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "191",
+      "name": "reverse()：逆置列表",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "192",
+      "name": "删除列表元素",
+      "category": "第5章 组合数据类型",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "193",
+      "name": "del语句：按索引删除",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "194",
+      "name": "remove()：按值删除第一个匹配项",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "195",
+      "name": "pop()：按索引删除并返回",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "196",
+      "name": "clear()：清空列表",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "197",
+      "name": "列表推导式",
+      "category": "第5章 组合数据类型",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "198",
+      "name": "基本格式：`[expr for var in iterable]`",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "199",
+      "name": "带if条件：`[expr for var in iterable if condition]`",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "200",
+      "name": "带if-else：`[expr1 if condition else expr2 for var in iterable]`",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "201",
+      "name": "嵌套循环：`[expr for var1 in iter1 for var2 in iter2]`",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "202",
+      "name": "创建元组",
+      "category": "第5章 组合数据类型",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "203",
+      "name": "使用小括号：`()`",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "204",
+      "name": "使用tuple()函数：`tuple()`",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "205",
+      "name": "访问元组元素",
+      "category": "第5章 组合数据类型",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "206",
+      "name": "索引访问",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "207",
+      "name": "切片访问",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "208",
+      "name": "循环访问",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "209",
+      "name": "特点：不可变序列，创建后不能修改",
+      "category": "第5章 组合数据类型",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "210",
+      "name": "创建集合",
+      "category": "第5章 组合数据类型",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "211",
+      "name": "使用大括号：`{}`",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "212",
+      "name": "使用set()函数：`set()`",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "213",
+      "name": "集合操作",
+      "category": "第5章 组合数据类型",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "214",
+      "name": "add()：添加元素",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "215",
+      "name": "remove()：删除元素（不存在报错）",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "216",
+      "name": "discard()：删除元素（不存在不报错）",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "217",
+      "name": "pop()：随机删除并返回",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "218",
+      "name": "clear()：清空集合",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "219",
+      "name": "copy()：复制集合",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "220",
+      "name": "isdisjoint()：判断是否无交集",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "221",
+      "name": "集合推导式",
+      "category": "第5章 组合数据类型",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "222",
+      "name": "格式：`{expr for var in iterable if condition}`",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "223",
+      "name": "创建字典",
+      "category": "第5章 组合数据类型",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "224",
+      "name": "使用大括号：`{key:value}`",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "225",
+      "name": "使用dict()函数：`dict()`",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "226",
+      "name": "字典访问",
+      "category": "第5章 组合数据类型",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "227",
+      "name": "键访问：`dict[key]`",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "228",
+      "name": "get()方法：`get(key, default)`",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "229",
+      "name": "keys()：获取所有键",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "230",
+      "name": "values()：获取所有值",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "231",
+      "name": "items()：获取所有键值对",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "232",
+      "name": "字典元素操作",
+      "category": "第5章 组合数据类型",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "233",
+      "name": "添加：`dict[key] = value` 或 `update()`",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "234",
+      "name": "修改：`dict[key] = new_value` 或 `update()`",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "235",
+      "name": "删除：`pop()`、`popitem()`、`clear()`",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "236",
+      "name": "字典推导式",
+      "category": "第5章 组合数据类型",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "237",
+      "name": "格式：`{key_expr: value_expr for var in iterable}`",
+      "category": "第5章 组合数据类型",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "238",
+      "name": "+运算符：拼接（字符串、列表、元组）",
+      "category": "第5章 组合数据类型",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "239",
+      "name": "*运算符：重复（字符串、列表、元组）",
+      "category": "第5章 组合数据类型",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "240",
+      "name": "in/not in：成员判断（所有组合类型）",
+      "category": "第5章 组合数据类型",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "241",
+      "name": "函数定义：组织好的、实现单一或相关功能的代码段",
+      "category": "第6章 函数",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "242",
+      "name": "函数优点：模块化、减少冗余、便于维护",
+      "category": "第6章 函数",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "243",
+      "name": "函数定义",
+      "category": "第6章 函数",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "244",
+      "name": "语法：`def 函数名(参数列表):`",
+      "category": "第6章 函数",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "245",
+      "name": "组成部分：函数名、参数列表、函数体、return语句",
+      "category": "第6章 函数",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "246",
+      "name": "函数调用",
+      "category": "第6章 函数",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "247",
+      "name": "语法：`函数名(实参)`",
+      "category": "第6章 函数",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "248",
+      "name": "执行过程：暂停→跳转→传参→执行→返回",
+      "category": "第6章 函数",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "249",
+      "name": "嵌套定义：函数内部定义函数",
+      "category": "第6章 函数",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "250",
+      "name": "位置参数传递：按顺序传递实参",
+      "category": "第6章 函数",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "251",
+      "name": "关键字参数传递：`参数名=值`格式传递",
+      "category": "第6章 函数",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "252",
+      "name": "默认参数传递：定义时指定默认值",
+      "category": "第6章 函数",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "253",
+      "name": "参数打包与解包",
+      "category": "第6章 函数",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "254",
+      "name": "*args：接收元组形式打包",
+      "category": "第6章 函数",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "255",
+      "name": "**kwargs：接收字典形式打包",
+      "category": "第6章 函数",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "256",
+      "name": "*：解包元组",
+      "category": "第6章 函数",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "257",
+      "name": "**：解包字典",
+      "category": "第6章 函数",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "258",
+      "name": "混合传递：遵循优先级规则",
+      "category": "第6章 函数",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "259",
+      "name": "return语句：函数结束时返回数据",
+      "category": "第6章 函数",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "260",
+      "name": "单返回值：直接返回",
+      "category": "第6章 函数",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "261",
+      "name": "多返回值：以元组形式返回",
+      "category": "第6章 函数",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "262",
+      "name": "局部变量",
+      "category": "第6章 函数",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "263",
+      "name": "定义：函数内部定义的变量",
+      "category": "第6章 函数",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "264",
+      "name": "作用域：仅限于函数内部",
+      "category": "第6章 函数",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "265",
+      "name": "全局变量",
+      "category": "第6章 函数",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "266",
+      "name": "定义：函数外部定义的变量",
+      "category": "第6章 函数",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "267",
+      "name": "作用域：整个程序",
+      "category": "第6章 函数",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "268",
+      "name": "global关键字",
+      "category": "第6章 函数",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "269",
+      "name": "作用：在函数内部声明全局变量",
+      "category": "第6章 函数",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "270",
+      "name": "语法：`global 变量名`",
+      "category": "第6章 函数",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "271",
+      "name": "nonlocal关键字",
+      "category": "第6章 函数",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "272",
+      "name": "作用：在嵌套函数中修改外层变量",
+      "category": "第6章 函数",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "273",
+      "name": "语法：`nonlocal 变量名`",
+      "category": "第6章 函数",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "274",
+      "name": "LEGB原则：Local→Enclosing→Global→Built-in",
+      "category": "第6章 函数",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "275",
+      "name": "递归函数",
+      "category": "第6章 函数",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "276",
+      "name": "定义：函数内部调用自身",
+      "category": "第6章 函数",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "277",
+      "name": "条件：递归公式 + 边界条件",
+      "category": "第6章 函数",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "278",
+      "name": "执行阶段：递推 + 回溯",
+      "category": "第6章 函数",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "279",
+      "name": "匿名函数",
+      "category": "第6章 函数",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "280",
+      "name": "定义：不需要命名的函数",
+      "category": "第6章 函数",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "281",
+      "name": "语法：`lambda 参数: 表达式`",
+      "category": "第6章 函数",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "282",
+      "name": "特点：函数体只能是单个表达式",
+      "category": "第6章 函数",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "283",
+      "name": "文件标识",
+      "category": "第7章 文件与数据格式化",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "284",
+      "name": "路径：文件在计算机中的位置",
+      "category": "第7章 文件与数据格式化",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "285",
+      "name": "文件名主干：描述文件内容",
+      "category": "第7章 文件与数据格式化",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "286",
+      "name": "扩展名：表示文件类型",
+      "category": "第7章 文件与数据格式化",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "287",
+      "name": "文件分类",
+      "category": "第7章 文件与数据格式化",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "288",
+      "name": "文本文件：由字符组成，可读性强",
+      "category": "第7章 文件与数据格式化",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "289",
+      "name": "二进制文件：由字节组成，需专用程序读取",
+      "category": "第7章 文件与数据格式化",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "290",
+      "name": "文件的打开与关闭",
+      "category": "第7章 文件与数据格式化",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "291",
+      "name": "打开文件：`open(file, mode, encoding)`",
+      "category": "第7章 文件与数据格式化",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "292",
+      "name": "文件模式：r、w、a、b、+等组合",
+      "category": "第7章 文件与数据格式化",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "293",
+      "name": "关闭文件：`close()` 或 `with`语句",
+      "category": "第7章 文件与数据格式化",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "294",
+      "name": "文件的读写",
+      "category": "第7章 文件与数据格式化",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "295",
+      "name": "读取文件",
+      "category": "第7章 文件与数据格式化",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "296",
+      "name": "read()：读取指定数量字符",
+      "category": "第7章 文件与数据格式化",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "297",
+      "name": "readline()：读取一行",
+      "category": "第7章 文件与数据格式化",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "298",
+      "name": "readlines()：读取所有行返回列表",
+      "category": "第7章 文件与数据格式化",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "299",
+      "name": "写入文件",
+      "category": "第7章 文件与数据格式化",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "300",
+      "name": "write()：写入字符串",
+      "category": "第7章 文件与数据格式化",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "301",
+      "name": "writelines()：写入字符串列表",
+      "category": "第7章 文件与数据格式化",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "302",
+      "name": "文件的定位读写",
+      "category": "第7章 文件与数据格式化",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "303",
+      "name": "tell()：获取当前读写位置",
+      "category": "第7章 文件与数据格式化",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "304",
+      "name": "seek()：移动读写位置",
+      "category": "第7章 文件与数据格式化",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "305",
+      "name": "os模块常用函数",
+      "category": "第7章 文件与数据格式化",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "306",
+      "name": "remove()：删除文件",
+      "category": "第7章 文件与数据格式化",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "307",
+      "name": "rename()：重命名文件或目录",
+      "category": "第7章 文件与数据格式化",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "308",
+      "name": "mkdir()：创建目录",
+      "category": "第7章 文件与数据格式化",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "309",
+      "name": "rmdir()：删除目录",
+      "category": "第7章 文件与数据格式化",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "310",
+      "name": "getcwd()：获取当前目录",
+      "category": "第7章 文件与数据格式化",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "311",
+      "name": "chdir()：更改默认目录",
+      "category": "第7章 文件与数据格式化",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "312",
+      "name": "listdir()：获取目录文件列表",
+      "category": "第7章 文件与数据格式化",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "313",
+      "name": "基于维度的数据分类",
+      "category": "第7章 文件与数据格式化",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "314",
+      "name": "一维数据：线性数据，如列表、元组",
+      "category": "第7章 文件与数据格式化",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "315",
+      "name": "二维数据：表格数据，如二维列表",
+      "category": "第7章 文件与数据格式化",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "316",
+      "name": "多维数据：复杂结构数据，如字典",
+      "category": "第7章 文件与数据格式化",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "317",
+      "name": "一维数据和二维数据的存储与读写",
+      "category": "第7章 文件与数据格式化",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "318",
+      "name": "数据存储：使用分隔符（逗号、空格等）",
+      "category": "第7章 文件与数据格式化",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "319",
+      "name": "CSV格式：通用表格数据存储格式",
+      "category": "第7章 文件与数据格式化",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "320",
+      "name": "数据读取：`open()` + 循环 + `split()`",
+      "category": "第7章 文件与数据格式化",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "321",
+      "name": "数据写入：`write()` + 字符串拼接",
+      "category": "第7章 文件与数据格式化",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "322",
+      "name": "多维数据的格式化",
+      "category": "第7章 文件与数据格式化",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "323",
+      "name": "JSON格式：轻量级数据交换格式",
+      "category": "第7章 文件与数据格式化",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "324",
+      "name": "XML格式：标签结构数据格式",
+      "category": "第7章 文件与数据格式化",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "325",
+      "name": "特点：JSON更简洁，XML更严谨",
+      "category": "第7章 文件与数据格式化",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "326",
+      "name": "面向对象编程思想",
+      "category": "第8章 面向对象",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "327",
+      "name": "将问题分解为多个对象",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "328",
+      "name": "通过对象之间的协作解决问题",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "329",
+      "name": "面向过程编程思想",
+      "category": "第8章 面向对象",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "330",
+      "name": "基于步骤和函数",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "331",
+      "name": "按流程依次调用函数",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "332",
+      "name": "类",
+      "category": "第8章 面向对象",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "333",
+      "name": "具有共同特征和行为的事物的抽象",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "334",
+      "name": "使用`class`关键字定义",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "335",
+      "name": "对象",
+      "category": "第8章 面向对象",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "336",
+      "name": "类的实例",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "337",
+      "name": "通过`类名()`创建",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "338",
+      "name": "属性",
+      "category": "第8章 面向对象",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "339",
+      "name": "类的特征",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "340",
+      "name": "类似于变量",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "341",
+      "name": "方法",
+      "category": "第8章 面向对象",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "342",
+      "name": "类的行为",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "343",
+      "name": "类似于函数",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "344",
+      "name": "第一个参数为`self`",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "345",
+      "name": "类属性",
+      "category": "第8章 面向对象",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "346",
+      "name": "定义在类内部、方法外部",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "347",
+      "name": "所有对象共享",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "348",
+      "name": "通过类或对象访问",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "349",
+      "name": "实例属性",
+      "category": "第8章 面向对象",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "350",
+      "name": "定义在方法内部",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "351",
+      "name": "通过`self.属性名`",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "352",
+      "name": "每个对象独立",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "353",
+      "name": "只能通过对象访问",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "354",
+      "name": "实例方法",
+      "category": "第8章 面向对象",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "355",
+      "name": "通过对象调用",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "356",
+      "name": "类方法",
+      "category": "第8章 面向对象",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "357",
+      "name": "使用`@classmethod`修饰",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "358",
+      "name": "第一个参数为`cls`",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "359",
+      "name": "可通过类或对象调用",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "360",
+      "name": "静态方法",
+      "category": "第8章 面向对象",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "361",
+      "name": "使用`@staticmethod`修饰",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "362",
+      "name": "无默认参数",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "363",
+      "name": "通过类调用",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "364",
+      "name": "私有成员",
+      "category": "第8章 面向对象",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "365",
+      "name": "通过双下划线`__`前缀定义",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "366",
+      "name": "只能在类内部访问",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "367",
+      "name": "构造方法",
+      "category": "第8章 面向对象",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "368",
+      "name": "`__init__()`",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "369",
+      "name": "用于初始化对象属性",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "370",
+      "name": "析构方法",
+      "category": "第8章 面向对象",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "371",
+      "name": "`__del__()`",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "372",
+      "name": "用于对象销毁时的清理操作",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "373",
+      "name": "封装概念",
+      "category": "第8章 面向对象",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "374",
+      "name": "隐藏类的实现细节",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "375",
+      "name": "只提供公开接口",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "376",
+      "name": "实现方式",
+      "category": "第8章 面向对象",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "377",
+      "name": "将属性设为私有",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "378",
+      "name": "提供公有方法访问",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "379",
+      "name": "`set_xxx()`设置属性",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "380",
+      "name": "`get_xxx()`获取属性",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "381",
+      "name": "继承概念",
+      "category": "第8章 面向对象",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "382",
+      "name": "子类自动拥有父类的公有成员",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "383",
+      "name": "单继承",
+      "category": "第8章 面向对象",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "384",
+      "name": "子类只继承一个父类",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "385",
+      "name": "多继承",
+      "category": "第8章 面向对象",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "386",
+      "name": "子类继承多个父类",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "387",
+      "name": "重写",
+      "category": "第8章 面向对象",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "388",
+      "name": "子类重新定义父类的方法",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "389",
+      "name": "super()函数",
+      "category": "第8章 面向对象",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "390",
+      "name": "调用父类中被重写的方法",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "391",
+      "name": "多态概念",
+      "category": "第8章 面向对象",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "392",
+      "name": "不同类的同一方法通过同一接口调用",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "393",
+      "name": "表现出不同行为",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "394",
+      "name": "运算符重载概念",
+      "category": "第8章 面向对象",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "395",
+      "name": "通过重写特殊方法使运算符支持自定义类的运算",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "396",
+      "name": "常见重载方法",
+      "category": "第8章 面向对象",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "397",
+      "name": "`__add__`：+",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "398",
+      "name": "`__sub__`：-",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "399",
+      "name": "`__mul__`：*",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "400",
+      "name": "`__truediv__`：/",
+      "category": "第8章 面向对象",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "401",
+      "name": "异常概念",
+      "category": "第9章 异常",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "402",
+      "name": "程序运行期间出现的错误或意外情况",
+      "category": "第9章 异常",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "403",
+      "name": "异常类",
+      "category": "第9章 异常",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "404",
+      "name": "每种异常对应一个类",
+      "category": "第9章 异常",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "405",
+      "name": "继承自`Exception`",
+      "category": "第9章 异常",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "406",
+      "name": "常见异常类型",
+      "category": "第9章 异常",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "407",
+      "name": "`ZeroDivisionError`：除数为零",
+      "category": "第9章 异常",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "408",
+      "name": "`ValueError`：值错误",
+      "category": "第9章 异常",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "409",
+      "name": "`AttributeError`：属性错误",
+      "category": "第9章 异常",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "410",
+      "name": "`FileNotFoundError`：文件或目录未找到",
+      "category": "第9章 异常",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "411",
+      "name": "try-except",
+      "category": "第9章 异常",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "412",
+      "name": "捕获并处理异常",
+      "category": "第9章 异常",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "413",
+      "name": "try-except-else",
+      "category": "第9章 异常",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "414",
+      "name": "无异常时执行`else`子句",
+      "category": "第9章 异常",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "415",
+      "name": "try-except-finally",
+      "category": "第9章 异常",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "416",
+      "name": "无论是否异常都执行`finally`子句",
+      "category": "第9章 异常",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "417",
+      "name": "常用于资源清理",
+      "category": "第9章 异常",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "418",
+      "name": "raise语句",
+      "category": "第9章 异常",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "419",
+      "name": "主动抛出异常",
+      "category": "第9章 异常",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "420",
+      "name": "assert语句",
+      "category": "第9章 异常",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "421",
+      "name": "断言",
+      "category": "第9章 异常",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "422",
+      "name": "条件不满足时抛出`AssertionError`",
+      "category": "第9章 异常",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "423",
+      "name": "自定义异常概念",
+      "category": "第9章 异常",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "424",
+      "name": "继承`Exception`类",
+      "category": "第9章 异常",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "425",
+      "name": "类名以`Error`结尾",
+      "category": "第9章 异常",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "426",
+      "name": "Python计算生态概念",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "427",
+      "name": "由Python语言及其周边工具、框架、库和应用构成的生态系统",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "428",
+      "name": "常见领域及库",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "429",
+      "name": "网络爬虫",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "430",
+      "name": "Requests",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "431",
+      "name": "Selenium",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "432",
+      "name": "Scrapy",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "433",
+      "name": "数据分析",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "434",
+      "name": "NumPy",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "435",
+      "name": "pandas",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "436",
+      "name": "SciPy",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "437",
+      "name": "文本处理",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "438",
+      "name": "jieba",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "439",
+      "name": "NLTK",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "440",
+      "name": "PyPDF2",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "441",
+      "name": "数据可视化",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "442",
+      "name": "Matplotlib",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "443",
+      "name": "seaborn",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "444",
+      "name": "pyecharts",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "445",
+      "name": "机器学习",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "446",
+      "name": "scikit-learn",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "447",
+      "name": "TensorFlow",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "448",
+      "name": "PyTorch",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "449",
+      "name": "GUI开发",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "450",
+      "name": "PyQt5",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "451",
+      "name": "wxPython",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "452",
+      "name": "Web开发",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "453",
+      "name": "Django",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "454",
+      "name": "Flask",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "455",
+      "name": "Tornado",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "456",
+      "name": "游戏开发",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "457",
+      "name": "Pygame",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "458",
+      "name": "Panda3D",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "459",
+      "name": "图形艺术",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "460",
+      "name": "turtle",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "461",
+      "name": "art",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "462",
+      "name": "图像处理",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "463",
+      "name": "Pillow",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "464",
+      "name": "OpenCV-Python",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "465",
+      "name": "模块",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "466",
+      "name": "一个`.py`文件",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "467",
+      "name": "通过`import`导入",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "468",
+      "name": "包",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "469",
+      "name": "包含`__init__.py`的目录",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "470",
+      "name": "用于组织多个模块",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "471",
+      "name": "发布流程",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "472",
+      "name": "编写`setup.py`",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "473",
+      "name": "`python setup.py build`构建",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "474",
+      "name": "`python setup.py sdist`创建安装包",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "475",
+      "name": "time库",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "476",
+      "name": "`time()`：获取当前时间戳",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "477",
+      "name": "`localtime()`：获取本地时间对象",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "478",
+      "name": "`strftime()`：格式化时间字符串",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "479",
+      "name": "`sleep()`：程序暂停指定秒数",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "480",
+      "name": "random库",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "481",
+      "name": "`random()`：生成0~1之间的随机浮点数",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "482",
+      "name": "`randint(a, b)`：生成[a, b]之间的随机整数",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "483",
+      "name": "`choice(seq)`：从序列中随机选择元素",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "484",
+      "name": "turtle库",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "485",
+      "name": "用于绘制图形",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "486",
+      "name": "常用函数",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "487",
+      "name": "`forward()`：前进",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "488",
+      "name": "`left()`：左转",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "489",
+      "name": "`circle()`：画圆",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "490",
+      "name": "`fillcolor()`：设置填充颜色",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "491",
+      "name": "jieba库",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "492",
+      "name": "中文分词",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "493",
+      "name": "分词模式",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "494",
+      "name": "精确模式",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "495",
+      "name": "全模式",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "496",
+      "name": "搜索引擎模式",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "497",
+      "name": "wordcloud库",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "498",
+      "name": "生成词云图",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "499",
+      "name": "可设置属性",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "500",
+      "name": "形状",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "501",
+      "name": "颜色",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "502",
+      "name": "字体",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "503",
+      "name": "Pygame库",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 2,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    },
+    {
+      "id": "504",
+      "name": "用于2D游戏开发",
+      "category": "第10章 Python计算生态与常用库",
+      "tier": 3,
+      "description": "",
+      "source": "Python快速编程入门（第3版）"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "rel_c_1",
+      "source": "1",
+      "target": "2",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_2",
+      "source": "3",
+      "target": "4",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_3",
+      "source": "4",
+      "target": "5",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_4",
+      "source": "4",
+      "target": "6",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_5",
+      "source": "4",
+      "target": "7",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_6",
+      "source": "4",
+      "target": "8",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_7",
+      "source": "4",
+      "target": "9",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_8",
+      "source": "4",
+      "target": "10",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_9",
+      "source": "4",
+      "target": "11",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_10",
+      "source": "4",
+      "target": "12",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_11",
+      "source": "4",
+      "target": "13",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_12",
+      "source": "3",
+      "target": "14",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_13",
+      "source": "14",
+      "target": "15",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_14",
+      "source": "16",
+      "target": "17",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_15",
+      "source": "18",
+      "target": "19",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_16",
+      "source": "18",
+      "target": "20",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_17",
+      "source": "21",
+      "target": "22",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_18",
+      "source": "23",
+      "target": "24",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_19",
+      "source": "23",
+      "target": "25",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_20",
+      "source": "23",
+      "target": "26",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_21",
+      "source": "23",
+      "target": "27",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_22",
+      "source": "23",
+      "target": "28",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_23",
+      "source": "29",
+      "target": "30",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_24",
+      "source": "29",
+      "target": "31",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_25",
+      "source": "32",
+      "target": "33",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_26",
+      "source": "34",
+      "target": "35",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_27",
+      "source": "36",
+      "target": "37",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_28",
+      "source": "36",
+      "target": "38",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_29",
+      "source": "39",
+      "target": "465",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_30",
+      "source": "39",
+      "target": "468",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_31",
+      "source": "39",
+      "target": "42",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_1",
+      "source": "43",
+      "target": "44",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_2",
+      "source": "43",
+      "target": "45",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_3",
+      "source": "46",
+      "target": "47",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_4",
+      "source": "46",
+      "target": "48",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_5",
+      "source": "49",
+      "target": "50",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_6",
+      "source": "49",
+      "target": "51",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_7",
+      "source": "52",
+      "target": "53",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_8",
+      "source": "52",
+      "target": "54",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_9",
+      "source": "52",
+      "target": "55",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_10",
+      "source": "52",
+      "target": "56",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_11",
+      "source": "57",
+      "target": "58",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_12",
+      "source": "59",
+      "target": "60",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_13",
+      "source": "61",
+      "target": "62",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_14",
+      "source": "62",
+      "target": "63",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_15",
+      "source": "62",
+      "target": "64",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_16",
+      "source": "62",
+      "target": "65",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_17",
+      "source": "62",
+      "target": "66",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_18",
+      "source": "61",
+      "target": "67",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_19",
+      "source": "67",
+      "target": "68",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_20",
+      "source": "67",
+      "target": "69",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_21",
+      "source": "67",
+      "target": "70",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_22",
+      "source": "67",
+      "target": "71",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_23",
+      "source": "67",
+      "target": "72",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_24",
+      "source": "73",
+      "target": "74",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_25",
+      "source": "73",
+      "target": "75",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_26",
+      "source": "76",
+      "target": "77",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_27",
+      "source": "78",
+      "target": "79",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_28",
+      "source": "80",
+      "target": "81",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_29",
+      "source": "82",
+      "target": "83",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_30",
+      "source": "82",
+      "target": "84",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_31",
+      "source": "85",
+      "target": "86",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_32",
+      "source": "85",
+      "target": "87",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_33",
+      "source": "85",
+      "target": "88",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_34",
+      "source": "85",
+      "target": "89",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_35",
+      "source": "90",
+      "target": "91",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_36",
+      "source": "90",
+      "target": "92",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_37",
+      "source": "90",
+      "target": "93",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_38",
+      "source": "90",
+      "target": "94",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_39",
+      "source": "90",
+      "target": "95",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_40",
+      "source": "90",
+      "target": "96",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_41",
+      "source": "90",
+      "target": "97",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_42",
+      "source": "98",
+      "target": "99",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_43",
+      "source": "98",
+      "target": "100",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_44",
+      "source": "98",
+      "target": "101",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_45",
+      "source": "98",
+      "target": "102",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_46",
+      "source": "103",
+      "target": "104",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_47",
+      "source": "103",
+      "target": "105",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_48",
+      "source": "103",
+      "target": "104",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_49",
+      "source": "103",
+      "target": "106",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_50",
+      "source": "103",
+      "target": "105",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_51",
+      "source": "103",
+      "target": "107",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_52",
+      "source": "108",
+      "target": "109",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_53",
+      "source": "108",
+      "target": "110",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_54",
+      "source": "108",
+      "target": "111",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_55",
+      "source": "112",
+      "target": "113",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_56",
+      "source": "112",
+      "target": "114",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_57",
+      "source": "115",
+      "target": "116",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_58",
+      "source": "115",
+      "target": "117",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_59",
+      "source": "115",
+      "target": "117",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_60",
+      "source": "115",
+      "target": "118",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_61",
+      "source": "115",
+      "target": "119",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_62",
+      "source": "115",
+      "target": "120",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_63",
+      "source": "121",
+      "target": "122",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_1",
+      "source": "123",
+      "target": "124",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_2",
+      "source": "125",
+      "target": "126",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_3",
+      "source": "127",
+      "target": "128",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_4",
+      "source": "129",
+      "target": "130",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_5",
+      "source": "131",
+      "target": "132",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_6",
+      "source": "133",
+      "target": "134",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_7",
+      "source": "133",
+      "target": "135",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_8",
+      "source": "136",
+      "target": "137",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_9",
+      "source": "138",
+      "target": "139",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_10",
+      "source": "140",
+      "target": "141",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_1",
+      "source": "142",
+      "target": "143",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_2",
+      "source": "142",
+      "target": "144",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_3",
+      "source": "142",
+      "target": "145",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_4",
+      "source": "146",
+      "target": "147",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_5",
+      "source": "146",
+      "target": "148",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_6",
+      "source": "146",
+      "target": "149",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_7",
+      "source": "146",
+      "target": "150",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_8",
+      "source": "151",
+      "target": "152",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_9",
+      "source": "153",
+      "target": "154",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_10",
+      "source": "155",
+      "target": "156",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_11",
+      "source": "157",
+      "target": "158",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_12",
+      "source": "159",
+      "target": "160",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_13",
+      "source": "161",
+      "target": "162",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_1",
+      "source": "163",
+      "target": "164",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_2",
+      "source": "165",
+      "target": "166",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_3",
+      "source": "165",
+      "target": "167",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_4",
+      "source": "165",
+      "target": "168",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_5",
+      "source": "165",
+      "target": "169",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_6",
+      "source": "170",
+      "target": "171",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_7",
+      "source": "170",
+      "target": "172",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_8",
+      "source": "173",
+      "target": "174",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_9",
+      "source": "173",
+      "target": "175",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_10",
+      "source": "173",
+      "target": "176",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_11",
+      "source": "177",
+      "target": "178",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_12",
+      "source": "177",
+      "target": "179",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_13",
+      "source": "180",
+      "target": "181",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_14",
+      "source": "180",
+      "target": "182",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_15",
+      "source": "180",
+      "target": "183",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_16",
+      "source": "184",
+      "target": "185",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_17",
+      "source": "184",
+      "target": "186",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_18",
+      "source": "184",
+      "target": "187",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_19",
+      "source": "188",
+      "target": "189",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_20",
+      "source": "188",
+      "target": "190",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_21",
+      "source": "188",
+      "target": "191",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_22",
+      "source": "192",
+      "target": "193",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_23",
+      "source": "192",
+      "target": "194",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_24",
+      "source": "192",
+      "target": "195",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_25",
+      "source": "192",
+      "target": "196",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_26",
+      "source": "197",
+      "target": "198",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_27",
+      "source": "197",
+      "target": "199",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_28",
+      "source": "197",
+      "target": "200",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_29",
+      "source": "197",
+      "target": "201",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_30",
+      "source": "202",
+      "target": "203",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_31",
+      "source": "202",
+      "target": "204",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_32",
+      "source": "205",
+      "target": "206",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_33",
+      "source": "205",
+      "target": "207",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_34",
+      "source": "205",
+      "target": "208",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_35",
+      "source": "210",
+      "target": "211",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_36",
+      "source": "210",
+      "target": "212",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_37",
+      "source": "213",
+      "target": "214",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_38",
+      "source": "213",
+      "target": "215",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_39",
+      "source": "213",
+      "target": "216",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_40",
+      "source": "213",
+      "target": "217",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_41",
+      "source": "213",
+      "target": "218",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_42",
+      "source": "213",
+      "target": "219",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_43",
+      "source": "213",
+      "target": "220",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_44",
+      "source": "221",
+      "target": "222",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_45",
+      "source": "223",
+      "target": "224",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_46",
+      "source": "223",
+      "target": "225",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_47",
+      "source": "226",
+      "target": "227",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_48",
+      "source": "226",
+      "target": "228",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_49",
+      "source": "226",
+      "target": "229",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_50",
+      "source": "226",
+      "target": "230",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_51",
+      "source": "226",
+      "target": "231",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_52",
+      "source": "232",
+      "target": "233",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_53",
+      "source": "232",
+      "target": "234",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_54",
+      "source": "232",
+      "target": "235",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_55",
+      "source": "236",
+      "target": "237",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_1",
+      "source": "243",
+      "target": "244",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_2",
+      "source": "243",
+      "target": "245",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_3",
+      "source": "246",
+      "target": "247",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_4",
+      "source": "246",
+      "target": "248",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_5",
+      "source": "253",
+      "target": "254",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_6",
+      "source": "253",
+      "target": "255",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_7",
+      "source": "253",
+      "target": "256",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_8",
+      "source": "253",
+      "target": "257",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_9",
+      "source": "262",
+      "target": "263",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_10",
+      "source": "262",
+      "target": "264",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_11",
+      "source": "265",
+      "target": "266",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_12",
+      "source": "265",
+      "target": "267",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_13",
+      "source": "268",
+      "target": "269",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_14",
+      "source": "268",
+      "target": "270",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_15",
+      "source": "271",
+      "target": "272",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_16",
+      "source": "271",
+      "target": "273",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_17",
+      "source": "275",
+      "target": "276",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_18",
+      "source": "275",
+      "target": "277",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_19",
+      "source": "275",
+      "target": "278",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_20",
+      "source": "279",
+      "target": "280",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_21",
+      "source": "279",
+      "target": "281",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_22",
+      "source": "279",
+      "target": "282",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_1",
+      "source": "283",
+      "target": "284",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_2",
+      "source": "283",
+      "target": "285",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_3",
+      "source": "283",
+      "target": "286",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_4",
+      "source": "287",
+      "target": "288",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_5",
+      "source": "287",
+      "target": "289",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_6",
+      "source": "290",
+      "target": "291",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_7",
+      "source": "290",
+      "target": "292",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_8",
+      "source": "290",
+      "target": "293",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_9",
+      "source": "294",
+      "target": "295",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_10",
+      "source": "295",
+      "target": "296",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_11",
+      "source": "295",
+      "target": "297",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_12",
+      "source": "295",
+      "target": "298",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_13",
+      "source": "294",
+      "target": "299",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_14",
+      "source": "299",
+      "target": "300",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_15",
+      "source": "299",
+      "target": "301",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_16",
+      "source": "302",
+      "target": "303",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_17",
+      "source": "302",
+      "target": "304",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_18",
+      "source": "305",
+      "target": "306",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_19",
+      "source": "305",
+      "target": "307",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_20",
+      "source": "305",
+      "target": "308",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_21",
+      "source": "305",
+      "target": "309",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_22",
+      "source": "305",
+      "target": "310",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_23",
+      "source": "305",
+      "target": "311",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_24",
+      "source": "305",
+      "target": "312",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_25",
+      "source": "313",
+      "target": "314",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_26",
+      "source": "313",
+      "target": "315",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_27",
+      "source": "313",
+      "target": "316",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_28",
+      "source": "317",
+      "target": "318",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_29",
+      "source": "317",
+      "target": "319",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_30",
+      "source": "317",
+      "target": "320",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_31",
+      "source": "317",
+      "target": "321",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_32",
+      "source": "322",
+      "target": "323",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_33",
+      "source": "322",
+      "target": "324",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_34",
+      "source": "322",
+      "target": "325",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_1",
+      "source": "326",
+      "target": "327",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_2",
+      "source": "326",
+      "target": "328",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_3",
+      "source": "329",
+      "target": "330",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_4",
+      "source": "329",
+      "target": "331",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_5",
+      "source": "332",
+      "target": "333",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_6",
+      "source": "332",
+      "target": "334",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_7",
+      "source": "335",
+      "target": "336",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_8",
+      "source": "335",
+      "target": "337",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_9",
+      "source": "338",
+      "target": "339",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_10",
+      "source": "338",
+      "target": "340",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_11",
+      "source": "341",
+      "target": "342",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_12",
+      "source": "341",
+      "target": "343",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_13",
+      "source": "341",
+      "target": "344",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_14",
+      "source": "345",
+      "target": "346",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_15",
+      "source": "345",
+      "target": "347",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_16",
+      "source": "345",
+      "target": "348",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_17",
+      "source": "349",
+      "target": "350",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_18",
+      "source": "349",
+      "target": "351",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_19",
+      "source": "349",
+      "target": "352",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_20",
+      "source": "349",
+      "target": "353",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_21",
+      "source": "354",
+      "target": "344",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_22",
+      "source": "354",
+      "target": "355",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_23",
+      "source": "356",
+      "target": "357",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_24",
+      "source": "356",
+      "target": "358",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_25",
+      "source": "356",
+      "target": "359",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_26",
+      "source": "360",
+      "target": "361",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_27",
+      "source": "360",
+      "target": "362",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_28",
+      "source": "360",
+      "target": "363",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_29",
+      "source": "364",
+      "target": "365",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_30",
+      "source": "364",
+      "target": "366",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_31",
+      "source": "367",
+      "target": "368",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_32",
+      "source": "367",
+      "target": "369",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_33",
+      "source": "370",
+      "target": "371",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_34",
+      "source": "370",
+      "target": "372",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_35",
+      "source": "373",
+      "target": "374",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_36",
+      "source": "373",
+      "target": "375",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_37",
+      "source": "376",
+      "target": "377",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_38",
+      "source": "376",
+      "target": "378",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_39",
+      "source": "376",
+      "target": "379",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_40",
+      "source": "376",
+      "target": "380",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_41",
+      "source": "381",
+      "target": "382",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_42",
+      "source": "383",
+      "target": "384",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_43",
+      "source": "385",
+      "target": "386",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_44",
+      "source": "387",
+      "target": "388",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_45",
+      "source": "389",
+      "target": "390",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_46",
+      "source": "391",
+      "target": "392",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_47",
+      "source": "391",
+      "target": "393",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_48",
+      "source": "394",
+      "target": "395",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_49",
+      "source": "396",
+      "target": "397",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_50",
+      "source": "396",
+      "target": "398",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_51",
+      "source": "396",
+      "target": "399",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_52",
+      "source": "396",
+      "target": "400",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_1",
+      "source": "401",
+      "target": "402",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_2",
+      "source": "403",
+      "target": "404",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_3",
+      "source": "403",
+      "target": "405",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_4",
+      "source": "406",
+      "target": "407",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_5",
+      "source": "406",
+      "target": "408",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_6",
+      "source": "406",
+      "target": "409",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_7",
+      "source": "406",
+      "target": "410",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_8",
+      "source": "411",
+      "target": "412",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_9",
+      "source": "413",
+      "target": "414",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_10",
+      "source": "415",
+      "target": "416",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_11",
+      "source": "415",
+      "target": "417",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_12",
+      "source": "418",
+      "target": "419",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_13",
+      "source": "420",
+      "target": "421",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_14",
+      "source": "420",
+      "target": "422",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_15",
+      "source": "423",
+      "target": "424",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_16",
+      "source": "423",
+      "target": "425",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_1",
+      "source": "426",
+      "target": "427",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_2",
+      "source": "428",
+      "target": "429",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_3",
+      "source": "429",
+      "target": "430",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_4",
+      "source": "429",
+      "target": "431",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_5",
+      "source": "429",
+      "target": "432",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_6",
+      "source": "428",
+      "target": "433",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_7",
+      "source": "433",
+      "target": "434",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_8",
+      "source": "433",
+      "target": "435",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_9",
+      "source": "433",
+      "target": "436",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_10",
+      "source": "428",
+      "target": "437",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_11",
+      "source": "437",
+      "target": "438",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_12",
+      "source": "437",
+      "target": "439",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_13",
+      "source": "437",
+      "target": "440",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_14",
+      "source": "428",
+      "target": "441",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_15",
+      "source": "441",
+      "target": "442",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_16",
+      "source": "441",
+      "target": "443",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_17",
+      "source": "441",
+      "target": "444",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_18",
+      "source": "428",
+      "target": "445",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_19",
+      "source": "445",
+      "target": "446",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_20",
+      "source": "445",
+      "target": "447",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_21",
+      "source": "445",
+      "target": "448",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_22",
+      "source": "428",
+      "target": "449",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_23",
+      "source": "449",
+      "target": "450",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_24",
+      "source": "449",
+      "target": "451",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_25",
+      "source": "428",
+      "target": "452",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_26",
+      "source": "452",
+      "target": "453",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_27",
+      "source": "452",
+      "target": "454",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_28",
+      "source": "452",
+      "target": "455",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_29",
+      "source": "428",
+      "target": "456",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_30",
+      "source": "456",
+      "target": "457",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_31",
+      "source": "456",
+      "target": "458",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_32",
+      "source": "428",
+      "target": "459",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_33",
+      "source": "459",
+      "target": "460",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_34",
+      "source": "459",
+      "target": "461",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_35",
+      "source": "428",
+      "target": "462",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_36",
+      "source": "462",
+      "target": "463",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_37",
+      "source": "462",
+      "target": "464",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_38",
+      "source": "465",
+      "target": "466",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_39",
+      "source": "465",
+      "target": "467",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_40",
+      "source": "468",
+      "target": "469",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_41",
+      "source": "468",
+      "target": "470",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_42",
+      "source": "471",
+      "target": "472",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_43",
+      "source": "471",
+      "target": "473",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_44",
+      "source": "471",
+      "target": "474",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_45",
+      "source": "475",
+      "target": "476",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_46",
+      "source": "475",
+      "target": "477",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_47",
+      "source": "475",
+      "target": "478",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_48",
+      "source": "475",
+      "target": "479",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_49",
+      "source": "480",
+      "target": "481",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_50",
+      "source": "480",
+      "target": "482",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_51",
+      "source": "480",
+      "target": "483",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_52",
+      "source": "484",
+      "target": "485",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_53",
+      "source": "484",
+      "target": "486",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_54",
+      "source": "486",
+      "target": "487",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_55",
+      "source": "486",
+      "target": "488",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_56",
+      "source": "486",
+      "target": "489",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_57",
+      "source": "486",
+      "target": "490",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_58",
+      "source": "491",
+      "target": "492",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_59",
+      "source": "491",
+      "target": "493",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_60",
+      "source": "493",
+      "target": "494",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_61",
+      "source": "493",
+      "target": "495",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_62",
+      "source": "493",
+      "target": "496",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_63",
+      "source": "497",
+      "target": "498",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_64",
+      "source": "497",
+      "target": "499",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_65",
+      "source": "499",
+      "target": "500",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_66",
+      "source": "499",
+      "target": "501",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_67",
+      "source": "499",
+      "target": "502",
+      "type": "PRECEDES",
+      "description": ""
+    },
+    {
+      "id": "rel_c_68",
+      "source": "503",
+      "target": "504",
+      "type": "PRECEDES",
+      "description": ""
+    }
+  ]
+}

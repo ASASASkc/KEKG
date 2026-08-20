@@ -7,7 +7,7 @@
       </div>
       <div class="top-actions">
         <button v-if="authStore.isAdmin" class="btn btn-primary" @click="openCreate">+ 新建题目</button>
-        <button class="btn btn-outline" @click="goStats">统计分析</button>
+        <button v-if="authStore.isAdmin" class="btn btn-outline" @click="openStats">统计分析</button>
       </div>
     </div>
 
@@ -306,6 +306,88 @@
       </div>
     </div>
 
+    <!-- ===== 题库统计分析弹窗 ===== -->
+    <div v-if="showStatsModal" class="modal-mask" @click.self="showStatsModal = false">
+      <div class="modal-card wide stats-modal">
+        <h4>题库统计分析</h4>
+        <UiLoading v-if="statsLoading" />
+        <template v-else-if="statsData">
+          <!-- 概览 -->
+          <div class="stats-overview">
+            <div class="stat-box">
+              <div class="stat-num">{{ statsData.total }}</div>
+              <div class="stat-label">题目总数</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num green">{{ statsData.pass_rate.avg }}%</div>
+              <div class="stat-label">平均通过率</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num blue">{{ statsData.pass_rate.attempted }}</div>
+              <div class="stat-label">有作答题数</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num red">{{ statsData.by_status.pending || 0 }}</div>
+              <div class="stat-label">待审核</div>
+            </div>
+          </div>
+
+          <!-- 通过率区间 -->
+          <div class="stats-col" v-if="statsData.pass_rate.attempted">
+            <h5>通过率分布</h5>
+            <div class="bar-row">
+              <span class="bar-label">通过率 ≥80%</span>
+              <div class="bar-track"><div class="bar-fill green" :style="{width: pct(statsData.pass_rate.high) + '%'}"></div></div>
+              <span class="bar-val">{{ statsData.pass_rate.high }} 题</span>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">通过率 50%-79%</span>
+              <div class="bar-track"><div class="bar-fill blue" :style="{width: pct(statsData.pass_rate.mid) + '%'}"></div></div>
+              <span class="bar-val">{{ statsData.pass_rate.mid }} 题</span>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">通过率 &lt;50%</span>
+              <div class="bar-track"><div class="bar-fill red" :style="{width: pct(statsData.pass_rate.low) + '%'}"></div></div>
+              <span class="bar-val">{{ statsData.pass_rate.low }} 题</span>
+            </div>
+          </div>
+
+          <!-- 题型 / 难度 -->
+          <div class="stats-row">
+            <div class="stats-col">
+              <h5>题型分布</h5>
+              <div v-for="(cnt, type) in statsData.by_type" :key="type" class="bar-row">
+                <span class="bar-label">{{ typeLabel(type) }}</span>
+                <div class="bar-track"><div class="bar-fill" :style="{width: pct(cnt) + '%'}"></div></div>
+                <span class="bar-val">{{ cnt }} 题</span>
+              </div>
+            </div>
+            <div class="stats-col">
+              <h5>难度分布</h5>
+              <div v-for="(cnt, star) in statsData.by_difficulty" :key="star" class="bar-row">
+                <span class="bar-label">{{ starText(Number(star) * 3) || '-' }}</span>
+                <div class="bar-track"><div class="bar-fill orange" :style="{width: pct(cnt) + '%'}"></div></div>
+                <span class="bar-val">{{ cnt }} 题</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 知识点分布 -->
+          <div class="stats-col" v-if="statsData.by_topic.length">
+            <h5>知识点分布（前 15）</h5>
+            <div v-for="t in statsData.by_topic" :key="t.topic" class="bar-row">
+              <span class="bar-label" :title="t.topic">{{ t.topic }}</span>
+              <div class="bar-track"><div class="bar-fill purple" :style="{width: pct(t.count) + '%'}"></div></div>
+              <span class="bar-val">{{ t.count }} 题</span>
+            </div>
+          </div>
+        </template>
+        <div class="modal-actions">
+          <button class="btn btn-ghost" @click="showStatsModal = false">关闭</button>
+        </div>
+      </div>
+    </div>
+
     <!-- ===== AI 出题弹窗 ===== -->
     <div v-if="showAiModal" class="modal-overlay" @click.self="showAiModal = false">
       <div class="modal" style="max-width:600px">
@@ -355,14 +437,36 @@
 
 <script setup>
 import { ref, onMounted, computed } from 'vue'
-import { useRouter } from 'vue-router'
 import api from '../api'
 import { authStore } from '../stores/auth'
 import { useFeedback } from '../composables/useFeedback'
 
 const { tip, ask } = useFeedback()
 
-const router = useRouter()
+// 题库统计分析
+const showStatsModal = ref(false)
+const statsData = ref(null)
+const statsLoading = ref(false)
+
+function pct(n) {
+  if (!statsData.value || !statsData.value.total) return 0
+  return Math.round(Number(n || 0) / statsData.value.total * 100)
+}
+
+async function openStats() {
+  showStatsModal.value = true
+  statsData.value = null
+  statsLoading.value = true
+  try {
+    const r = await api.get('/questions/stats')
+    if (r.success) statsData.value = r.data
+    else tip(r.message || '统计加载失败')
+  } catch (e) {
+    tip('统计加载失败，请稍后重试')
+    showStatsModal.value = false
+  }
+  finally { statsLoading.value = false }
+}
 const questions = ref([])
 const loading = ref(true)
 const page = ref(1)
@@ -558,12 +662,25 @@ function doReject(id) {
   })
 }
 
+const topics = ref([])
+
+async function loadTopics() {
+  try {
+    const r = await api.get('/question-topics')
+    if (r.success) topics.value = r.data || []
+  } catch (e) { console.error('加载知识点列表失败:', e); tip('知识点列表加载失败，请稍后重试') }
+}
+
 onMounted(() => {
   doSearch()
+  loadTopics()
 })
+
+let searchSeq = 0   // 请求序号，防止旧结果覆盖新结果
 
 async function doSearch() {
   loading.value = true
+  const seq = ++searchSeq
   try {
     const params = { page: page.value, page_size: pageSize.value }
     if (filterType.value) params.type = filterType.value
@@ -577,12 +694,13 @@ async function doSearch() {
     if (filterKeyword.value) params.keyword = filterKeyword.value
     if (filterStatus.value) params.status = filterStatus.value
     const r = await api.get('/questions', { params })
+    if (seq !== searchSeq) return   // 丢弃过期请求
     if (r.success) {
       questions.value = r.data.items || []
       totalPages.value = r.data.total_pages || Math.ceil((r.data.total || 0) / pageSize.value)
     }
-  } catch (e) { console.error(e) }
-  finally { loading.value = false }
+  } catch (e) { console.error(e); if (seq === searchSeq) tip('题目列表加载失败，请稍后重试') }
+  finally { if (seq === searchSeq) loading.value = false }
 }
 
 function toggleSelect(id) {
@@ -632,7 +750,7 @@ async function doExport(fmt) {
       const extMap = { excel: 'xlsx', word: 'docx' }
       downloadBlob(blob, `questions.${extMap[fmt] || fmt}`)
     }
-  } catch (e) { console.error(e) }
+  } catch (e) { console.error(e); tip('操作失败，请重试') }
   finally { exporting.value = false }
 }
 
@@ -781,10 +899,6 @@ async function saveQuestion() {
   }
   finally { saving.value = false }
 }
-
-function goStats() {
-  router.push('/statistics')
-}
 </script>
 
 <style scoped>
@@ -859,8 +973,31 @@ function goStats() {
   box-shadow: 0 8px 30px rgba(0,0,0,0.15);
 }
 .modal-card.wide { width: 640px; }
+.modal-card.stats-modal { width: 680px; max-height: 82vh; }
 .modal-card h4 { margin: 0 0 16px; font-size: 14px; }
 .modal-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 16px; }
+
+/* 题库统计 */
+.stats-overview { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px; }
+.stat-box { background: #f8fafc; border-radius: 8px; padding: 16px 8px; text-align: center; }
+.stat-num { font-size: 26px; font-weight: 700; color: #1e293b; }
+.stat-num.green { color: #10b981; }
+.stat-num.blue { color: #3b82f6; }
+.stat-num.red { color: #ef4444; }
+.stat-label { font-size: 11px; color: var(--text-secondary); margin-top: 4px; }
+.stats-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 20px; }
+@media (max-width: 700px) { .stats-row { grid-template-columns: 1fr; } }
+.stats-col { margin-bottom: 20px; }
+.stats-col h5 { font-size: 12px; margin: 0 0 10px; color: #1e293b; }
+.bar-row { display: flex; align-items: center; gap: 8px; margin-bottom: 7px; }
+.bar-label { font-size: 11px; color: var(--text-secondary); width: 110px; flex-shrink: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.bar-track { flex: 1; height: 8px; background: #f1f5f9; border-radius: 4px; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 4px; background: #3b82f6; min-width: 2px; transition: width .5s ease; }
+.bar-fill.green { background: #10b981; }
+.bar-fill.orange { background: #f59e0b; }
+.bar-fill.purple { background: #8b5cf6; }
+.bar-fill.red { background: #ef4444; }
+.bar-val { font-size: 11px; font-weight: 600; color: #334155; width: 48px; flex-shrink: 0; text-align: right; }
 
 .form-group { margin-bottom: 12px; }
 .form-group label { display: block; font-size: 11px; font-weight: 500; margin-bottom: 4px; color: var(--text-secondary); }

@@ -225,6 +225,7 @@ async function doSearch() {
     totalPages.value = data.total_pages
   } catch (e) {
     console.error('加载资源失败:', e)
+    tip('资源加载失败，请稍后重试')
   } finally {
     loading.value = false
   }
@@ -245,6 +246,12 @@ async function openEdit(r) {
 }
 
 async function submitForm() {
+  const title = (form.value.title || '').trim()
+  if (!title) { tip('请输入资源标题'); return }
+  const url = (form.value.url || '').trim()
+  const content = (form.value.content || '').trim()
+  if (!url && !content) { tip('请填写链接或内容，至少一项'); return }
+  if (url && !/^https?:\/\//i.test(url)) { tip('链接须以 http:// 或 https:// 开头'); return }
   submitting.value = true
   try {
     if (editingId.value) {

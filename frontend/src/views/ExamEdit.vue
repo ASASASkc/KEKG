@@ -146,7 +146,7 @@
         <button v-if="authStore.isAdmin" class="btn btn-ai" @click="showAiModal = true" title="使用 AI 批量生成题目">
           AI 出题
         </button>
-        <button class="btn btn-primary" @click="doCreate" :disabled="saving" v-if="!isEdit">
+        <button class="btn btn-primary" @click="doCreate" :disabled="savingAI || saving" v-if="!isEdit">
           {{ saving ? '创建中...' : '题库组卷' }}
         </button>
         <button class="btn btn-primary btn-ai-create" @click="doCreateAI" :disabled="saving" v-if="!isEdit">
@@ -282,7 +282,9 @@ import { useRoute, useRouter } from 'vue-router'
 import api from '../api'
 import { authStore } from '../stores/auth'
 import TreeNodePicker from '../components/TreeNodePicker.vue'
+import { useFeedback } from '../composables/useFeedback'
 
+const { tip } = useFeedback()
 const route = useRoute()
 const router = useRouter()
 const eid = computed(() => route.query.edit || '')
@@ -352,7 +354,7 @@ async function openExamKpPicker() {
       computeLeafCounts(examKpPickerTree.value, examKpLeafCountMap)
       examKpPickerLeafCount.value = examKpLeafCountMap[examKpPickerTree.value.name] || 0
     }
-  } catch (e) { console.error(e) }
+  } catch (e) { console.error(e); tip('知识树加载失败，请稍后重试') }
   examKpPickerLoading.value = false
 }
 
@@ -524,7 +526,7 @@ onMounted(async () => {
           rules: []
         }
       }
-    } catch (e) { console.error(e) }
+    } catch (e) { console.error(e); tip('考试信息加载失败，请稍后重试') }
   }
   loading.value = false
 })
@@ -533,7 +535,7 @@ async function fetchMyClasses() {
   try {
     const r = await api.get('/classes')
     if (r.success) myClasses.value = r.data?.items || r.data
-  } catch (e) { console.error('加载班级列表失败:', e) }
+  } catch (e) { console.error('加载班级列表失败:', e); tip('班级加载失败，请稍后重试') }
 }
 
 function addRule() {
@@ -551,7 +553,7 @@ async function fetchTopics() {
   try {
     const r = await api.get('/question-topics')
     if (r.success) topics.value = r.data || []
-  } catch (e) { console.error(e) }
+  } catch (e) { console.error(e); tip('题型加载失败，请稍后重试') }
 }
 
 async function doCreate() {
@@ -559,6 +561,7 @@ async function doCreate() {
   if (!form.value.title.trim()) { errorMsg.value = '请输入标题'; return }
   if (!form.value.class_id) { errorMsg.value = '请选择班级'; return }
   if (!form.value.start_time || !form.value.end_time) { errorMsg.value = '请选择时间'; return }
+  if (form.value.end_time <= form.value.start_time) { errorMsg.value = '结束时间必须晚于开始时间'; return }
   const rules = form.value.rules.filter(r => r.type && r.count > 0)
   if (!rules.length) { errorMsg.value = '请至少添加一条组卷规则'; return }
   if (totalScore.value !== 100) {
@@ -585,6 +588,8 @@ async function doCreateAI() {
   errorMsg.value = ''
   if (!form.value.title.trim()) { errorMsg.value = '请输入标题'; return }
   if (!form.value.class_id) { errorMsg.value = '请选择班级'; return }
+  if (!form.value.start_time || !form.value.end_time) { errorMsg.value = '请选择时间'; return }
+  if (form.value.end_time <= form.value.start_time) { errorMsg.value = '结束时间必须晚于开始时间'; return }
   const rules = form.value.rules.filter(r => r.type && r.count > 0)
   if (!rules.length) { errorMsg.value = '请至少添加一条组卷规则'; return }
   if (totalScore.value !== 100) {
@@ -620,6 +625,9 @@ async function doCreateAI() {
 
 async function doUpdate() {
   errorMsg.value = ''
+  if (!form.value.title.trim()) { tip('请输入标题'); return }
+  if (!form.value.start_time || !form.value.end_time) { tip('请选择开始和结束时间'); return }
+  if (form.value.end_time <= form.value.start_time) { tip('结束时间必须晚于开始时间'); return }
   saving.value = true
   try {
     await api.put(`/exams/${eid.value}`, {

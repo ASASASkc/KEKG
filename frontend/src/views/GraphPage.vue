@@ -164,10 +164,12 @@ import { ref, onMounted, onUnmounted, nextTick, watch, computed } from 'vue'
 import { useRoute } from 'vue-router'
 import * as echarts from 'echarts'
 import api from '../api'
+import { useFeedback } from '../composables/useFeedback'
 import KnowledgeCard from '../components/KnowledgeCard.vue'
 import SubGraphPanel from '../components/SubGraphPanel.vue'
 
 const route = useRoute()
+const { tip } = useFeedback()
 const chartRef = ref(null)
 let chart = null
 let resizeObserver = null
@@ -251,6 +253,7 @@ async function loadTrackGraph() {
     }
   } catch (e) {
     console.error('加载拓展图谱失败:', e)
+    tip('图谱加载失败，请稍后重试')
     trackLoaded.value = true
     graphData.value = { nodes: [], relationships: [] }
   } finally {
@@ -278,7 +281,7 @@ async function loadTracks() {
     if (r.success) {
       tracks.value = r.data?.items || r.data
     }
-  } catch (e) { console.error('加载拓展列表失败:', e) }
+  } catch (e) { console.error('加载拓展列表失败:', e); tip('拓展列表加载失败，请稍后重试') }
 }
 
 // ── KnowledgeCard 事件处理 ──
@@ -359,7 +362,7 @@ async function enterSubGraph(nodeId) {
       await nextTick()
       renderChart()
     }
-  } catch (e) { console.error('加载子图失败:', e) }
+  } catch (e) { console.error('加载子图失败:', e); tip('子图加载失败，请稍后重试') }
 }
 
 function navigateToBreadcrumb(idx) {
@@ -428,7 +431,7 @@ async function loadNodeById(nid) {
       const node = { ...r.data, properties: { ...r.data.properties } }
       await selectNode({ id: nid, labels: ['KnowledgePoint'], properties: r.data.properties || node.properties })
     }
-  } catch (e) { console.error('加载节点详情失败:', e) }
+  } catch (e) { console.error('加载节点详情失败:', e); tip('节点详情加载失败，请稍后重试') }
 }
 
 // ── 搜索与选择 ──
@@ -452,7 +455,7 @@ async function doSearch(fromHomepage) {
         selectNode(r.data[0])
       }
     }
-  } catch (e) { console.error('搜索节点失败:', e) }
+  } catch (e) { console.error('搜索节点失败:', e); tip('节点搜索失败，请稍后重试') }
 }
 
 async function selectNode(node) {
@@ -480,7 +483,7 @@ async function selectNode(node) {
       await nextTick()
       renderChart()
     }
-  } catch (e) { console.error('展开子节点失败:', e) }
+  } catch (e) { console.error('展开子节点失败:', e); tip('子节点展开失败，请稍后重试') }
 }
 
 async function viewNeighbors(nodeId) {
@@ -501,7 +504,7 @@ async function viewNeighbors(nodeId) {
       await nextTick()
       renderChart()
     }
-  } catch (e) { console.error('展开邻居失败:', e) }
+  } catch (e) { console.error('展开邻居失败:', e); tip('邻居展开失败，请稍后重试') }
 }
 
 // ── 路径查询 ──
@@ -517,7 +520,7 @@ async function searchPathTarget() {
       pathTargetNode.value = null
       pathResult.value = null
     }
-  } catch (e) { console.error('搜索目标节点失败:', e) }
+  } catch (e) { console.error('搜索目标节点失败:', e); tip('目标节点搜索失败，请稍后重试') }
 }
 
 function selectPathTarget(node) {
@@ -547,7 +550,7 @@ async function findPath() {
         highlightPathOnGraph()
       }
     }
-  } catch (e) { console.error('路径查询失败:', e) }
+  } catch (e) { console.error('路径查询失败:', e); tip('路径查询失败，请稍后重试') }
 }
 
 function highlightPathOnGraph() {

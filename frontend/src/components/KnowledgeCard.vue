@@ -275,6 +275,9 @@
 import { ref, computed, onUnmounted } from 'vue'
 import api from '../api'
 import { authStore } from '../stores/auth'
+import { useFeedback } from '../composables/useFeedback'
+
+const { tip } = useFeedback()
 
 const props = defineProps({
   node: { type: Object, default: () => ({ properties: {} }) },
@@ -616,7 +619,7 @@ async function doDelete() {
     if (r.success) {
       emit('deleted', props.node.id)
     }
-  } catch (e) { console.error('删除知识点失败:', e) }
+  } catch (e) { console.error('删除知识点失败:', e); tip('操作失败，请重试') }
   deleting.value = false
 }
 </script>

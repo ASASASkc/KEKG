@@ -122,10 +122,11 @@ async function fetchInviteCode() {
   try {
     const r = await api.get('/auth/invite-code')
     if (r.success) inviteCodeInput.value = r.data.invite_code
-  } catch (e) { console.error('加载邀请码失败:', e) }
+  } catch (e) { console.error('加载邀请码失败:', e); tip('邀请码加载失败，请稍后重试') }
 }
 
 async function saveInviteCode() {
+  if ((inviteCodeInput.value || '').trim().length < 4) { tip('邀请码至少 4 位'); return }
   savingInvite.value = true
   inviteMsg.value = ''
   try {

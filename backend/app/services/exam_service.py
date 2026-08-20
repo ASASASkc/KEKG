@@ -684,7 +684,7 @@ class ExamService:
 
             sql_repo.commit()
             return result
-        except:
+        except Exception:
             sql_repo.rollback()
             raise
 

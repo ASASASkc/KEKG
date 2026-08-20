@@ -221,6 +221,9 @@ import { useRoute } from 'vue-router'
 import api from '../api'
 import * as echarts from 'echarts'
 import BaseChart from '../components/BaseChart.vue'
+import { useFeedback } from '../composables/useFeedback'
+
+const { tip } = useFeedback()
 
 const route = useRoute()
 const eid = route.params.eid
@@ -234,6 +237,7 @@ const kpChartRef = ref(null)
 let kpChart = null
 
 onMounted(async () => {
+  window.addEventListener('resize', onResize)
   try {
     const r = await api.get(`/exams/${eid}/my-result`)
     if (r.success) {
@@ -250,8 +254,13 @@ onMounted(async () => {
 })
 
 onUnmounted(() => {
+  window.removeEventListener('resize', onResize)
   if (kpChart) { kpChart.dispose(); kpChart = null }
 })
+
+function onResize() {
+  if (kpChart) kpChart.resize()
+}
 
 function formatDate(d) {
   if (!d) return '-'
@@ -312,6 +321,7 @@ async function openAnalysis() {
     }
   } catch (e) {
     console.error('加载分析报告失败:', e)
+    tip('分析报告加载失败，请稍后重试')
   } finally {
     analysisLoading.value = false
   }

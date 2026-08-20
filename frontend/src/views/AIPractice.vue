@@ -15,6 +15,15 @@
         <button class="nav-item" :class="{ active: activeModule === 'bank' }" @click="switchModule('bank')">
           题库刷题
         </button>
+        <button class="nav-item" :class="{ active: activeModule === 'tasks' }" @click="switchModule('tasks')">
+          项目任务库
+        </button>
+        <button class="nav-item" :class="{ active: activeModule === 'wrongbook' }" @click="switchModule('wrongbook')">
+          错题本
+        </button>
+        <button class="nav-item" :class="{ active: activeModule === 'plans' }" @click="switchModule('plans')">
+          学习计划
+        </button>
       </div>
 
       <!-- AI出题配置 -->
@@ -223,18 +232,49 @@
             </div>
             <textarea v-model="codeText" class="code-textarea code-textarea-pro"
                       placeholder="# 在此编写你的 Python 代码..." spellcheck="false"
-                      ref="codeEditor" @scroll="syncLineScroll" @keydown="handleTab"></textarea>
+                      ref="codeEditor" @scroll="syncLineScroll" @keydown="handleTab" @input="onCodeInput"></textarea>
+          </div>
+
+          <!-- 标准输入：程序含 input() 时在此填写，每行一项 -->
+          <div class="stdin-panel">
+            <div class="output-section-label">标准输入（程序含 input() 时填写，每行一个值）</div>
+            <textarea v-model="stdinText" class="stdin-textarea" spellcheck="false"
+                      placeholder="例如程序需要两个数，则填写：&#10;5&#10;3"></textarea>
           </div>
 
           <!-- 输出面板 -->
           <div class="output-panel" v-if="codeOutput">
-            <div class="output-section-label">输入</div>
-            <pre class="output-content input-content">{{ codeText }}</pre>
             <div class="output-metrics">
               <span>运行时间: {{ codeMetrics.execTime }}ms</span>
             </div>
             <div class="output-section-label">输出</div>
             <pre class="output-content" :class="{ 'output-error': codeOutputError }">{{ codeOutput }}</pre>
+          </div>
+
+          <!-- 步骤记录面板（代码练习会话步骤历史/回放/保存） -->
+          <div class="steps-panel">
+            <div class="steps-panel-header">
+              <span class="steps-panel-title" @click="stepsPanelOpen = !stepsPanelOpen">
+                <span class="toggle-arrow">{{ stepsPanelOpen ? '▼' : '▶' }}</span>
+                步骤记录 <span class="count-text">({{ codeSteps.length }})</span>
+              </span>
+              <div class="steps-panel-actions">
+                <button v-if="!replaying" class="btn btn-xs btn-primary" @click="replaySteps" :disabled="!codeSteps.length">▶ 回放</button>
+                <button v-else class="btn btn-xs" @click="stopReplay">⏹ 停止回放</button>
+                <button class="btn btn-xs" @click="saveCodeSession" :disabled="!recording || !codeSteps.length">💾 保存</button>
+                <button class="btn btn-xs" @click="toggleMySessions">📂 我的记录</button>
+              </div>
+            </div>
+            <div v-if="stepsPanelOpen" class="steps-timeline">
+              <div v-if="!codeSteps.length" class="list-hint">暂无步骤记录，开始编写代码吧</div>
+              <div v-for="(step, i) in codeSteps" :key="step.id || i" class="step-item"
+                   :class="{ 'step-active': activeStepIndex === i }" @click="rollbackToStep(i)" title="点击回退到该步骤">
+                <span class="step-icon" :class="'si-' + step.step_type">{{ stepIcon(step.step_type) }}</span>
+                <span class="step-idx">{{ i + 1 }}</span>
+                <span class="step-time">{{ (step.created_at || '').slice(11, 19) || '--:--' }}</span>
+                <span class="step-note">{{ step.note || '' }}</span>
+              </div>
+            </div>
           </div>
 
           <!-- 答案区 - 仅提交习题后可见 -->
@@ -274,6 +314,21 @@
       <!-- 题库刷题模块 -->
       <template v-if="activeModule === 'bank'">
         <PracticeCenter class="bank-panel" />
+      </template>
+
+      <!-- 项目任务库模块 -->
+      <template v-if="activeModule === 'tasks'">
+        <ProjectTaskLibrary />
+      </template>
+
+      <!-- 错题本模块 -->
+      <template v-if="activeModule === 'wrongbook'">
+        <WrongBookPanel />
+      </template>
+
+      <!-- 学习计划模块（含学习概况看板 + 自定义学习计划） -->
+      <template v-if="activeModule === 'plans'">
+        <StudyPlanPanel />
       </template>
     </div>
 
@@ -346,15 +401,57 @@
         </div>
       </div>
     </div>
+
+    <!-- 我的记录弹窗（已保存的练习会话） -->
+    <div v-if="showMySessions" class="picker-overlay" @click.self="showMySessions = false">
+      <div class="picker-modal" style="height:auto;max-width:520px;">
+        <div class="picker-header">
+          <h3>我的记录</h3>
+          <button class="modal-close-btn" @click="showMySessions = false">&times;</button>
+        </div>
+        <div style="padding:12px 16px;max-height:60vh;overflow-y:auto;">
+          <div v-if="mySessionsLoading" class="list-hint">加载中...</div>
+          <div v-else-if="!mySessions.length" class="list-hint">暂无已保存的记录</div>
+          <div v-for="s in mySessions" :key="s.id" class="my-session-item">
+            <div class="ms-info" @click="restoreSession(s)">
+              <div class="ms-title">{{ s.title || '未命名练习' }}</div>
+              <div class="ms-meta">{{ s.step_count }} 个步骤 · {{ (s.updated_at || '').slice(0, 19).replace('T', ' ') }}</div>
+            </div>
+            <button class="snip-delete" @click.stop="deleteMySession(s)" title="删除">&times;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 退出保存确认弹窗（离开 code 模块/页面时若正在记录） -->
+    <div v-if="saveModalOpen" class="picker-overlay" @click.self="cancelLeave">
+      <div class="picker-modal" style="height:auto;max-width:420px;">
+        <div class="picker-header">
+          <h3>保存练习记录？</h3>
+          <button class="modal-close-btn" @click="cancelLeave">&times;</button>
+        </div>
+        <div style="padding:16px;">
+          <p style="font-size:13px;color:#475569;margin-bottom:14px;">当前练习已有 {{ codeSteps.length }} 个步骤记录，离开前是否保存？</p>
+          <div style="text-align:right;">
+            <button class="btn" @click="cancelLeave" style="margin-right:8px;">取消</button>
+            <button class="btn" @click="confirmDeleteLeave" style="margin-right:8px;color:#ef4444;border-color:#fecaca;">不保存删除</button>
+            <button class="btn btn-primary" @click="confirmSaveLeave">保存并离开</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
-import { ref, reactive, computed, watch } from 'vue'
-import { useRouter } from 'vue-router'
+import { ref, reactive, computed, watch, onMounted, onBeforeUnmount } from 'vue'
+import { useRouter, onBeforeRouteLeave } from 'vue-router'
 import api from '../api'
 import TreeNodePicker from '../components/TreeNodePicker.vue'
 import PracticeCenter from './PracticeCenter.vue'
+import ProjectTaskLibrary from '../components/ProjectTaskLibrary.vue'
+import WrongBookPanel from '../components/WrongBookPanel.vue'
+import StudyPlanPanel from '../components/StudyPlanPanel.vue'
 import { useFeedback } from '../composables/useFeedback'
 
 const { tip, ask } = useFeedback()
@@ -386,11 +483,26 @@ function stopResize() {
   document.removeEventListener('mouseup', stopResize)
 }
 
+// 判断代码练习是否有待处理内容（有步骤或编辑器非空），用于退出拦截
+function hasActiveCodeWork() {
+  return codeSessionId.value && recording.value &&
+    (codeSteps.value.length > 1 || !!codeText.value.trim())
+}
+
 function switchModule(mod) {
+  // 离开 code 模块：若有待处理内容，先弹窗确认（复用退出保存弹窗逻辑）
+  if (mod !== 'code' && activeModule.value === 'code' && hasActiveCodeWork()) {
+    pendingAction.value = 'switch'
+    pendingTarget = mod
+    saveModalOpen.value = true
+    return
+  }
   activeModule.value = mod
   if (mod === 'code') {
     if (!codeExercises.value.length) loadCodeExercises()
     if (!snippets.value.length && !snippetsLoading.value) loadSnippets()
+    // 进入 code 模块且尚未创建会话时，自动开始记录（若已从"我的记录"恢复则跳过）
+    if (codeSessionId.value === 0) startCodeSession()
   }
 }
 
@@ -438,6 +550,7 @@ const codeText = ref('')
 const codeOutput = ref('')
 const codeOutputError = ref(false)
 const codeRunning = ref(false)
+const stdinText = ref('')
 const codeMetrics = ref({ execTime: 0, memory: 0 })
 const codeSubmitted = ref(false)
 const codeAnswerTab = ref('ai')
@@ -484,6 +597,25 @@ function handleTab(e) {
     const end = ta.selectionEnd
     codeText.value = codeText.value.substring(0, start) + '    ' + codeText.value.substring(end)
     setTimeout(() => { ta.selectionStart = ta.selectionEnd = start + 4 }, 0)
+    return
+  }
+  // Enter 自动缩进：延续上一行缩进；若上一行以冒号结尾（且非注释），再增加一级缩进
+  if (e.key === 'Enter' && e.target.selectionStart === e.target.selectionEnd) {
+    e.preventDefault()
+    const ta = e.target
+    const start = ta.selectionStart
+    const text = codeText.value
+    const lineStart = text.lastIndexOf('\n', start - 1) + 1
+    const line = text.slice(lineStart, start)
+    let indent = (line.match(/^[ \t]*/) || [''])[0]
+    const content = line.slice(indent.length).trimEnd()
+    if (content && !content.startsWith('#') && /[:：]$/.test(content)) {
+      indent += '    '
+    }
+    const insertion = '\n' + indent
+    codeText.value = text.slice(0, start) + insertion + text.slice(start)
+    const pos = start + insertion.length
+    setTimeout(() => { ta.selectionStart = ta.selectionEnd = pos }, 0)
   }
 }
 const aiCodeAnswer = ref('')
@@ -493,6 +625,23 @@ const shareCodeText = ref('')
 const shareExplanation = ref('')
 const showCreateCodeModal = ref(false)
 const newCodeEx = ref({ title: '', description: '', template_code: '', difficulty: 1 })
+
+// ── 代码步骤记录（练习会话）──
+const codeSessionId = ref(0)        // 当前练习会话 id，0 表示未创建
+const codeSteps = ref([])           // 当前会话步骤缓存（按 id 升序）
+const stepsPanelOpen = ref(true)    // 步骤历史面板展开状态
+const recording = ref(false)        // 是否处于记录中
+const saveModalOpen = ref(false)    // 退出保存确认弹窗
+const pendingAction = ref(null)     // 退出弹窗待执行动作：'leave'（路由离开）| 'switch'（模块切换）| null
+let pendingNext = null              // 路由离开守卫的 next 回调（'leave' 场景使用）
+let pendingTarget = null            // 'switch' 场景的目标模块
+const replaying = ref(false)        // 是否正在回放
+const activeStepIndex = ref(-1)     // 回放高亮步骤下标
+let replayTimer = null              // 回放定时器句柄
+let editTimer = null                // 输入防抖句柄
+const mySessions = ref([])          // 我的已保存会话列表
+const showMySessions = ref(false)   // "我的记录"弹窗
+const mySessionsLoading = ref(false)
 
 // ── 知识树选择器 ──
 const pickerOpen = ref(false)
@@ -662,21 +811,33 @@ async function loadExistingAnswers() {
 }
 
 async function runCode() {
+  if (!codeText.value.trim()) { tip('请输入要运行的代码'); return }
   codeRunning.value = true
   codeOutput.value = '运行中...'
   codeOutputError.value = false
   codeMetrics.value = { execTime: 0, memory: 0 }
+  // 步骤记录：运行前先快照记录 run 步骤（记录运行时的代码）
+  if (recording.value && codeSessionId.value) {
+    await postCodeStep('run', codeText.value, '运行代码')
+  }
   try {
-    const r = await api.post('/code-run', { code: codeText.value, language: 'python' })
+    const r = await api.post('/code-run', { code: codeText.value, language: 'python', stdin: stdinText.value })
     codeOutput.value = (r.data && r.data.output) || '(无输出)'
     codeOutputError.value = !!(r.data && r.data.error)
     codeMetrics.value = {
       execTime: (r.data && r.data.exec_time) || 0,
       memory: (r.data && r.data.memory) || 0
     }
+    // 运行报错：追加 error 步骤（错误信息前 200 字符）
+    if (recording.value && codeSessionId.value && r.data && r.data.error) {
+      await postCodeStep('error', codeText.value, String(r.data.error).slice(0, 200))
+    }
   } catch (e) {
     codeOutput.value = '运行失败: ' + (e.message || '未知错误')
     codeOutputError.value = true
+    if (recording.value && codeSessionId.value) {
+      await postCodeStep('error', codeText.value, String(e.message || e).slice(0, 200))
+    }
   }
   codeRunning.value = false
 }
@@ -724,6 +885,7 @@ async function shareCodeAnswer() {
 }
 
 async function createCodeExercise() {
+  if (!newCodeEx.value.title || !newCodeEx.value.title.trim()) { tip('请输入代码题标题'); return }
   try {
     const r = await api.post('/code-exercises', newCodeEx.value)
     if (r.success) {
@@ -741,7 +903,7 @@ async function loadSnippets() {
   try {
     const r = await api.get('/code-snippets')
     if (r.success) snippets.value = r.data || []
-  } catch (e) { console.error('加载代码片段失败:', e) }
+  } catch (e) { console.error('加载代码片段失败:', e); tip('代码片段加载失败，请稍后重试') }
   snippetsLoading.value = false
 }
 
@@ -793,6 +955,250 @@ function deleteSnippet(snip) {
     } catch (e) { tip('删除失败: ' + (e.message || '未知错误')) }
   })
 }
+
+// ── 代码步骤记录：会话创建 ──
+async function startCodeSession() {
+  if (codeSessionId.value) return
+  try {
+    const title = selectedCodeEx.value?.title || '未命名练习'
+    const r = await api.post('/code-sessions', { title })
+    if (r.success && r.data && r.data.id) {
+      codeSessionId.value = r.data.id
+      recording.value = true
+      await postCodeStep('init', codeText.value, '初始代码')
+      await refreshCodeSteps()
+    }
+  } catch (e) {
+    console.error('创建练习会话失败:', e)
+    codeSessionId.value = 0
+    recording.value = false
+  }
+}
+
+// 通用：记录一个步骤并写入本地缓存（返回步骤对象或 null）
+async function postCodeStep(stepType, code, note = '') {
+  if (!codeSessionId.value || !recording.value) return null
+  try {
+    const r = await api.post(`/code-sessions/${codeSessionId.value}/steps`, { step_type: stepType, code, note })
+    if (r.success) {
+      // 后端仅返回 {id}，此处补全字段，保证回退/回放/时间线可用
+      const step = {
+        id: r.data && r.data.id,
+        step_type: stepType,
+        code,
+        note: note || '',
+        created_at: new Date().toLocaleString('zh-CN', { hour12: false })
+      }
+      if (step.id) codeSteps.value.push(step)
+      return step
+    }
+  } catch (e) { console.error('记录步骤失败:', e) }
+  return null
+}
+
+// 从后端刷新当前会话步骤缓存
+async function refreshCodeSteps() {
+  if (!codeSessionId.value) return
+  try {
+    const r = await api.get(`/code-sessions/${codeSessionId.value}/steps`)
+    if (r.success && r.data) {
+      codeSteps.value = Array.isArray(r.data) ? r.data : (r.data.items || [])
+    }
+  } catch (e) { console.error('刷新步骤失败:', e) }
+}
+
+// ── 输入记录：防抖 1.5s 后记录 edit 步骤 ──
+function onCodeInput() {
+  if (!codeSessionId.value || !recording.value) return
+  if (editTimer) clearTimeout(editTimer)
+  editTimer = setTimeout(async () => {
+    editTimer = null
+    await postCodeStep('edit', codeText.value, '编辑代码')
+  }, 1500)
+}
+
+// ── 回退：应用某步骤代码并截断本地缓存 ──
+function rollbackToStep(index) {
+  const step = codeSteps.value[index]
+  if (!step) return
+  codeText.value = step.code
+  codeSteps.value = codeSteps.value.slice(0, index + 1)
+  if (replaying.value) stopReplay()
+}
+
+// ── 回放：依次应用每个步骤的 code（600ms 间隔）──
+function replaySteps() {
+  if (!codeSteps.value.length || replaying.value) return
+  replaying.value = true
+  activeStepIndex.value = -1
+  let i = 0
+  replayTimer = setInterval(() => {
+    if (i >= codeSteps.value.length) {
+      stopReplay()
+      return
+    }
+    const step = codeSteps.value[i]
+    codeText.value = step.code
+    activeStepIndex.value = i
+    i++
+  }, 600)
+}
+
+function stopReplay() {
+  if (replayTimer) { clearInterval(replayTimer); replayTimer = null }
+  replaying.value = false
+  activeStepIndex.value = -1
+}
+
+function clearReplayTimer() {
+  if (replayTimer) { clearInterval(replayTimer); replayTimer = null }
+  replaying.value = false
+}
+
+// 步骤类型图标
+const stepTypeIcon = { init: '◇', edit: '✎', run: '▶', error: '✕' }
+function stepIcon(t) { return stepTypeIcon[t] || '·' }
+
+// ── 保存当前会话（手动）──
+async function saveCodeSession() {
+  if (!codeSessionId.value) return
+  try {
+    await api.put(`/code-sessions/${codeSessionId.value}/status`, { status: 'saved' })
+    recording.value = false
+    tip('已保存')
+  } catch (e) { tip('保存失败: ' + (e.message || '未知错误')) }
+}
+
+// ── 我的记录：加载 / 恢复 / 删除 ──
+function toggleMySessions() {
+  showMySessions.value = !showMySessions.value
+  if (showMySessions.value) loadMySessions()
+}
+
+async function loadMySessions() {
+  mySessionsLoading.value = true
+  try {
+    const r = await api.get('/code-sessions/mine')
+    if (r.success) {
+      mySessions.value = Array.isArray(r.data) ? r.data : (r.data?.items || [])
+    }
+  } catch (e) { tip('加载记录失败') }
+  mySessionsLoading.value = false
+}
+
+async function restoreSession(session) {
+  try {
+    const r = await api.get(`/code-sessions/${session.id}/steps`)
+    if (r.success && r.data) {
+      const steps = Array.isArray(r.data) ? r.data : (r.data.items || [])
+      codeSteps.value = steps
+      codeSessionId.value = session.id
+      const last = steps[steps.length - 1]
+      if (last) codeText.value = last.code
+      recording.value = true
+      showMySessions.value = false
+      tip('已恢复记录，继续练习')
+    }
+  } catch (e) { tip('恢复失败: ' + (e.message || '未知错误')) }
+}
+
+async function deleteMySession(session) {
+  try {
+    await api.put(`/code-sessions/${session.id}/status`, { status: 'deleted' })
+    await loadMySessions()
+    tip('已删除')
+  } catch (e) { tip('删除失败') }
+}
+
+// ── 退出保存确认弹窗：保留 / 删除 / 取消 ──
+// 退出后清空代码工作区，避免下次进入残留旧代码/输入/输出
+function resetCodeWorkspace() {
+  codeText.value = ''
+  stdinText.value = ''
+  codeOutput.value = ''
+  codeOutputError.value = false
+  codeMetrics.value = { execTime: 0, memory: 0 }
+  codeSessionId.value = 0
+  codeSteps.value = []
+  recording.value = false
+  currentSnippetId.value = 0
+  selectedCodeEx.value = null
+  activeStepIndex.value = -1
+}
+
+async function confirmSaveLeave() {
+  if (codeSessionId.value) {
+    try {
+      await api.put(`/code-sessions/${codeSessionId.value}/status`, { status: 'saved' })
+    } catch (e) { /* 忽略保存失败，仍放行 */ }
+  }
+  resetCodeWorkspace()
+  finishLeave()
+}
+
+async function confirmDeleteLeave() {
+  if (codeSessionId.value) {
+    try {
+      await api.put(`/code-sessions/${codeSessionId.value}/status`, { status: 'deleted' })
+    } catch (e) { /* 忽略 */ }
+  }
+  resetCodeWorkspace()
+  finishLeave()
+}
+
+function finishLeave() {
+  saveModalOpen.value = false
+  clearReplayTimer()
+  const action = pendingAction.value
+  pendingAction.value = null
+  if (action === 'leave') {
+    const next = pendingNext
+    pendingNext = null
+    if (typeof next === 'function') next(true)
+  } else if (action === 'switch' && pendingTarget) {
+    const target = pendingTarget
+    pendingTarget = null
+    activeModule.value = target
+  }
+  pendingTarget = null
+}
+
+function cancelLeave() {
+  saveModalOpen.value = false
+  pendingAction.value = null
+  pendingNext = null
+  pendingTarget = null
+}
+
+// 路由离开守卫：有待处理代码内容时先弹窗确认
+onBeforeRouteLeave((to, from, next) => {
+  if (hasActiveCodeWork()) {
+    pendingAction.value = 'leave'
+    pendingNext = next
+    saveModalOpen.value = true
+    return false
+  }
+  clearReplayTimer()
+  next()
+})
+
+// 刷新 / 关闭标签页提醒：有待处理代码内容时拦截
+function handleBeforeUnload(e) {
+  if (hasActiveCodeWork()) {
+    e.preventDefault()
+    e.returnValue = ''
+  }
+}
+
+// 卸载清理：防抖与回放定时器
+onMounted(() => {
+  window.addEventListener('beforeunload', handleBeforeUnload)
+})
+onBeforeUnmount(() => {
+  window.removeEventListener('beforeunload', handleBeforeUnload)
+  if (editTimer) { clearTimeout(editTimer); editTimer = null }
+  clearReplayTimer()
+})
 </script>
 
 <style scoped>
@@ -1007,10 +1413,19 @@ function deleteSnippet(snip) {
   min-height: 420px; padding: 12px 14px;
   background: #0f172a; color: #e2e8f0;
   font-family: 'Consolas', 'Monaco', monospace; font-size: 13px;
-  line-height: 1.6; resize: none; outline: none; tab-size: 4;
+  line-height: 1.6; resize: vertical; outline: none; tab-size: 4;
 }
 .output-panel { margin-top: 12px; }
 .output-section-label { font-size: 11px; color: #64748b; margin-bottom: 4px; font-weight: 600; }
+.stdin-panel { margin-top: 12px; }
+.stdin-textarea {
+  width: 100%; min-height: 64px; padding: 10px 12px;
+  background: #ffffff; color: #1e293b;
+  font-family: 'Consolas', 'Monaco', monospace; font-size: 13px;
+  line-height: 1.5; resize: vertical; outline: none;
+  border: 1px solid #e0e7ff; border-radius: 6px; box-sizing: border-box;
+}
+.stdin-textarea:focus { border-color: #3b82f6; }
 .output-metrics {
   display: flex; gap: 16px; font-size: 11px; color: #64748b;
   padding: 6px 12px; background: #f0f4ff; border-radius: 4px;
@@ -1021,7 +1436,6 @@ function deleteSnippet(snip) {
   font-size: 12px; max-height: 150px; overflow-y: auto; margin: 0; border: 1px solid #e0e7ff;
   white-space: pre-wrap; word-break: break-all;
 }
-.input-content { background: #fffbe6; border-color: #fde68a; }
 .output-error { color: #ef4444; }
 
 /* 答案 - 白底 */
@@ -1088,4 +1502,47 @@ function deleteSnippet(snip) {
   padding: 24px 28px;
   max-width: none;
 }
+
+/* ===== 代码步骤记录面板 ===== */
+.steps-panel {
+  margin-top: 12px; border: 1px solid #e0e7ff; border-radius: 8px;
+  background: #ffffff; overflow: hidden;
+}
+.steps-panel-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 8px 12px; border-bottom: 1px solid #f1f5f9;
+}
+.steps-panel-title {
+  display: flex; align-items: center; gap: 4px;
+  font-size: 12px; font-weight: 600; color: #475569; cursor: pointer;
+}
+.steps-panel-title:hover { color: #1e40af; }
+.steps-panel-actions { display: flex; gap: 4px; }
+.steps-timeline { max-height: 220px; overflow-y: auto; padding: 6px 8px; }
+.step-item {
+  display: flex; align-items: center; gap: 8px;
+  padding: 6px 8px; border-radius: 6px; cursor: pointer;
+  font-size: 12px; color: #475569; transition: background 0.15s;
+}
+.step-item:hover { background: rgba(59,130,246,0.06); }
+.step-item.step-active { background: rgba(59,130,246,0.15); }
+.step-icon { width: 18px; text-align: center; font-weight: 700; flex-shrink: 0; }
+.si-init { color: #3b82f6; }
+.si-edit { color: #f59e0b; }
+.si-run { color: #10b981; }
+.si-error { color: #ef4444; }
+.step-idx { color: #94a3b8; width: 22px; text-align: right; flex-shrink: 0; }
+.step-time { color: #94a3b8; font-size: 11px; flex-shrink: 0; }
+.step-note { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* ===== 我的记录弹窗项 ===== */
+.my-session-item {
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 10px; border: 1px solid #e0e7ff; border-radius: 6px;
+  margin-bottom: 6px; transition: border-color 0.15s;
+}
+.my-session-item:hover { border-color: #3b82f6; }
+.ms-info { flex: 1; cursor: pointer; min-width: 0; }
+.ms-title { font-size: 13px; font-weight: 500; color: #334155; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ms-meta { font-size: 11px; color: #94a3b8; margin-top: 2px; }
 </style>

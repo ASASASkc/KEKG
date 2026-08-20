@@ -125,7 +125,7 @@ onMounted(async () => {
         r => r.start_node === nid || r.end_node === nid
       )
     }
-  } catch (e) { console.error('加载知识点详情失败:', e) }
+  } catch (e) { console.error('加载知识点详情失败:', e); tip('知识点详情加载失败，请稍后重试') }
 })
 
 async function doFindPath() {
@@ -137,7 +137,7 @@ async function doFindPath() {
       max_depth: 5
     })
     if (r.success) foundPaths.value = r.data
-  } catch (e) { console.error('查找路径失败:', e) }
+  } catch (e) { console.error('查找路径失败:', e); tip('操作失败，请重试') }
 }
 
 function doDeleteRel(relId) {
@@ -145,7 +145,7 @@ function doDeleteRel(relId) {
     try {
       await api.delete(`/relationships/${relId}`)
       directRelations.value = directRelations.value.filter(r => r.id !== relId)
-    } catch (e) { console.error('删除关系失败:', e) }
+    } catch (e) { console.error('删除关系失败:', e); tip('操作失败，请重试') }
   })
 }
 </script>

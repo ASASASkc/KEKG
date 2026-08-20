@@ -76,8 +76,10 @@
 import { ref, computed, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import api from '../api'
+import { useFeedback } from '../composables/useFeedback'
 
 const route = useRoute()
+const { tip } = useFeedback()
 const exerciseId = Number(route.params.id)
 
 const exercise = ref({ title: '', description: '', difficulty: 1 })
@@ -98,7 +100,7 @@ async function loadExercise() {
   try {
     const r = await api.get(`/code-exercises/${exerciseId}`)
     if (r.success) exercise.value = r.data
-  } catch (e) { console.error('加载题目失败', e) }
+  } catch (e) { console.error('加载题目失败', e); tip('题目加载失败，请稍后重试') }
 }
 
 async function loadAnswersAndAI() {

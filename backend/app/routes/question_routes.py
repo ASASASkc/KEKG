@@ -42,6 +42,14 @@ def list_questions():
     return jsonify({'code': 200, 'success': True, 'data': data, 'message': '操作成功'})
 
 
+@question_bp.route('/questions/stats', methods=['GET'])
+@require_admin
+def question_stats():
+    """题库统计分析（管理员）"""
+    data = question_service.get_stats()
+    return jsonify({'code': 200, 'success': True, 'data': data, 'message': '操作成功'})
+
+
 @question_bp.route('/questions/<int:qid>', methods=['GET'])
 @require_auth
 def get_question(qid):

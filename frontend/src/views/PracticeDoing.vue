@@ -175,7 +175,7 @@ onMounted(async () => {
       }
       // 新题：nextQid 留空，待提交成功后再计算，避免未作答即可点"下一题"跳走
     }
-  } catch (e) { console.error(e) }
+  } catch (e) { console.error(e); tip('题目加载失败，请稍后重试') }
   finally { loading.value = false }
 })
 

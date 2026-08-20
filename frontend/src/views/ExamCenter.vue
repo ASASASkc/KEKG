@@ -18,7 +18,7 @@
       <template v-else>
         <p>你还没有可参加的考试或作业。</p>
         <p class="empty-hint">考试/作业需要教师创建并在任务中心 <strong>「发布」</strong> 后才会在这里显示。</p>
-        <router-link to="/classes" class="btn btn-primary btn-sm" style="margin-top:12px;display:inline-block">前往加入班级</router-link>
+        <router-link to="/class-tasks" class="btn btn-primary btn-sm" style="margin-top:12px;display:inline-block">前往加入班级</router-link>
       </template>
     </UiEmpty>
 

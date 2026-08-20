@@ -133,7 +133,7 @@ async function loadPage(page) {
         total_pages: r.data.total_pages
       }
     }
-  } catch (e) { console.error('加载知识点列表失败:', e) }
+  } catch (e) { console.error('加载知识点列表失败:', e); tip('知识点列表加载失败，请稍后重试') }
 }
 
 function goPage(p) {
@@ -202,7 +202,7 @@ async function doCreate() {
       form.value = { name: '', category: '', description: '' }
       await loadPage(1)
     }
-  } catch (e) { console.error('创建知识点失败:', e) }
+  } catch (e) { console.error('创建知识点失败:', e); tip('操作失败，请重试') }
 }
 
 function doDelete(id) {
@@ -210,7 +210,7 @@ function doDelete(id) {
     try {
       await api.delete(`/knowledge-points/${id}`)
       items.value = items.value.filter(i => i.id !== id)
-    } catch (e) { console.error('删除知识点失败:', e) }
+    } catch (e) { console.error('删除知识点失败:', e); tip('操作失败，请重试') }
   })
 }
 </script>

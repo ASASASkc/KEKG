@@ -9,7 +9,8 @@
         <h2>我的图谱</h2>
         <button v-if="authStore.isAdmin" class="btn btn-primary" @click="showCreateDialog = true">+ 创建图谱</button>
       </div>
-      <div v-if="labels.length === 0" class="empty-state">
+      <UiLoading v-if="labelsLoading" />
+      <div v-else-if="labels.length === 0" class="empty-state">
         暂无自定义图谱，点击"创建图谱"开始
       </div>
       <div v-else class="label-grid">
@@ -231,6 +232,7 @@ const { tip, ask } = useFeedback()
 
 // ── 图谱标签 ──
 const labels = ref([])
+const labelsLoading = ref(true)
 const showCreateDialog = ref(false)
 const newLabel = ref('')
 const newDisplayName = ref('')
@@ -327,6 +329,7 @@ async function startEnrichment() {
     activePolls.push(poll)
   } catch (e) {
     console.error('AI补全失败:', e)
+    tip('操作失败，请重试')
     enriching.value = false
   }
 }
@@ -394,6 +397,7 @@ async function startLinksEnrich() {
     activePolls.push(poll)
   } catch (e) {
     console.error('链接补全失败:', e)
+    tip('操作失败，请重试')
     linking.value = false
   }
 }
@@ -424,17 +428,26 @@ onUnmounted(() => {
 })
 
 async function loadLabels() {
+  labelsLoading.value = true
   try {
     const r = await api.get('/graph-management/labels')
     if (r.success) labels.value = r.data?.items || r.data
-  } catch (e) { console.error('加载图谱列表失败:', e) }
+  } catch (e) {
+    console.error('加载图谱列表失败:', e)
+    tip('加载图谱列表失败，请稍后重试')
+  } finally {
+    labelsLoading.value = false
+  }
 }
 
 async function loadStats() {
   try {
     const r = await api.get('/graph/statistics')
     if (r.success) stats.value = r.data
-  } catch (e) { console.error('加载统计失败:', e) }
+  } catch (e) {
+    console.error('加载统计失败:', e)
+    tip('加载统计失败，请稍后重试')
+  }
 }
 
 // ── 创建图谱 ──
@@ -489,6 +502,7 @@ async function doDeleteLabel() {
     }
   } catch (e) {
     console.error('删除失败:', e)
+    tip('操作失败，请重试')
   } finally {
     deleting.value = false
   }

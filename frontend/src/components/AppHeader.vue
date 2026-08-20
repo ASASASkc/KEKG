@@ -36,10 +36,9 @@
         <router-link v-if="authStore.isAdmin" to="/graph-management" class="nav-link nav-admin">图谱管理</router-link>
         <router-link v-if="authStore.isAdmin" to="/statistics" class="nav-link nav-admin">成绩统计</router-link>
         <router-link v-else-if="authStore.isLoggedIn" to="/statistics" class="nav-link">我的统计</router-link>
-        <router-link to="/exams" class="nav-link">任务中心</router-link>
-        <router-link to="/classes" class="nav-link">班级管理</router-link>
+        <router-link to="/class-tasks" class="nav-link">班级任务</router-link>
         <router-link v-if="!authStore.isAdmin" to="/learning-path" class="nav-link">学习路径</router-link>
-        <router-link v-if="!authStore.isAdmin" to="/ai-practice" class="nav-link nav-practice">AI 练习</router-link>
+        <router-link v-if="!authStore.isAdmin" to="/ai-practice" class="nav-link nav-practice">练习中心</router-link>
 
         <router-link v-if="authStore.isAdmin" to="/questions" class="nav-link nav-admin">题库管理</router-link>
         <router-link v-if="authStore.isAdmin" to="/resources" class="nav-link nav-admin">学习资源</router-link>
@@ -96,10 +95,9 @@
       <router-link v-if="authStore.isAdmin" to="/graph-management" class="mm-link" @click="menuOpen = false">图谱管理</router-link>
       <router-link v-if="authStore.isAdmin" to="/statistics" class="mm-link" @click="menuOpen = false">成绩统计</router-link>
       <router-link v-else-if="authStore.isLoggedIn" to="/statistics" class="mm-link" @click="menuOpen = false">我的统计</router-link>
-      <router-link to="/exams" class="mm-link" @click="menuOpen = false">任务中心</router-link>
-      <router-link to="/classes" class="mm-link" @click="menuOpen = false">班级管理</router-link>
+      <router-link to="/class-tasks" class="mm-link" @click="menuOpen = false">班级任务</router-link>
       <router-link v-if="!authStore.isAdmin" to="/learning-path" class="mm-link" @click="menuOpen = false">学习路径</router-link>
-      <router-link v-if="!authStore.isAdmin" to="/ai-practice" class="mm-link" @click="menuOpen = false">AI 练习</router-link>
+      <router-link v-if="!authStore.isAdmin" to="/ai-practice" class="mm-link" @click="menuOpen = false">练习中心</router-link>
       <router-link v-if="authStore.isAdmin" to="/questions" class="mm-link" @click="menuOpen = false">题库管理</router-link>
       <router-link v-if="authStore.isAdmin" to="/resources" class="mm-link" @click="menuOpen = false">学习资源</router-link>
       <router-link v-if="authStore.isDev" to="/llm-settings" class="mm-link" @click="menuOpen = false">AI设置</router-link>
@@ -114,8 +112,10 @@ import { ref, onMounted, onBeforeUnmount, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import api from '../api'
 import { authStore } from '../stores/auth'
+import { useFeedback } from '../composables/useFeedback'
 
 const router = useRouter()
+const { tip } = useFeedback()
 const graphGroups = ref([])
 const showGraphMenu = ref(false)
 const menuOpen = ref(false)
@@ -147,7 +147,7 @@ onMounted(async () => {
   try {
     const r = await api.get('/graph-groups')
     if (r.success) graphGroups.value = r.data
-  } catch (e) { console.error('加载拓展失败:', e) }
+  } catch (e) { console.error('加载拓展失败:', e); tip('拓展加载失败，请稍后重试') }
   loadUnread()
   notifTimer = setInterval(loadUnread, 30000)
 })

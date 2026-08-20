@@ -83,6 +83,9 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import api from '../api'
+import { useFeedback } from '../composables/useFeedback'
+
+const { tip } = useFeedback()
 
 const loading = ref(true)
 const questions = ref([])
@@ -135,7 +138,7 @@ async function doSearch() {
       totalPages.value = r.data.total_pages || 1
       stats.value = r.data.stats || stats.value
     }
-  } catch (e) { console.error(e) }
+  } catch (e) { console.error(e); tip('练习列表加载失败，请稍后重试') }
   finally { loading.value = false }
 }
 
@@ -158,7 +161,7 @@ async function toggleFavorite(q) {
       await api.put(`/questions/${q.id}/favorite`)
     }
     q.is_favorite = !q.is_favorite
-  } catch (e) { console.error(e) }
+  } catch (e) { console.error(e); tip('操作失败，请重试') }
 }
 </script>
 

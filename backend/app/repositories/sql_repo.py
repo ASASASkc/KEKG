@@ -879,6 +879,43 @@ class MySQLRepository:
         except Exception as e:
             _logger.warning('migration failed: %s', e)
 
+        # code_sessions 表（代码练习会话）
+        try:
+            conn = self._ensure_connected()
+            conn.execute("""
+                CREATE TABLE IF NOT EXISTS code_sessions (
+                    id INT AUTO_INCREMENT PRIMARY KEY,
+                    user_id INT NOT NULL,
+                    exercise_id INT,
+                    title VARCHAR(200) DEFAULT '未命名练习',
+                    status VARCHAR(20) DEFAULT 'recording',
+                    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+                    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+                    INDEX idx_session_user (user_id)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+            """)
+            conn.commit()
+        except Exception as e:
+            _logger.warning('migration failed: %s', e)
+
+        # code_session_steps 表（代码练习步骤记录）
+        try:
+            conn = self._ensure_connected()
+            conn.execute("""
+                CREATE TABLE IF NOT EXISTS code_session_steps (
+                    id INT AUTO_INCREMENT PRIMARY KEY,
+                    session_id INT NOT NULL,
+                    step_type VARCHAR(20) NOT NULL,
+                    code TEXT,
+                    note VARCHAR(500),
+                    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+                    INDEX idx_step_session (session_id)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+            """)
+            conn.commit()
+        except Exception as e:
+            _logger.warning('migration failed: %s', e)
+
 
 # 全局单例
 sql_repo = MySQLRepository()

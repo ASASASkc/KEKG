@@ -67,8 +67,10 @@ class CodeEditorService:
         return ex
     
     @staticmethod
-    def run_code(code, language='python'):
-        """执行代码并返回结果（沙箱模式：隔离环境 + 超时 + 内存限制）"""
+    def run_code(code, language='python', stdin=''):
+        """执行代码并返回结果（沙箱模式：隔离环境 + 超时 + 内存限制）
+        stdin: 程序 input() 读取的标准输入数据（限制 4096 字符）
+        """
         if language != 'python':
             return {'success': False, 'output': '当前仅支持 Python', 'exec_time': 0, 'memory': 0}
 
@@ -219,10 +221,11 @@ del _modsys, _STDLIB_PREFIX
             sandbox_env = dict(os.environ)
             sandbox_env['PYTHONIOENCODING'] = 'utf-8'
             sandbox_env['PYTHONUTF8'] = '1'
+            stdin_data = (stdin or '')[:4096]  # 限制标准输入长度，防止管道阻塞滥用
             with _RUN_SEM:
                 proc = subprocess.Popen(
                     ['python', '-I', '-B', '-X', 'utf8', tmp_path],  # -I: 隔离模式, -B: 不生成 .pyc, -X utf8: UTF-8 模式
-                    stdin=subprocess.DEVNULL,
+                    stdin=subprocess.PIPE,
                     stdout=subprocess.PIPE, stderr=subprocess.PIPE,
                     text=True, encoding='utf-8', errors='replace',
                     env=sandbox_env,
@@ -233,7 +236,7 @@ del _modsys, _STDLIB_PREFIX
                 t.start()
 
                 try:
-                    stdout, stderr = proc.communicate(timeout=10)
+                    stdout, stderr = proc.communicate(input=stdin_data, timeout=10)
                 except subprocess.TimeoutExpired:
                     proc.kill()
                     stdout, stderr = proc.communicate()

@@ -38,6 +38,9 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import api from '../api'
+import { useFeedback } from '../composables/useFeedback'
+
+const { tip } = useFeedback()
 
 const props = defineProps({
   eid: { type: [Number, String], required: true },
@@ -64,6 +67,7 @@ onMounted(async () => {
     if (res.success) items.value = res.data || []
   } catch (e) {
     console.error('加载排行榜失败:', e)
+    tip('排行榜加载失败，请稍后重试')
   } finally {
     loading.value = false
   }

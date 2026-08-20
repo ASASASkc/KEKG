@@ -14,6 +14,7 @@ const routes = [
   { path: '/users', name: 'users', component: () => import('../views/UserManagement.vue') },
   { path: '/logs', name: 'logs', component: () => import('../views/LogPage.vue') },
   { path: '/questions', name: 'questions', component: () => import('../views/QuestionBank.vue') },
+  { path: '/class-tasks', name: 'classTasks', component: () => import('../views/ClassTasks.vue') },
   { path: '/classes', name: 'classes', component: () => import('../views/ClassList.vue') },
   { path: '/classes/:id', name: 'classDetail', component: () => import('../views/ClassDetail.vue') },
   { path: '/exams', name: 'exams', component: () => import('../views/ExamCenter.vue') },
@@ -33,11 +34,17 @@ const routes = [
   { path: '/code-solution/:id', name: 'codeSolution', component: () => import('../views/CodeSolution.vue') },
   { path: '/user/:id', name: 'userProfile', component: () => import('../views/UserProfile.vue') },
   { path: '/notifications', name: 'notifications', component: () => import('../views/NotificationCenter.vue') },
+  { path: '/:pathMatch(.*)*', name: 'NotFound', component: () => import('../views/NotFound.vue') },
 ]
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) return savedPosition
+    if (to.hash) return { el: to.hash, behavior: 'smooth' }
+    return { top: 0 }
+  }
 })
 
 router.beforeEach(async (to, from, next) => {

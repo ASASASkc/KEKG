@@ -71,7 +71,7 @@
         <div class="review-top-bar">
           <h3>批阅学生: {{ reviewingStudent?.username || 'ID:' + reviewingSid }}</h3>
           <div class="review-top-actions">
-            <button class="btn btn-ghost btn-sm" @click="saveAllReviews">暂存评分</button>
+            <button class="btn btn-ghost btn-sm" @click="saveAllReviews" :disabled="submitting">{{ submitting ? '保存中...' : '暂存评分' }}</button>
             <button class="btn btn-primary btn-sm" @click="doFinalize(reviewingSid)" v-if="!reviewingStudent?.is_reviewed">完成批阅</button>
           </div>
         </div>
@@ -92,7 +92,7 @@
           </div>
           <div class="review-score" v-if="a.q_type === 'subjective'">
             <label>评分：</label>
-            <input v-model.number="scores[a.id]" class="input input-sm" type="number" min="0" :max="a.max_score" style="width:70px" @change="saveReview(a.id)" />
+            <input v-model.number="scores[a.id]" class="input input-sm" type="number" min="0" :max="a.max_score" style="width:70px" @change="saveReview(a.id)" :disabled="submitting" />
             <span class="score-max">/ {{ a.max_score }} 分</span>
           </div>
           <div class="review-score" v-else>
@@ -100,7 +100,7 @@
             <span>{{ a.score ?? '-' }} / {{ a.max_score }} 分</span>
           </div>
           <div class="review-comment">
-            <input v-model="comments[a.id]" class="input input-sm" placeholder="评语（可选）" @blur="saveReview(a.id)" />
+            <input v-model="comments[a.id]" class="input input-sm" placeholder="评语（可选）" @blur="saveReview(a.id)" :disabled="submitting" />
           </div>
         </div>
       </div>
@@ -127,6 +127,7 @@ const reviewingSid = ref(null)
 const reviewingStudent = ref(null)
 const reviewAnswers = ref([])
 const reviewLoading = ref(false)
+const submitting = ref(false)
 const scores = ref({})
 const comments = ref({})
 
@@ -140,7 +141,7 @@ onMounted(async () => {
     if (r1.success) examInfo.value = r1.data
     const r2 = await api.get(`/exams/${eid.value}/submissions`)
     if (r2.success) submissions.value = r2.data?.items || r2.data
-  } catch (e) { console.error(e) }
+  } catch (e) { console.error(e); tip('批阅数据加载失败，请稍后重试') }
   finally { loading.value = false }
 })
 
@@ -160,7 +161,7 @@ async function openReview(sub) {
         comments.value[a.id] = a.review_comment || ''
       })
     }
-  } catch (e) { console.error(e) }
+  } catch (e) { console.error(e); tip('答卷加载失败，请稍后重试') }
   finally { reviewLoading.value = false }
 }
 

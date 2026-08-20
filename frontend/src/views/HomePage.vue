@@ -39,7 +39,10 @@
             探索图谱
           </button>
         </div>
-        <div class="hero-stats" v-if="graphGroups.length">
+        <div class="hero-stats" v-if="groupsLoading">
+          <UiLoading text="统计数据加载中..." />
+        </div>
+        <div class="hero-stats" v-else-if="graphGroups.length">
           <div v-for="g in graphGroups" :key="g.label" class="stat-card"
             @click="enterGraph(g.label)">
             <span class="stat-num">{{ g.node_count }}</span>
@@ -83,12 +86,16 @@
 import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import api from '../api'
+import { useFeedback } from '../composables/useFeedback'
+
+const { tip } = useFeedback()
 
 const router = useRouter()
 const searchKw = ref('')
 const searchResults = ref([])
 const showResults = ref(false)
 const graphGroups = ref([])
+const groupsLoading = ref(true)
 let searchTimer = null
 let searchSeq = 0   // 请求序号，防止旧结果覆盖新结果
 
@@ -104,10 +111,16 @@ function getGroupName(label) {
 }
 
 onMounted(async () => {
+  groupsLoading.value = true
   try {
     const r = await api.get('/graph-groups')
     if (r.success) graphGroups.value = r.data
-  } catch (e) { console.error('加载图谱分组失败:', e) }
+  } catch (e) {
+    console.error('加载图谱分组失败:', e)
+    tip('统计加载失败，请稍后重试')
+  } finally {
+    groupsLoading.value = false
+  }
 })
 
 function onSearchInput() {
@@ -162,7 +175,6 @@ function enterGraph(label) {
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
   padding: 80px 24px 64px;
   text-align: center;
-  overflow: hidden;
 }
 .hero-bg {
   position: absolute;

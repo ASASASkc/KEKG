@@ -247,9 +247,9 @@ class QuestionService:
                 f"FROM exam_answers WHERE question_id IN ({marks}) GROUP BY question_id",
                 qids)
             for pr in pr_rows:
-                total = pr['total'] or 0
-                if total > 0:
-                    pass_rates[pr['question_id']] = round((pr['correct'] or 0) * 100 / total, 1)
+                ans_total = pr['total'] or 0
+                if ans_total > 0:
+                    pass_rates[pr['question_id']] = round((pr['correct'] or 0) * 100 / ans_total, 1)
 
         items = [QuestionService._format(r) for r in rows]
         for it in items:
@@ -275,6 +275,74 @@ class QuestionService:
         for r in rows2:
             cats.add(r['category'])
         return sorted(cats)
+
+    @staticmethod
+    def get_stats():
+        """题库整体统计：总数、题型/难度/知识点/状态分布、作答通过率"""
+        import math
+
+        def _cnt(sql):
+            rows = sql_repo.execute_query(sql)
+            return int(rows[0]['cnt']) if rows else 0
+
+        total = _cnt("SELECT COUNT(*) AS cnt FROM question_bank WHERE status != 'deleted'")
+
+        # 题型分布
+        by_type = {}
+        for r in sql_repo.execute_query(
+                "SELECT type, COUNT(*) AS cnt FROM question_bank WHERE status != 'deleted' GROUP BY type"):
+            by_type[r['type']] = int(r['cnt'])
+
+        # 难度分布（按星级 1-4 分组，与前端展示一致：ceil(difficulty/3)）
+        by_difficulty = {1: 0, 2: 0, 3: 0, 4: 0}
+        for r in sql_repo.execute_query(
+                "SELECT difficulty, COUNT(*) AS cnt FROM question_bank WHERE status != 'deleted' GROUP BY difficulty"):
+            d = r['difficulty'] or 1
+            star = min(4, max(1, math.ceil(int(d) / 3)))
+            by_difficulty[star] += int(r['cnt'])
+
+        # 状态分布
+        by_status = {}
+        for r in sql_repo.execute_query(
+                "SELECT status, COUNT(*) AS cnt FROM question_bank WHERE status != 'deleted' GROUP BY status"):
+            by_status[r['status'] or 'approved'] = int(r['cnt'])
+
+        # 知识点分布（按 topic 字段，前 15）
+        topic_rows = sql_repo.execute_query(
+            "SELECT topic, COUNT(*) AS cnt FROM question_bank "
+            "WHERE status != 'deleted' AND topic IS NOT NULL AND topic != '' "
+            "GROUP BY topic ORDER BY cnt DESC LIMIT 15")
+        by_topic = [{'topic': r['topic'], 'count': int(r['cnt'])} for r in topic_rows]
+
+        # 通过率统计：基于 exam_answers 实际作答
+        pr_rows = sql_repo.execute_query(
+            "SELECT question_id, COUNT(*) AS total, SUM(is_correct = 1) AS correct "
+            "FROM exam_answers WHERE question_id IN "
+            "(SELECT id FROM question_bank WHERE status != 'deleted') GROUP BY question_id")
+        rates = []
+        for pr in pr_rows:
+            t = float(pr['total'] or 0)
+            if t > 0:
+                rates.append(round(float(pr['correct'] or 0) * 100 / t, 1))
+        if rates:
+            pass_rate = {
+                'avg': round(sum(rates) / len(rates), 1),
+                'attempted': len(rates),
+                'high': sum(1 for r in rates if r >= 80),
+                'mid': sum(1 for r in rates if 50 <= r < 80),
+                'low': sum(1 for r in rates if r < 50),
+            }
+        else:
+            pass_rate = {'avg': 0, 'attempted': 0, 'high': 0, 'mid': 0, 'low': 0}
+
+        return {
+            'total': total,
+            'by_type': by_type,
+            'by_difficulty': by_difficulty,
+            'by_topic': by_topic,
+            'by_status': by_status,
+            'pass_rate': pass_rate,
+        }
 
     @staticmethod
     def get_topics():

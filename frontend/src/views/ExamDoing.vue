@@ -11,7 +11,7 @@
         <p v-if="myScore !== null">客观题得分：{{ myScore }} 分</p>
         <p v-else>试卷已提交，主观题将由教师批阅</p>
         <router-link :to="`/exams/${eid}/result`" class="btn btn-primary">查看成绩</router-link>
-        <router-link to="/exams" class="btn btn-outline">返回任务中心</router-link>
+        <router-link to="/class-tasks" class="btn btn-outline">返回班级任务</router-link>
       </div>
     </template>
 

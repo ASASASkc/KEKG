@@ -101,6 +101,7 @@ async function loadConfig() {
     }
   } catch (e) {
     console.error('加载配置失败', e)
+    tip('配置加载失败，请稍后重试')
   }
 }
 

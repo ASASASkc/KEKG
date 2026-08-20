@@ -40,7 +40,7 @@
           已有账号？<a href="#" @click.prevent="switchToLogin">返回登录</a>
         </template>
         <br />
-        <span v-if="showDemoAccount" class="demo-account">测试账号: admin / admin123</span>
+        <span class="demo-account">测试账号: admin / admin123</span>
       </p>
     </div>
   </div>
@@ -51,7 +51,9 @@ import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import api from '../api'
 import { authStore } from '../stores/auth'
+import { useFeedback } from '../composables/useFeedback'
 
+const { tip } = useFeedback()
 const router = useRouter()
 const username = ref('')
 const password = ref('')
@@ -93,7 +95,9 @@ async function doLogin() {
 }
 
 async function doRegister() {
-  if (!username.value || !password.value) return
+  const uname = username.value.trim()
+  if (uname.length < 2 || uname.length > 50) { tip('用户名须为 2-50 个字符'); return }
+  if (!password.value || password.value.length < 4) { tip('密码至少 4 位'); return }
   clearMessages()
   loading.value = true
   try {

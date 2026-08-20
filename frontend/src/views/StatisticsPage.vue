@@ -235,6 +235,9 @@ import { ref, watch, nextTick, onMounted, onUnmounted, computed } from 'vue'
 import * as echarts from 'echarts'
 import api from '../api'
 import { authStore } from '../stores/auth'
+import { useFeedback } from '../composables/useFeedback'
+
+const { tip } = useFeedback()
 
 const activeTab = ref(authStore.isAdmin ? 'class' : 'student')
 const startDate = ref('')
@@ -392,7 +395,7 @@ async function fetchClassList() {
   try {
     const r = await api.get('/classes')
     if (r.success) classList.value = r.data?.items || r.data
-  } catch (e) { console.error('加载班级列表失败:', e) }
+  } catch (e) { console.error('加载班级列表失败:', e); tip('班级列表加载失败，请稍后重试') }
 }
 
 async function loadClassSummary() {
@@ -408,7 +411,7 @@ async function loadClassSummary() {
       classSummary.value = r.data
       console.log('[Stats] classSummary set:', 'students=', r.data.total_students, 'exams=', r.data.exam_count)
     }
-  } catch (e) { console.error('加载班级概况失败:', e) }
+  } catch (e) { console.error('加载班级概况失败:', e); tip('班级概况加载失败，请稍后重试') }
   finally { loadingClass.value = false }
 }
 
@@ -547,7 +550,7 @@ async function loadExamDetail(eid) {
     if (r.success) {
       examDetail.value = r.data
     }
-  } catch (e) { console.error('加载考试分析失败:', e) }
+  } catch (e) { console.error('加载考试分析失败:', e); tip('考试分析加载失败，请稍后重试') }
 }
 
 async function renderTypeChart(byType) {
@@ -598,7 +601,7 @@ async function loadClassExamDetail(eid) {
   try {
     const r = await api.get(`/statistics/class/${selectedClassId.value}/exam/${eid}`)
     if (r.success) { classExamDetail.value = r.data; loadClassWeakPoints(eid) }
-  } catch (e) { console.error('加载题目正确率失败:', e) }
+  } catch (e) { console.error('加载题目正确率失败:', e); tip('题目正确率加载失败，请稍后重试') }
   finally { loadingExamDetail.value = false }
 }
 
@@ -606,14 +609,14 @@ async function loadStudentRadar() {
   try {
     const r = await api.get('/statistics/student/radar')
     if (r.success) studentRadar.value = r.data
-  } catch (e) { console.error('加载掌握度失败:', e) }
+  } catch (e) { console.error('加载掌握度失败:', e); tip('掌握度加载失败，请稍后重试') }
 }
 
 async function loadClassWeakPoints(eid) {
   try {
     const r = await api.get(`/statistics/class/${selectedClassId.value}/weak-points/${eid}`)
     if (r.success) classWeakPoints.value = r.data
-  } catch (e) { console.error('加载薄弱点失败:', e) }
+  } catch (e) { console.error('加载薄弱点失败:', e); tip('薄弱点加载失败，请稍后重试') }
 }
 
 const ACCURACY_COLORS = [

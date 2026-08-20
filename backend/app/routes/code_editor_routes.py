@@ -77,7 +77,8 @@ def run_code():
     data = request.get_json(force=True) or {}
     result = code_editor_service.run_code(
         code=data.get('code', ''),
-        language=data.get('language', 'python')
+        language=data.get('language', 'python'),
+        stdin=data.get('stdin', '')
     )
     return jsonify({'code': 200, 'success': True, 'data': result})
 

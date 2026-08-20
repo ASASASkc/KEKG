@@ -82,6 +82,9 @@
 <script setup>
 import { ref, reactive, onMounted } from 'vue'
 import api from '../api'
+import { useFeedback } from '../composables/useFeedback'
+
+const { tip } = useFeedback()
 
 const logs = ref([])
 const loading = ref(false)
@@ -108,7 +111,7 @@ async function loadActionsAndModules() {
     ])
     if (a.success) actions.value = a.data
     if (m.success) modules.value = m.data
-  } catch (e) { console.error('加载日志操作和模块失败:', e) }
+  } catch (e) { console.error('加载日志操作和模块失败:', e); tip('日志筛选条件加载失败，请稍后重试') }
 }
 
 async function doSearch() {

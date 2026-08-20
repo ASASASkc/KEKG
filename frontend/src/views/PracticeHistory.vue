@@ -46,8 +46,10 @@
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import api from '../api'
+import { useFeedback } from '../composables/useFeedback'
 
 const router = useRouter()
+const { tip } = useFeedback()
 
 // 返回题库：优先回退到来源页，无历史则进入练习中心
 function backToBank() {
@@ -90,7 +92,7 @@ async function load() {
       items.value = r.data.items || []
       totalPages.value = r.data.total_pages || 1
     }
-  } catch (e) { console.error(e) }
+  } catch (e) { console.error(e); tip('练习记录加载失败，请稍后重试') }
   finally { loading.value = false }
 }
 

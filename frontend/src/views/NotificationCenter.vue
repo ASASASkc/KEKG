@@ -67,6 +67,7 @@ async function load() {
     }
   } catch (e) {
     console.error('加载通知失败:', e)
+    tip('通知加载失败，请稍后重试')
   } finally {
     loading.value = false
   }
@@ -78,6 +79,7 @@ async function markAllRead() {
     items.value.forEach(n => { n.is_read = 1 })
   } catch (e) {
     console.error(e)
+    tip('操作失败，请重试')
   }
 }
 

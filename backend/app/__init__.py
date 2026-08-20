@@ -107,6 +107,7 @@ def create_app(env='default'):
     from .routes.llm_routes import llm_bp
     from .routes.ai_practice_routes import ai_practice_bp
     from .routes.code_editor_routes import editor_bp
+    from .routes.code_session_routes import code_session_bp
     from .routes.user_routes import user_bp
     from .routes.task_routes import task_bp
     from .routes.practice_routes import practice_bp
@@ -128,6 +129,7 @@ def create_app(env='default'):
     app.register_blueprint(llm_bp, url_prefix='/api/v1')
     app.register_blueprint(ai_practice_bp, url_prefix='/api/v1')
     app.register_blueprint(editor_bp, url_prefix='/api/v1')
+    app.register_blueprint(code_session_bp, url_prefix='/api/v1')
     app.register_blueprint(user_bp, url_prefix='/api/v1')
     app.register_blueprint(task_bp, url_prefix='/api/v1')
     app.register_blueprint(practice_bp, url_prefix='/api/v1')

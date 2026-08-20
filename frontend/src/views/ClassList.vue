@@ -64,8 +64,10 @@ import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import api from '../api'
 import { authStore } from '../stores/auth'
+import { useFeedback } from '../composables/useFeedback'
 
 const router = useRouter()
+const { tip } = useFeedback()
 const classes = ref([])
 const loading = ref(true)
 const showForm = ref(false)
@@ -84,7 +86,7 @@ async function fetchClasses() {
   try {
     const r = await api.get('/classes')
     if (r.success) classes.value = r.data?.items || r.data
-  } catch (e) { console.error(e) }
+  } catch (e) { console.error(e); tip('班级列表加载失败，请稍后重试') }
   finally { loading.value = false }
 }
 

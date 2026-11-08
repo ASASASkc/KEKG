@@ -62,8 +62,8 @@ KEKG/
 ```bash
 cd backend
 pip install -r requirements.txt
-# 复制并配置环境变量（MySQL/Neo4j 账号密码、SECRET_KEY）
-# cp .env.example .env   （若存在示例则复制，否则按 .env 模板创建）
+# 复制环境变量模板并按实际环境修改（SECRET_KEY / MySQL / Neo4j 必填）
+# cp .env.example .env
 python run.py            # http://127.0.0.1:5000
 ```
 
@@ -75,12 +75,84 @@ npm install
 npm run dev              # http://localhost:3000（/api/v1 代理到 5000）
 ```
 
-### 3. 初始化数据（可选）
+## 演示环境还原（MySQL + Neo4j）
+
+本项目的数据分为两部分，需要分别还原：
+
+| 数据 | 落库位置 | 来源文件 |
+|------|---------|---------|
+| 业务数据（题库、试卷、班级、元数据镜像表等） | MySQL `kekg_db` | `database/seed_demo.sql` |
+| 知识图谱（知识点节点、关系、赛道） | Neo4j | `backend/data/graph_*.json` |
+
+### 步骤 1：导入 MySQL 业务数据
+
+> **警告**：`seed_demo.sql` 开头包含 `CREATE DATABASE kekg_db` 和 39 条 `DROP TABLE`，导入会**清空并重建 `kekg_db` 中的数据表**。请勿对已有正式数据的库执行。
+
+```bash
+mysql -u root -p < database/seed_demo.sql
+```
+
+导入完成后核对行数（可选）：
+
+```sql
+USE kekg_db;
+SELECT COUNT(*) FROM question_bank;          -- 885
+SELECT COUNT(*) FROM question_kp_map;        -- 7952
+SELECT COUNT(*) FROM knowledge_points_meta;  -- 6706
+SELECT COUNT(*) FROM relationship_meta;      -- 9574
+```
+
+### 步骤 2：配置 `.env` 并设置 `SKIP_SQL_META=1`
 
 ```bash
 cd backend
-python data/seed_data.py   # 导入学科图谱种子数据
+cp .env.example .env
 ```
+
+编辑 `.env`，至少填写 `SECRET_KEY`、`MYSQL_PASSWORD`、`NEO4J_PASSWORD`，并确认：
+
+```ini
+SKIP_SQL_META=1
+```
+
+**为什么必须设为 1**：`seed_demo.sql` 已经把 `knowledge_points_meta` / `relationship_meta` 灌好了。导入图谱时若仍同步写 MySQL（`SKIP_SQL_META=0`），这两张表会出现重复记录，统计数字翻倍。
+
+| 场景 | `SKIP_SQL_META` |
+|------|----------------|
+| 演示环境（先导入 seed_demo.sql，再导入图谱） | `1` |
+| 从零构建（Neo4j 与 MySQL 都没有数据） | `0`（默认） |
+| 生产环境（需要 Neo4j / MySQL 双写一致） | `0` |
+
+### 步骤 3：启动 Neo4j 并导入图谱
+
+确认 Neo4j 5.15 已启动（默认 `bolt://localhost:7687`），然后：
+
+```bash
+cd backend
+python data/seed_data.py     # 读取 data/graph_*.json，导入全部赛道
+```
+
+种子文件共 8 个（`python公共部分.json`、`graph_data_analysis.json`、`graph_ml.json`、`graph_dl.json`、`graph_llm.json`、`graph_nlp.json`、`graph_crawler.json`、`graph_devops.json`），按知识点名称去重后约 **6706 个节点 / 9574 条关系** 落入 Neo4j。
+
+> Neo4j 为空时，图谱可视化、学习路径推荐等依赖图谱的功能不可用，但题库、考试、班级等功能不受影响。
+
+### 步骤 4：启动服务并验证
+
+```bash
+cd backend && python run.py     # 后端 :5000
+cd frontend && npm run dev      # 前端 :3000
+```
+
+浏览器访问 `http://localhost:3000`。演示库里预置了两个账号：
+
+| 账号 | 角色 |
+|------|------|
+| `admin` | 教师 / 管理员 |
+| `student` | 学生 |
+
+> 账号密码、邀请码与班级加入码见 `database/seed_demo.sql` 头部注释（**演示环境专用**，请勿用于生产）。也可以自行修改 `users` 表或通过 `.env` 的 `ADMIN_DEFAULT_PASSWORD` / `DEFAULT_INVITE_CODE` 生成新的凭证。
+
+健康检查：`GET http://127.0.0.1:5000/api/v1/health`。
 
 ## 角色说明
 

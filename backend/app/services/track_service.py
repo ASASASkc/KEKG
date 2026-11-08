@@ -26,6 +26,8 @@ class TrackService:
     @staticmethod
     def import_track_json(filepath: str) -> dict:
         """导入单个赛道 JSON（双事务保护）"""
+        # SKIP_SQL_META=1：只写 Neo4j，不写 MySQL 镜像表，避免双写导致统计翻倍
+        skip_sql_meta = os.getenv('SKIP_SQL_META', '0') == '1'
         if not os.path.exists(filepath):
             raise FileNotFoundError(f'文件不存在: {filepath}')
 
@@ -83,15 +85,16 @@ class TrackService:
                     id_map[item['id']] = node['id']
                 nodes_created += 1
 
-                sql_repo.execute_insert(
-                    """INSERT INTO knowledge_points_meta
-                       (graph_node_id, name, category, knowledge_level,
-                        difficulty_level, description, source, course_id, code_example)
-                       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)""",
-                    (node['id'], item['name'], item.get('category', ''),
-                     item.get('category', ''), item.get('tier', item.get('difficulty', 1)),
-                     item.get('description', ''), track_name, '', '')
-                )
+                if not skip_sql_meta:
+                    sql_repo.execute_insert(
+                        """INSERT INTO knowledge_points_meta
+                           (graph_node_id, name, category, knowledge_level,
+                            difficulty_level, description, source, course_id, code_example)
+                           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                        (node['id'], item['name'], item.get('category', ''),
+                         item.get('category', ''), item.get('tier', item.get('difficulty', 1)),
+                         item.get('description', ''), track_name, '', '')
+                    )
 
             # 3. 创建 BELONGS_TO_TRACK 关系（缓存 Track 节点避免重复查询）
             cached_track_nodes = graph_repo.get_all_nodes('Track')
@@ -127,10 +130,11 @@ class TrackService:
                                                        {'description': rel.get('description', '')})
                     if r:
                         rels_created += 1
-                        sql_repo.execute_insert(
-                            "INSERT INTO relationship_meta (graph_rel_id, source_node_id, target_node_id, type, description) VALUES (?, ?, ?, ?, ?)",
-                            (r['id'], sid, tid, rtype, rel.get('description', ''))
-                        )
+                        if not skip_sql_meta:
+                            sql_repo.execute_insert(
+                                "INSERT INTO relationship_meta (graph_rel_id, source_node_id, target_node_id, type, description) VALUES (?, ?, ?, ?, ?)",
+                                (r['id'], sid, tid, rtype, rel.get('description', ''))
+                            )
 
             # 5. 根据 prerequisites 自动创建 PRECEDES 关系
             for item in nodes_data:

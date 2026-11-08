@@ -1,6 +1,7 @@
 # ===== 环境与密钥（严禁提交） =====
 backend/.env
 backend/.env.*
+!backend/.env.example
 backend/kekg.db
 backend/uploads/
 
